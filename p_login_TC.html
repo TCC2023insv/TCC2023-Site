@@ -3,12 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="php/conexao/conexaoBD.php"></script>
+        <script src="php/classes/usuarios.php"></script>
         <title>Página de Login</title>
     </head>
     <body>
         <fieldset class="caixa">
                 <h1>Login</h1>
-                <form method="post" action="" class="Forms">
+                <form method="post" action="php/classes/usuarios.php" class="Forms">
                     <label>Entrar como:</label>
                     <br>
                     <select name="identificacao" class="Select">
@@ -24,7 +26,7 @@
                     <label>Senha:</label>
                     <input class="Txt" type="password" name="senha" placeholder=" Digite aqui" required>
                     <br><br>
-                    <input class="Btn" type="submit" value="Entrar">
+                    <input class="Btn" type="submit" name='entrar' value="Entrar">
             </form>
         </fieldset>
     </body>
