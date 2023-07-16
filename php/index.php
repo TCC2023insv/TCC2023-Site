@@ -11,19 +11,19 @@
             {
                 switch ($tipoDeLogin) {
                     case 'Dir':
-                        include('direcao.php');
+                        include('classes/direcao.php');
                         $novaDirecao = new direcao();
                         $novaDirecao->EntrarComoDirecao($login, $senha);
                         break;
                     
                     case 'Prof':
-                        include('professor.php');
+                        include('classes/professor.php');
                         $novoProfessor = new professor();
                         $novoProfessor->EntrarComoProfessor($login, $senha);
                         break;
 
                     case 'Mon':
-                        include('monitor.php');
+                        include('classes/monitor.php');
                         $novoMonitor = new monitor();
                         $novoMonitor->EntrarComoMonitor($login, $senha);
                         break;

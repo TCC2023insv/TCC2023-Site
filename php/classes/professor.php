@@ -1,5 +1,5 @@
 <?php
-    require('../conexao/conexaoBD.php');
+    require('conexao/conexaoBD.php');
     class professor
     {
         public $login;
@@ -14,9 +14,10 @@
             if (mysqli_num_rows($resultado) > 0) 
             {
                 mysqli_close($conexao);
-                return header("Location: ../../index.html");
+                return header("Location: ../index.html");
             }
-            return header("Location: ../../p_login_TC.html");
+            mysqli_close($conexao);
+            return header("Location: ../p_login_TC.html");
         }
 
         public function CadastrarMonitor($loginMonitor, $senhaMonitor)
