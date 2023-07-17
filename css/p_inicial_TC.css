@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+}
+
+body{
+    background-color: #FFEEDD;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.Labs1-2{ 
+    margin-top: 20px;
+    display: flex;   
+    justify-content: center;
+}
+
+.Labs3-4{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.Links{
+    font-size: 25px;
+    background-color: #2E355F;
+    color: #FFEEDD;
+    padding: 20px 0 0 40px;
+
+    width: 500px;
+    height: 260px;
+    border-radius: 15px; 
+    margin: 0 20px;
+}
+
+@media screen and (max-width:500px) 
+{   
+    .Labs1-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .Labs3-4{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .Links{
+        font-size: 25px;
+        background-color: #2E355F;
+        color: #FFEEDD; 
+        width: 280px;
+        height: 95px;
+        border-radius: 15px; 
+    }
+}
