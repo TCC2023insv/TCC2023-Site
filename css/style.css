@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #FFEEDD;
+    font-family: 'Roboto Mono', monospace;
+    color:#2E355F;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.caixa{
+    width: 470px;
+    height: 550px;
+
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto; 
+    
+    background-color: #A79CAC;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    margin-top: 35px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.Forms{
+    margin-top: 40px;
+    margin-left: 75px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.Select{
+    border-radius: 10px;
+    width: 315px;
+    height:35px;
+    background-color: #FFEEDD ;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    color:#2E355F;
+    letter-spacing: 5px;
+}
+
+.Txt{
+    border-radius: 10px;
+    width: 315px;
+    height:35px;
+    background-color: #FFEEDD ;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    color:#2E355F;
+    letter-spacing: 5px;
+}
+
+
+#Btn{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 28px;
+    color: #FFEEDD;
+    border-radius: 15px;
+    width: 150px;
+    height:45px;
+    background-color: #2E355F;
+    letter-spacing: 3px;
+}
+
+.Botao{
+    margin-top: 15px;
+    margin-left: 170px;
+}
+
+.Btn:hover{
+    background-color: #4C5381;
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+@media screen and (max-width:500px) 
+{
+    .caixa{
+        /*tamanho*/
+        width: 325px;
+        height: 420px;
+
+        /*posição*/
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto; 
+
+        /* resto */
+        background-color: #A79CAC;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        margin-top: 25px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .Forms{
+        margin-top: 25px;
+        margin-left: 35px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .Select{
+        border-radius: 10px;
+        width: 245px;
+        height:30px;
+        background-color: #FFEEDD ;
+        font-size: 15px;
+        font-family: 'Roboto Mono', monospace;
+        color:#2E355F;
+        letter-spacing: 5px;
+    }
+
+    .Txt{
+        border-radius: 10px;
+        width: 245px;
+        height:30px;
+        background-color: #FFEEDD ;
+        font-size: 15px;
+        font-family: 'Roboto Mono', monospace;
+        color:#2E355F;
+        letter-spacing: 5px;
+    }
+
+    #Btn{
+        font-family: 'Roboto Mono', monospace;
+        font-size: 18px;
+        color: #FFEEDD;
+        border-radius: 15px;
+        width: 100px;
+        height: 40px;
+        background-color: #2E355F;
+        letter-spacing: 3px;
+    }
+
+    .Botao
+    {
+        margin-top: 5px;
+        margin-left: 145px;
+    }
+    
+}
+
