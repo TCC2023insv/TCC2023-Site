@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/p_reg-repa-M_TC.css">
+        <link rel="stylesheet" type="text/css" href="css/navbar_TC.css">
+        <title>Registrar Reparo</title>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="btncheck">
+                <img src="img/icon.png">
+            </label>
+
+            <label class="logo">LOGO</label>
+            <ul>
+                <li><a class="active" href="">Laboratórios</a></li>
+                <li><a href="p_login_TC.html">Sair</a></li>
+            </ul>
+        </nav>
+
+        <fieldset id="Caixa">
+            <form method="post" action="" id="Forms">
+                <div id="Caixa-direita">
+                    <div id="Problemas">
+                        <label class="Titulo">Problemas</label><br>
+                        <input class="txtProb" type="checkbox" name="quebrado">
+                            <label for="quebrado" class="txtProb">Quebrado</label><br>
+                        <input class="CheckProb" type="checkbox" name="desatualizado">
+                            <label for="desatualizado" class="txtProb">Desatualizado</label><br>
+                        <input class="CheckProb" type="checkbox" name="em falta">
+                            <label for="em falta" class="txtProb">Em falta</label><br>
+                        <input class="CheckProb" type="checkbox" name="corrompido">
+                            <label for="corrompido" class="txtProb">Corrompido</label><br>
+                        <input class="CheckProb" type="checkbox" name="em excesso">
+                            <label for="em excesso" class="txtProb">Em excesso</label><br>
+                        <input class="CheckProb" type="checkbox" name="outros">
+                            <label for="outros" class="txtProb">Outros</label><br>
+                    </div>
+
+                    
+                    <div class="Caixa-Texto"> 
+                        <label class="Titulo">Atividade Exercida</label><br>
+                        <textarea class="Atv-Exer" name="atv-exer" placeholder="Digite Aqui"></textarea>
+                    </div>
+    
+                
+                    <div class="Caixa-Texto">
+                        <label class="Titulo">Problemas Solucionados</label>
+                        <textarea class="Prob-Solu" name="prob-solu" placeholder="Digite Aqui"></textarea>
+                    </div>
+        
+                    <div id="Fotos">
+                        <label class="Titulo">Fotos</label>
+
+                        <label for="foto">+</label>
+                        <input type="file" name="foto" id="foto">
+                    </div>
+                </div>
+                
+                
+                <div id="Caixa-esquerda">
+                    <div id="Data-Resp">
+                        <input id="Data" type="date" name="data">
+                        <input id="Responsavel" type="text" name="responsavel" placeholder="Responsável" requireds>
+                    </div>
+        
+                    <div id="Dispositivos">
+                        <label class="Titulo">Dispositivos</label>
+                        <label class="Nome-Disp">APPs</label>
+                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
+                        <label class="Nome-Disp">Fonte</label>
+                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
+                        <label class="Nome-Disp">HD</label>
+                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
+                        <label class="Nome-Disp">Monitor</label>
+                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
+                        <label class="Nome-Disp">Mouse</label>
+                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
+                        <label class="Nome-Disp">Teclado</label>
+                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
+                        <label class="Nome-Disp">Windows</label>
+                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">                        
+                    </div>
+                </div>
+
+                
+                <div id="Botoes">
+                    <input class="Btn" type="submit" value="Voltar">
+                    <input class="Btn" type="submit" value="Registrar">
+                </div>
+                
+            </form>
+        </fieldset>
+    </body>
+</html>
