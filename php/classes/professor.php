@@ -19,26 +19,10 @@
 
                 $_SESSION['login'] = $professor;
 
-                return header("Location: ../../p_inicial-P_TC.html");
+                return header("Location: ../p_inicial-P_TC.html");
             }
             mysqli_close($conexao);
             return header("Location: ../p_login_TC.html");
         }
-
-        // public function CadastrarMonitor($nome, $login, $senha, $professor)
-        // {
-        //     $conexao = ConectarBanco();
-
-        //     $nomeMonitor = $nome;
-        //     $loginMonitor = $login;
-        //     $senhaMonitor = $senha;
-        //     $loginProfessor = $professor;
-
-        //     $query = "INSERT INTO monitor (login, nome, senha, login_professor) VALUES 
-        //     ( '" . $loginMonitor . "', '" . $nomeMonitor . "', '" . $senhaMonitor . "', '" .$loginProfessor ."')";
-        //     $resultado = mysqli_query($conexao, $query);
-
-        //     mysqli_close($conexao);
-        // }
     }
 ?>
