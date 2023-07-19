@@ -46,11 +46,10 @@ body{
 }
 
 #Caixa-direita{
-    float: left;
     margin-left: 20px;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 #Problemas{
@@ -68,20 +67,34 @@ body{
     color:#2E355F;
     background-color: #A79CAC;
     border-radius: 6px;
-    height: 20px;
     font-size: 25px;
     padding: 0 0 0 5px;
     margin-top: 20px;
 }
 
-.Caixa-Texto{
+.CheckProb{
+    height: 20px;
+    width: 80px;
+}
+
+
+#Caixa-Texto-1{
     background-color: #FFEEDD;
-    width: 600px;
+    width: 950px;
     height: auto;
     border-radius: 15px;
     padding: 25px;
-    margin-top: 30px; 
-    margin-left: 59px;
+    margin-top: 50px; 
+    margin-left: 75px;
+}
+#Caixa-Texto-2{
+    background-color: #FFEEDD;
+    width: 950px;
+    height: auto;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 50px; 
+    margin-left: 75px;
 }
 
 .Atv-Exer{
@@ -94,8 +107,8 @@ body{
     letter-spacing: 5px;
     padding: 8px;
     margin-top: 20px;
-    width: 580px;
-    height: 100px;
+    width: 930px;
+    height: 150px;
 }
 
 
@@ -109,8 +122,8 @@ body{
     letter-spacing: 5px;
     padding: 8px;
     margin-top: 20px;
-    width: 580px;
-    height: 100px;
+    width: 930px;
+    height: 150px;
 }
 
 #Fotos{
@@ -138,86 +151,6 @@ label{
 }
 
 
-/* Parte da esquerda */
-#Caixa-esquerda{
-    margin-top: 50px;
-    float: right;
-    margin-right: 67px;
-    height: auto;
-}
-
-#Data-Resp{
-    background-color: #FFEEDD;
-    border-radius: 10px;
-    width: 290px;
-    height: 130px;
-}
-
-#Data{
-    background-color: #2E355F;
-    color: #FFEEDD;
-    font-size: 30px;
-    border-radius: 8px;
-    margin-top: 15px;
-    margin-left: 20px;
-    padding: 5px 10px 5px 10px;
-    width: 210px;
-}
-
-#Responsavel{
-    background-color: #FFEEDD;
-    color: #2E355F;
-    border-radius: 8px;
-    width: 220px;
-    height:30px;
-    font-size: 25px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 20px;
-    padding: 5px 10px 5px 10px;
-}
-
-#Dispositivos{
-    background-color: #FFEEDD;
-    float: right;
-    border-radius: 10px;
-    width: 291px;
-    height: auto;
-    margin-top: 40px;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0 15px 0;
-}
-
-.Nome-Disp{
-    background-color: #A79CAC;
-    color: #2E355F;
-    border-radius: 8px;
-    width: 235px;
-    height:30px;
-    font-size: 20px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    margin-top: 25px;
-    padding: 0 5px;
-}
-
-.Num-Disp{
-    background-color:#FFEEDD;
-    color: #2E355F;
-    border-radius: 8px;
-    width: 235px;
-    height:30px;
-    font-size: 20px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-    padding: 0 5px;
-}
-
 .Btn{
     background-color: #323853;
     color: #FFEEDD;
@@ -237,5 +170,82 @@ label{
     transition: all 0.5s
 }
 
+
+
+/* Parte da esquerda */
+#Caixa-esquerda{
+    margin-top: 50px;
+    float: right;
+    margin-right: 67px;
+    height: auto;
+}
+
+/* Laboratórios */
+#Sel-Labs{
+    background-color: #FFEEDD;
+    border-radius: 10px;
+    width: 290px;
+    height: 130px;
+    padding: 20px 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Titulo-E{
+    background-color: #2E355F;
+    color: #FFEEDD;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+    width: 230px;
+}
+
+#Lab{
+    background-color: #FFEEDD;
+    color: #2E355F;
+    border-radius: 8px;
+    width: 250px;
+    height:40px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+/* Data e Responsável */
+#Data-Resp{
+    background-color: #FFEEDD;
+    border-radius: 10px;
+    width: 290px;
+    height: 152px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Data{
+    background-color: #2E355F;
+    color: #FFEEDD;
+    font-size: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 5px 10px 5px 10px;
+    width: 230px;
+}
+
+#Responsavel{
+    background-color: #FFEEDD;
+    color: #2E355F;
+    border-radius: 8px;
+    width: 230px;
+    height:30px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 5px 10px 5px 10px;
+}
 
 

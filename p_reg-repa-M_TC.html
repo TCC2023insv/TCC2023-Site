@@ -23,70 +23,65 @@
 
         <fieldset id="Caixa">
             <form method="post" action="" id="Forms">
-                <div id="Caixa-direita">
-                    <div id="Problemas">
-                        <label class="Titulo">Problemas</label><br>
-                        <input class="txtProb" type="checkbox" name="quebrado">
-                            <label for="quebrado" class="txtProb">Quebrado</label><br>
-                        <input class="CheckProb" type="checkbox" name="desatualizado">
-                            <label for="desatualizado" class="txtProb">Desatualizado</label><br>
-                        <input class="CheckProb" type="checkbox" name="em falta">
-                            <label for="em falta" class="txtProb">Em falta</label><br>
-                        <input class="CheckProb" type="checkbox" name="corrompido">
-                            <label for="corrompido" class="txtProb">Corrompido</label><br>
-                        <input class="CheckProb" type="checkbox" name="em excesso">
-                            <label for="em excesso" class="txtProb">Em excesso</label><br>
-                        <input class="CheckProb" type="checkbox" name="outros">
-                            <label for="outros" class="txtProb">Outros</label><br>
-                    </div>
 
-                    
-                    <div class="Caixa-Texto"> 
-                        <label class="Titulo">Atividade Exercida</label><br>
-                        <textarea class="Atv-Exer" name="atv-exer" placeholder="Digite Aqui"></textarea>
-                    </div>
-    
-                
-                    <div class="Caixa-Texto">
-                        <label class="Titulo">Problemas Solucionados</label>
-                        <textarea class="Prob-Solu" name="prob-solu" placeholder="Digite Aqui"></textarea>
-                    </div>
-        
-                    <div id="Fotos">
-                        <label class="Titulo">Fotos</label>
-
-                        <label for="foto">+</label>
-                        <input type="file" name="foto" id="foto">
-                    </div>
-                </div>
-                
-                
                 <div id="Caixa-esquerda">
+                    <div id="Sel-Labs">
+                        <label id="Titulo-E">Laboratório</label><br>
+                        <select name="sele-lab" id="Lab">
+                            <option value="Lab 1">Selecione</option>
+                            <option value="Lab 1">Lab 1</option>
+                            <option value="Lab 2">Lab 2</option>
+                            <option value="Lab 3">Lab 3</option> 
+                            <option value="Lab 4">Lab 4</option>
+                        </select>
+                    </div>
                     <div id="Data-Resp">
                         <input id="Data" type="date" name="data">
                         <input id="Responsavel" type="text" name="responsavel" placeholder="Responsável" requireds>
                     </div>
-        
-                    <div id="Dispositivos">
-                        <label class="Titulo">Dispositivos</label>
-                        <label class="Nome-Disp">APPs</label>
-                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
-                        <label class="Nome-Disp">Fonte</label>
-                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
-                        <label class="Nome-Disp">HD</label>
-                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
-                        <label class="Nome-Disp">Monitor</label>
-                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
-                        <label class="Nome-Disp">Mouse</label>
-                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
-                        <label class="Nome-Disp">Teclado</label>
-                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">
-                        <label class="Nome-Disp">Windows</label>
-                        <input class="Num-Disp" type="text" name="num-disp" placeholder="00000000000000">                        
-                    </div>
                 </div>
 
+                <div id="Caixa-direita">
+                    <div id="Problemas">
+                        <label class="Titulo">Problemas</label><br>
+                        <input class="CheckProb" type="checkbox" name="apps">
+                            <label for="apps" class="txtProb">APPs</label><br>
+                        <input class="CheckProb" type="checkbox" name="fonte">
+                            <label for="fonte" class="txtProb">Fonte</label><br>
+                        <input class="CheckProb" type="checkbox" name="hd">
+                            <label for="hd" class="txtProb">HD</label><br>
+                        <input class="CheckProb" type="checkbox" name="monitor">
+                            <label for="monitor" class="txtProb">Monitor</label><br>
+                        <input class="CheckProb" type="checkbox" name="mouse">
+                            <label for="mouse" class="txtProb">Mouse</label><br>
+                            <input class="CheckProb" type="checkbox" name="outros">
+                                <label for="outros" class="txtProb">Teclado</label><br>
+                            <input class="CheckProb" type="checkbox" name="outros">
+                                <label for="outros" class="txtProb">Windows</label><br>
+                        </div>
+                </div>
+                    
+                <div id="Caixa-Texto-1"> 
+                    <label class="Titulo">Atividade Exercida</label><br>
+                    <textarea class="Atv-Exer" name="atv-exer" placeholder="Digite Aqui"></textarea>
+                </div>
+    
                 
+<<<<<<< HEAD
+=======
+                <div id="Caixa-Texto-2">
+                    <label class="Titulo">Problemas Solucionados</label>
+                    <textarea class="Prob-Solu" name="prob-solu" placeholder="Digite Aqui"></textarea>
+                </div>
+        
+                <div id="Fotos">
+                    <label class="Titulo">Fotos</label>
+
+                    <label for="foto">+</label>
+                    <input type="file" name="foto" id="foto">
+                </div>
+                
+>>>>>>> 3319351be5cda0f6c5035a4b85a5a6ace36277d2
                 <div>
                     <input class="Btn" type="submit" value="Voltar">
                     <input class="Btn" type="submit" value="Registrar">
