@@ -12,7 +12,6 @@ body{
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;
-    padding-bottom: 20px;
 }
 
 #Caixa{
@@ -21,12 +20,12 @@ body{
     width: 1152px;
     height: auto;
 
-    position: absolute;
-    top: 100px; bottom: auto;
+    position: relative;
+    top: 20px; bottom: 0;
     left: 0; right: 0;
-    margin: auto; 
+    margin: auto;
     
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 
     border-radius: 25px;
     display: flex;
@@ -61,7 +60,7 @@ body{
     line-height: 40px;
     margin-top: 50px; 
     margin-left: 59px;
-} 
+}
 
 .txtProb{
     color:#2E355F;
@@ -77,6 +76,33 @@ body{
     width: 80px;
 }
 
+.Select{
+    border-radius: 10px;
+    width: 175px;
+    height:35px;
+    background-color: #FFEEDD ;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    color:#2E355F;
+    letter-spacing: 5px;
+}
+
+.Txt-serialN{
+    border-radius: 10px;
+    width: 175px;
+    height:35px;
+    background-color: #A79CAC;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    color:#FFEEDD;
+    letter-spacing: 5px;
+    margin-left: 115px;
+    border: none;
+}
+/* Cor do placeholder */
+input::placeholder {
+    color: #FFEEDD;
+  }
 
 #Caixa-Texto-1{
     background-color: #FFEEDD;
@@ -126,14 +152,17 @@ body{
     height: 150px;
 }
 
+
+/* FOTOS */
+
 #Fotos{
     background-color: #FFEEDD;
-    width: 600px;
+    width: 950px;
     height: auto;
     border-radius: 15px;
     padding: 25px;
-    margin-top: 30px; 
-    margin-left: 59px;
+    margin-top: 50px; 
+    margin-left: 75px;
 }
 
 input[type="file"]{
@@ -142,26 +171,52 @@ input[type="file"]{
 
 
 label{
-    background-color: #2E355F;
-    color: #FFEEDD;
-    font-size: 30px;
+    background-color: #FFEEDD;
+    color: #2E355F;
+    font-size: 50px;
     cursor: pointer;
-    padding: 10px;
+    text-align: center;
+    width: 405px;
+    height: 289px;
+    margin: 30px 20px 20px 20px ;
+}
+
+.Linha{
+    display: flex;
+    flex-direction: row;
+
+    width: 951px;
+    height: 376px;
+
+    justify-content: center;
+    
+    margin-bottom: 30px;
+}
+
+.Fundo{
+    background-color: #2E355F;
+    width: 449px;
+    height: 376px;
+    margin: 20px;
     text-align: center;
 }
 
+#Btn{
+    float: right;
+    margin-right: 80px;
+}
 
 .Btn{
-    background-color: #323853;
+    background-color: #2E355F;
+    font-family: 'Roboto Mono', monospace;
     color: #FFEEDD;
-    width: 162px;
+    width: auto;
     height: 45px;
     border-radius: 10px;
-    font-family: 'Roboto Mono', monospace;
     font-size: 25px;
-    margin-top: 100px;
+    margin-top: 50px;
     border: none;
-
+    padding: 5px;
 }
 
 .Btn:hover{
@@ -185,10 +240,8 @@ label{
     background-color: #FFEEDD;
     border-radius: 10px;
     width: 290px;
-    height: 130px;
+    height: 110px;
     padding: 20px 0 0 0 ;
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -199,18 +252,19 @@ label{
     text-align: center;
     border-radius: 8px;
     padding: 5px 10px 5px 10px;
-    width: 230px;
+    width: 250px;
 }
 
 #Lab{
     background-color: #FFEEDD;
     color: #2E355F;
     border-radius: 8px;
-    width: 250px;
+    width: 240px;
     height:40px;
     font-size: 25px;
     letter-spacing: 5px;
     font-weight: bold;
+    margin: 20px;
 }
 
 /* Data e Responsável */
@@ -218,7 +272,7 @@ label{
     background-color: #FFEEDD;
     border-radius: 10px;
     width: 290px;
-    height: 152px;
+    height: 140px;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -230,7 +284,7 @@ label{
     color: #FFEEDD;
     font-size: 30px;
     border-radius: 8px;
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 5px 10px 5px 10px;
     width: 230px;
 }
@@ -244,6 +298,7 @@ label{
     font-size: 25px;
     letter-spacing: 5px;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 5px 10px 5px 10px;
 }
+
