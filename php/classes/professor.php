@@ -19,7 +19,7 @@
 
                 $_SESSION['login'] = $professor;
 
-                return header("Location: ../p_inicial-P_TC.html");
+                return header("Location: ../p_inicial-P_TC.php");
             }
             mysqli_close($conexao);
             return header("Location: ../p_login_TC.html");

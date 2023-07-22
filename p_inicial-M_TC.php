@@ -11,23 +11,29 @@
 </head>
 
 <body>
-    <!-- 
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="btncheck">
+    <?php
+        session_start();
+
+        if (isset($_SESSION['login']))
+        {
+            $monitor = $_SESSION['login'];
+        }
+    ?>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="btncheck">
                 <img src="img/icon.png">
             </label>
 
- --><label class="logo">LOGO</label>
-    <ul>
-        <li><a href="p_cad-mon-P_TC.html">Cadastrar Monitor</a></li>
-        <li><a class="active" href="">Laboratórios</a></li>
-        <li><a href="p_login_TC.html">Sair</a></li>
-    </ul>
+        <label class="logo">LOGO</label>
+        <ul>
+            <li><a class="active" href="">Laboratórios</a></li>
+            <li><a href="p_login_TC.html">Sair</a></li>
+        </ul>
     </nav>
 
     <div class="Labs1-2">
-        <a class="Links" href="">Lab 1</a>
+        <a class="Links" href="p_reg-repa-M_TC.html">Lab 1</a>
         <a class="Links" href="">Lab 2</a>
     </div>
     <div class="Labs3-4">

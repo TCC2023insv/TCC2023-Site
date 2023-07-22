@@ -14,5 +14,5 @@
     $resultado = mysqli_query($conexao, $query);
 
     mysqli_close($conexao);
-    return header("Location: ../../tcc2023-site/p_inicial-D_TC.html");
+    return header("Location: ../../tcc2023-site/p_inicial-P_TC.php");
 ?>

@@ -24,7 +24,7 @@
 
             <label class="logo">LOGO</label>
             <ul>
-                <li><a href="p_cad-mon-P_TC.php">Cadastrar Monitor</a></li>
+                <li><a href="p_cad-mon-P_TC.html">Cadastrar Monitor</a></li>
                 <li><a class="active" href="">Laboratórios</a></li>
                 <li><a href="p_login_TC.html">Sair</a></li>
             </ul>
