@@ -12,7 +12,6 @@ body{
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;
-    padding-bottom: 20px;
 }
 
 #Caixa{
@@ -21,12 +20,12 @@ body{
     width: 1152px;
     height: auto;
 
-    position: absolute;
-    top: 100px; bottom: auto;
+    position: relative;
+    top: 20px; bottom: 0;
     left: 0; right: 0;
-    margin: auto; 
+    margin: auto;
     
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 
     border-radius: 25px;
     display: flex;
@@ -46,11 +45,10 @@ body{
 }
 
 #Caixa-direita{
-    float: left;
     margin-left: 20px;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 #Problemas{
@@ -62,26 +60,67 @@ body{
     line-height: 40px;
     margin-top: 50px; 
     margin-left: 59px;
-} 
+}
 
 .txtProb{
     color:#2E355F;
     background-color: #A79CAC;
     border-radius: 6px;
-    height: 20px;
     font-size: 25px;
     padding: 0 0 0 5px;
     margin-top: 20px;
 }
 
-.Caixa-Texto{
+.CheckProb{
+    height: 20px;
+    width: 80px;
+}
+
+.Select{
+    border-radius: 10px;
+    width: 175px;
+    height:35px;
+    background-color: #FFEEDD ;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    color:#2E355F;
+    letter-spacing: 5px;
+}
+
+.Txt-serialN{
+    border-radius: 10px;
+    width: 175px;
+    height:35px;
+    background-color: #A79CAC;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    color:#FFEEDD;
+    letter-spacing: 5px;
+    margin-left: 115px;
+    border: none;
+}
+/* Cor do placeholder */
+input::placeholder {
+    color: #FFEEDD;
+  }
+
+#Caixa-Texto-1{
     background-color: #FFEEDD;
-    width: 600px;
+    width: 950px;
     height: auto;
     border-radius: 15px;
     padding: 25px;
-    margin-top: 30px; 
-    margin-left: 59px;
+    margin-top: 50px; 
+    margin-left: 75px;
+}
+#Caixa-Texto-2{
+    background-color: #FFEEDD;
+    width: 950px;
+    height: auto;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 50px; 
+    margin-left: 75px;
 }
 
 .Atv-Exer{
@@ -94,8 +133,8 @@ body{
     letter-spacing: 5px;
     padding: 8px;
     margin-top: 20px;
-    width: 580px;
-    height: 100px;
+    width: 930px;
+    height: 150px;
 }
 
 
@@ -109,18 +148,21 @@ body{
     letter-spacing: 5px;
     padding: 8px;
     margin-top: 20px;
-    width: 580px;
-    height: 100px;
+    width: 930px;
+    height: 150px;
 }
+
+
+/* FOTOS */
 
 #Fotos{
     background-color: #FFEEDD;
-    width: 600px;
+    width: 950px;
     height: auto;
     border-radius: 15px;
     padding: 25px;
-    margin-top: 30px; 
-    margin-left: 59px;
+    margin-top: 50px; 
+    margin-left: 75px;
 }
 
 input[type="file"]{
@@ -129,13 +171,60 @@ input[type="file"]{
 
 
 label{
-    background-color: #2E355F;
-    color: #FFEEDD;
-    font-size: 30px;
+    background-color: #FFEEDD;
+    color: #2E355F;
+    font-size: 50px;
     cursor: pointer;
-    padding: 10px;
+    text-align: center;
+    width: 405px;
+    height: 289px;
+    margin: 30px 20px 20px 20px ;
+}
+
+.Linha{
+    display: flex;
+    flex-direction: row;
+
+    width: 951px;
+    height: 376px;
+
+    justify-content: center;
+    
+    margin-bottom: 30px;
+}
+
+.Fundo{
+    background-color: #2E355F;
+    width: 449px;
+    height: 376px;
+    margin: 20px;
     text-align: center;
 }
+
+#Btn{
+    float: right;
+    margin-right: 80px;
+}
+
+.Btn{
+    background-color: #2E355F;
+    font-family: 'Roboto Mono', monospace;
+    color: #FFEEDD;
+    width: auto;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 25px;
+    margin-top: 50px;
+    border: none;
+    padding: 5px;
+}
+
+.Btn:hover{
+    background-color: #4C5381;
+    transform: scale(1.1);
+    transition: all 0.5s
+}
+
 
 
 /* Parte da esquerda */
@@ -146,11 +235,48 @@ label{
     height: auto;
 }
 
+/* Laboratórios */
+#Sel-Labs{
+    background-color: #FFEEDD;
+    border-radius: 10px;
+    width: 290px;
+    height: 110px;
+    padding: 20px 0 0 0 ;
+    align-items: center;
+}
+
+#Titulo-E{
+    background-color: #2E355F;
+    color: #FFEEDD;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+    width: 250px;
+}
+
+#Lab{
+    background-color: #FFEEDD;
+    color: #2E355F;
+    border-radius: 8px;
+    width: 240px;
+    height:40px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+/* Data e Responsável */
 #Data-Resp{
     background-color: #FFEEDD;
     border-radius: 10px;
     width: 290px;
-    height: 130px;
+    height: 140px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #Data{
@@ -159,63 +285,19 @@ label{
     font-size: 30px;
     border-radius: 8px;
     margin-top: 15px;
-    margin-left: 20px;
     padding: 5px 10px 5px 10px;
-    width: 210px;
+    width: 230px;
 }
 
 #Responsavel{
     background-color: #FFEEDD;
     color: #2E355F;
     border-radius: 8px;
-    width: 220px;
+    width: 230px;
     height:30px;
     font-size: 25px;
     letter-spacing: 5px;
     font-weight: bold;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 15px;
     padding: 5px 10px 5px 10px;
 }
-
-#Dispositivos{
-    background-color: #FFEEDD;
-    float: right;
-    border-radius: 10px;
-    width: 291px;
-    height: auto;
-    margin-top: 40px;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0 15px 0;
-}
-
-.Nome-Disp{
-    background-color: #A79CAC;
-    color: #2E355F;
-    border-radius: 8px;
-    width: 235px;
-    height:30px;
-    font-size: 20px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    margin-top: 25px;
-    padding: 0 5px;
-}
-
-.Num-Disp{
-    background-color:#FFEEDD;
-    color: #2E355F;
-    border-radius: 8px;
-    width: 235px;
-    height:30px;
-    font-size: 20px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-    padding: 0 5px;
-}
-
-
