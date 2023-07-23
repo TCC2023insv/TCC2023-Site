@@ -9,10 +9,9 @@
     $loginMonitor = $_POST['login'];
     $senhaMonitor = $_POST['senha'];
 
-    $query = "INSERT INTO monitor (login, nome, senha, login_professor) VALUES 
-    ( '" . $loginMonitor . "', '" . $nomeMonitor . "', '" . $senhaMonitor . "', '" .$professor ."')";
-    $resultado = mysqli_query($conexao, $query);
+    $conexao->query("INSERT INTO monitor (login, nome, senha, login_professor) VALUES 
+    ( '" . $loginMonitor . "', '" . $nomeMonitor . "', '" . $senhaMonitor . "', '" .$professor ."')");
 
-    mysqli_close($conexao);
+    $conexao->close();
     return header("Location: ../../tcc2023-site/p_inicial-P_TC.php");
 ?>

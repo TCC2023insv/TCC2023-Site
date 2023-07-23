@@ -9,10 +9,9 @@
     $loginProfessor = $POST['login'];
     $senhaProfessor = $_POST['senha'];
 
-    $query = "INSERT INTO professor (login, nome, senha, login_direcao) VALUES 
-    ( '" . $loginProfessor . "', '" . $nomeProfessor . "', '" . $senhaProfessor . "', '" .$direcao."')";
-    $resultado = mysqli_query($conexao, $query);
+    $conexao->query("INSERT INTO professor (login, nome, senha, login_direcao) VALUES 
+    ( '" . $loginProfessor . "', '" . $nomeProfessor . "', '" . $senhaProfessor . "', '" .$direcao."')");
 
-    mysqli_close($conexao);
+    $conexao->close();
     return header("Location: ../../tcc2023-site/p_inicial-D_TC.html");
 ?>
