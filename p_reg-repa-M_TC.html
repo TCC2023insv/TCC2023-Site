@@ -24,7 +24,7 @@
     </nav>
 
     <fieldset id="Caixa">
-        <form method="post" action="php/registrarReparo.php" id="Forms">
+        <form method="post" enctype="multipart/form-data" action="php/registrarReparo.php" id="Forms">
 
             <div id="Caixa-esquerda">
                 <div id="Sel-Labs">
@@ -149,21 +149,21 @@
                 <div class="Linha">
                     <div class="Fundo">
                         <label for="foto"><img src="img/icon_add_foto.png "></label>
-                        <input type="file" name="foto" id="foto">
+                        <input type="file" name="foto[]" id="foto" accept="image/jpeg,image/jpg,image/png,image/img" multiple>
                     </div>
                     <div class="Fundo">
                         <label for="foto">+</label>
-                        <input type="file" name="foto" id="foto">
+                        <input type="file" name="foto[]" id="foto" accept="image/jpeg,image/jpg,image/png,image/img" multiple>
                     </div>
                 </div>
                 <div class="Linha">
                     <div class="Fundo">
                         <label for="foto">+</label>
-                        <input type="file" name="foto" id="foto">
+                        <input type="file" name="foto[]" id="foto" accept="image/jpeg,image/jpg,image/png,image/img" multiple>
                     </div>
                     <div class="Fundo">
                         <label for="foto"><img src="img/icon_add_foto.png "> </label>
-                        <input type="file" name="foto" id="foto">
+                        <input type="file" name="foto[]" id="foto" accept="image/jpeg,image/jpg,image/png,image/img" multiple>
                     </div>
                 </div>
 

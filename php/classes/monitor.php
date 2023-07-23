@@ -13,7 +13,7 @@
 
             if (mysqli_num_rows($resultado) > 0) 
             {
-                mysqli_close($conexao);
+                $conexao->close();
 
                 session_start();
 
@@ -21,7 +21,7 @@
 
                 return header("Location: ../p_inicial-M_TC.php");
             }
-            mysqli_close($conexao);
+            $conexao->close();
             return header("Location: ../p_login_TC.html");
         }
 
