@@ -4,9 +4,11 @@
 //    $conexao = ConectarBanco();
 //    $dataReparo = $_GET['data'];
 
-//    $sql_query = $conexao->query(SELECT `Data`, `Acao`, `Problemas_Solucionados`, `Responsavel`, 
-//    `Login_Monitor`, `Laboratorio` FROM `reparo` WHERE Data = '$dataReparo') or die ($conexao->error);
-?> -->
+//    $sql_query_rep = $conexao->query("SELECT `Data`, `Acao`, `Problemas_Solucionados`, `Responsavel`, 
+//    `Login_Monitor`, `Laboratorio` FROM `reparo` WHERE Data = '$dataReparo'") or die ($conexao->error);
+    // $sql_query_prob = $conexao->query("SELECT dispositivo.Nome, dispositivo.Problema FROM dispositivo
+    // JOIN dispositivo_reparo ON dispositivo.ID = dispositivo_reparo.ID_Dispositivo
+    // WHERE dispositivo_reparo.Data_Reparo = '$dataReparo'") or die ($conexao->error); ?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +23,7 @@
     <?php
         $i = 0;
         while ($i < 10)
-        //while ($reparo = $sql_query->fetch_assoc())
+        //while ($reparo = $sql_query_rep->fetch_assoc())
         {
     ?>
 
@@ -40,7 +42,26 @@
             </tr>
     <?php
         } 
+    ?>
+</table>
+<table>
+    <?php
+    $j = 0;
+    while ($j < 7)
+        //while ($problema = $sql_query_prob->fetch_assoc())
+        {
     ?> 
-    </table>
+    <tr>
+        <td><?php echo "Dispositivo: exemploDispositivo"; ?></td>
+        <td><?php echo "Problema: exemploProblema";?></td>
+        <!-- <td><?php echo "Dispositivo: " . $problema['Nome']; ?></td>
+        <td><?php echo "Problema: " . $problema['Problema'];?></td> -->
+    </tr>
+    <?php
+        }
+    ?>
+    
+
+    
 </body>
 </html>
