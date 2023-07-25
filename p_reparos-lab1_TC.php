@@ -12,7 +12,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/p_reparos-lab1-D_TC.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar_TC.css">
+    <title>Reparos</title>
 </head>
 <body>
 <table>
