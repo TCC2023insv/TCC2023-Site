@@ -67,13 +67,13 @@ body{
     background-color: #A79CAC;
     border-radius: 6px;
     font-size: 25px;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 5px; 
     margin-top: 20px;
 }
 
 .CheckProb{
     height: 20px;
-    width: 80px;
+    width: 35px;
 }
 
 .Select{
@@ -86,22 +86,26 @@ body{
     color:#2E355F;
     letter-spacing: 5px;
 }
+.Sec-prob{
+    display: flex;
+    justify-content: center;
+    }
 
 .Txt-serialN{
     border-radius: 10px;
     width: 175px;
     height:35px;
-    background-color: #A79CAC;
+    background-color: #FFEEDD;
     font-size: 20px;
     font-family: 'Roboto Mono', monospace;
-    color:#FFEEDD;
+    color:#2E355F;
     letter-spacing: 5px;
-    margin-left: 115px;
-    border: none;
+    margin-left: 10px;
+    border-color: #2E355F;
 }
 /* Cor do placeholder */
 input::placeholder {
-    color: #FFEEDD;
+    color:#2E355F;
   }
 
 #Caixa-Texto-1{
