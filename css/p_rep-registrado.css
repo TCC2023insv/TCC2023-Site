@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style: none;
+    
+}
+
+body{
+    background-color: #FFEEDD;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+#Caixa{
+    background-color: #A79CAC;
+
+    width: 1152px;
+    height: auto;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    margin: 25px auto;   
+    padding: 20px 0 20px 0;
+}
+    
+#Caixa-direita{
+    margin-top: 25px;
+    float: right;
+    margin-right: 67px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#Sele-Lab{
+    background-color: #FFEEDD;
+    border-radius: 12px;
+    width: 290px;
+    height: 110px;
+    padding: 20px 0 0 0 ;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#Titulo-E{
+    background-color: #2E355F;
+    color: #FFEEDD;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px 0 5px 0;
+    width: 240px;
+}
+
+#Lab{
+    background-color: #FFEEDD;
+    color: #2E355F;
+    border-color: #2E355F;
+    border-radius: 8px;
+    width: 240px;
+    height:40px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin: 20px;
+
+}

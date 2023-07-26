@@ -32,20 +32,23 @@
             </ul>
         </nav>
 
-        <div id="Caixa-esquerda">
-            <div id="Sel-Labs">
-                <label id="Titulo-E">Laboratório</label><br>
-                <select name="sele-lab" id="Lab">
-                        <option value="Lab 1">Selecione</option>
-                        <option value="Lab 1">Lab 1</option>
-                        <option value="Lab 2">Lab 2</option>
-                        <option value="Lab 3">Lab 3</option> 
-                        <option value="Lab 4">Lab 4</option>
-                    </select>
-            </div>
-            <div id="Data-Resp">
-                <input id="Data" type="date" name="data">
-                <input id="Responsavel" type="text" name="responsavel" placeholder="Responsável">
+        <div id="Caixa">
+            <div id="Caixa1">
+                <div id="Caixa-direita">
+                    <div id="Sele-Lab">
+                        <div id="Titulo-E">
+                            <label>Laboratório</label>
+                        </div>
+                        <div id="Lab">
+                            <label>Lab 1</label>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div id="Caixa-esquerda">
+
+                </div>
             </div>
         </div>
         
@@ -65,11 +68,11 @@
             <td><?php echo "Responsavel: exemploResponsavel"; $i++; ?></td>
             <td><?php echo "Laboratorio: exemploLaboratorio"; $i++; ?></td>
 
-            <!-- <td><?php echo "Data: " . $reparo['Data']; ?></td>
+            <td><?php echo "Data: " . $reparo['Data']; ?></td>
             <td><?php echo "Ação: " . $reparo['Acao']; ?></td>
             <td><?php echo "Problemas Solucionados: " . $reparo['Problemas_Solucionados']; ?></td>
             <td><?php echo "Responsável: " . $reparo['Responsavel']; ?></td>
-            <td><?php echo "Laboratório: " . $reparo['Laboratorio']; ?></td> -->
+            <td><?php echo "Laboratório: " . $reparo['Laboratorio']; ?></td>
         </tr> -->
         <!-- <?php
             } 
