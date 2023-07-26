@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/p_reg-repa-M_TC.css">
+    <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
+    <title>Registrar Reparo</title>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="btncheck">
+                <img src="img/icon.png">
+            </label>
+
+        <label class="logo">LOGO</label>
+        <ul>
+            <li><a class="active" href="">Laboratórios</a></li>
+            <li><a href="../p_login_TC.html">Sair</a></li>
+        </ul>
+    </nav>
+
+    <fieldset id="Caixa">
+        <form method="post" enctype="multipart/form-data" action="php/registrarReparo.php" id="Forms">
+
+            <div id="Caixa-esquerda">
+                <div id="Sel-Labs">
+                    <label id="Titulo-E">Laboratório</label><br>
+                    <select name="sele-lab" id="Lab">
+                            <option value="Lab 1">Selecione</option>
+                            <option value="Lab 1">Lab 1</option>
+                            <option value="Lab 2">Lab 2</option>
+                            <option value="Lab 3">Lab 3</option> 
+                            <option value="Lab 4">Lab 4</option>
+                        </select>
+                </div>
+                <div id="Data-Resp">
+                    <input id="Data" type="date" name="data">
+                    <input id="Responsavel" type="text" name="responsavel" placeholder="Responsável">
+                </div>
+            </div>
+
+            <div id="Caixa-direita">
+                <div id="Problemas">
+                    <label class="Titulo">Problemas</label><br>
+                    
+                    <!-- Problems 1 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="apps">
+                        <label class="txtProb" for="apps">APPs</label>
+                    
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select> 
+                    </div>      
+
+                    <!-- Problema 2 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="fonte">
+                        <label for="fonte" class="txtProb">Fonte</label>
+                        
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                        
+                    <!-- Problema 3 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="hd">
+                        <label for="hd" class="txtProb">HD</label>
+                            
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                                <option value="sel">Selecione</option>
+                                <option value="quebrado">Quebrado</option>
+                                <option value="desatualizado">Desatualizado</option>
+                                <option value="em falta">Em falta</option>
+                                <option value="corrompido">Corrompido</option>
+                                <option value="em excesso">Em excesso</option>
+                                <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Problema 4 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="monitor">
+                        <label for="monitor" class="txtProb">Monitor</label>
+                            
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>  
+                    </div>
+                                           
+
+                    <!-- Problema 5 -->
+                    <div>   
+                        <input class="CheckProb" type="checkbox" name="mouse">
+                        <label for="mouse" class="txtProb">Mouse</label>
+                        
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                        
+
+                    <!-- Problema 6  -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="outros">
+                        <label for="outros" class="txtProb">Teclado</label>
+                        
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                            
+                    <!-- Problema 7 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="outros">
+                        <label for="outros" class="txtProb">Windows</label>
+                        
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                </div>      
+            </div>
+
+            <div id="Caixa-Texto-1">
+                <label class="Titulo">Atividade Exercida</label><br>
+                <textarea class="Atv-Exer" name="atv-exer" placeholder="Digite Aqui"></textarea>
+            </div>
+
+
+            <div id="Caixa-Texto-2">
+                <label class="Titulo">Problemas Solucionados</label>
+                <textarea class="Prob-Solu" name="prob-solu" placeholder="Digite Aqui"></textarea>
+            </div>
+
+            <div id="Fotos">
+                <label class="Titulo">Fotos</label>
+                    <label for="foto" class="Solte-Aqui">
+                        <span class="Solte-Titulo">Clique aqui</span>
+                        ou
+                        <input type="file" name="foto[]" id="foto" accept="image/*" multiple> 
+                    </label>
+            </div>
+
+            <div id="Btn">
+                <input class="Btn" type="submit" name="btnVoltar" value="Voltar">
+                <input class="Btn" type="submit" name="btnRegistrar" value="Registrar">
+            </div>
+
+        </form>
+    </fieldset>
+</body>
+
+</html>
