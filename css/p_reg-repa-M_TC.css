@@ -67,7 +67,7 @@ body{
     color:#2E355F;
     background-color: #A79CAC;
     border-radius: 6px;
-    font-size: 25px;
+    font-size: 20px;
     padding: 0 0 0 5px;
     margin-top: 20px;
     width: 150px;
@@ -88,6 +88,7 @@ body{
     font-family: 'Roboto Mono', monospace;
     color:hsl(231, 35%, 28%);
     letter-spacing: 5px;
+    float: right;
 }
 
 .Quant{
