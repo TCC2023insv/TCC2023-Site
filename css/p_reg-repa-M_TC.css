@@ -66,14 +66,15 @@ body{
     color:#2E355F;
     background-color: #A79CAC;
     border-radius: 6px;
-    font-size: 25px;
-    padding: 0 0 0 5px; 
+    font-size: 20px;
+    padding: 0 0 0 5px;
     margin-top: 20px;
+    text-align: center;
 }
 
 .CheckProb{
     height: 20px;
-    width: 35px;
+    width: 80px;
 }
 
 .Select{
@@ -85,27 +86,23 @@ body{
     font-family: 'Roboto Mono', monospace;
     color:#2E355F;
     letter-spacing: 5px;
+    float: right;
 }
-.Sec-prob{
-    display: flex;
-    justify-content: center;
-    }
 
 .Txt-serialN{
     border-radius: 10px;
     width: 175px;
     height:35px;
-    background-color: #FFEEDD;
+    background-color: #A79CAC;
     font-size: 20px;
     font-family: 'Roboto Mono', monospace;
-    color:#2E355F;
+    color:#FFEEDD;
     letter-spacing: 5px;
-    margin-left: 10px;
-    border-color: #2E355F;
+    border: none;
 }
 /* Cor do placeholder */
 input::placeholder {
-    color:#2E355F;
+    color: #FFEEDD;
   }
 
 #Caixa-Texto-1{
@@ -169,42 +166,49 @@ input::placeholder {
     margin-left: 75px;
 }
 
-input[type="file"]{
-    display: none;
-}
-
-
-label{
-    background-color: #FFEEDD;
-    color: #2E355F;
-    font-size: 50px;
-    cursor: pointer;
-    text-align: center;
-    width: 405px;
-    height: 289px;
-    margin: 30px 20px 20px 20px ;
-}
-
-.Linha{
+.Solte-Aqui{
+    position: relative;
     display: flex;
-    flex-direction: row;
-
-    width: 951px;
-    height: 376px;
-
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
     
-    margin-bottom: 30px;
-}
-
-.Fundo{
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 4px dashed #A79CAC;
+    color: #FFEEDD;
+    font-size: 20px;
     background-color: #2E355F;
-    width: 449px;
-    height: 376px;
-    margin: 20px;
-    text-align: center;
+    cursor: pointer;
 }
 
+.Solte-Aqui:hover{
+    background-color: #4C5381;
+}
+
+.Solte-Titulo{
+    margin-bottom:10px;
+}
+
+input[type=file]::file-selector-button{
+    border: none;
+    background: #FFEEDD;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #2E355F;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+input[type=file]::file-selector-button:hover {
+    background: #ddc3a9;
+  }
+
+/* BOTÕES */
 #Btn{
     float: right;
     margin-right: 80px;

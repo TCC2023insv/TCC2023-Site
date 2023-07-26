@@ -1,63 +1,67 @@
 <!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/p_reg-repa-M_TC.css">
-        <link rel="stylesheet" type="text/css" href="css/navbar_TC.css">
-        <title>Registrar Reparo</title>
-    </head>
-    <body>
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="btncheck">
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/p_reg-repa-M_TC.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar_TC.css">
+    <title>Registrar Reparo</title>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="btncheck">
                 <img src="img/icon.png">
             </label>
 
-            <label class="logo">LOGO</label>
-            <ul>
-                <li><a class="active" href="">Laboratórios</a></li>
-                <li><a href="p_login_TC.html">Sair</a></li>
-            </ul>
-        </nav>
+        <label class="logo">LOGO</label>
+        <ul>
+            <li><a class="active" href="">Laboratórios</a></li>
+            <li><a href="p_login_TC.html">Sair</a></li>
+        </ul>
+    </nav>
 
-        <fieldset id="Caixa">
-            <form method="post" action="" id="Forms">
+    <fieldset id="Caixa">
+        <form method="post" enctype="multipart/form-data" action="php/registrarReparo.php" id="Forms">
 
-                <div id="Caixa-esquerda">
-                    <div id="Sel-Labs">
-                        <label id="Titulo-E">Laboratório</label><br>
-                        <select name="sele-lab" id="Lab">
+            <div id="Caixa-esquerda">
+                <div id="Sel-Labs">
+                    <label id="Titulo-E">Laboratório</label><br>
+                    <select name="sele-lab" id="Lab">
                             <option value="Lab 1">Selecione</option>
                             <option value="Lab 1">Lab 1</option>
                             <option value="Lab 2">Lab 2</option>
                             <option value="Lab 3">Lab 3</option> 
                             <option value="Lab 4">Lab 4</option>
                         </select>
-                    </div>
-                    <div id="Data-Resp">
-                        <input id="Data" type="date" name="data">
-                        <input id="Responsavel" type="text" name="responsavel" placeholder="Responsável" requireds>
-                    </div>
                 </div>
+                <div id="Data-Resp">
+                    <input id="Data" type="date" name="data">
+                    <input id="Responsavel" type="text" name="responsavel" placeholder="Responsável">
+                </div>
+            </div>
 
-                <div id="Caixa-direita">
-                    <div id="Problemas">
-                        <label class="Titulo">Problemas</label><br>
+            <div id="Caixa-direita">
+                <div id="Problemas">
+                    <label class="Titulo">Problemas</label><br>
                         <input class="CheckProb" type="checkbox" name="apps">
                             <label for="apps" class="txtProb">APPs</label>
-                               <select class="Select">
-                                    <option value="sel">Selecione</option>
-                                    <option value="quebrado">Quebrado</option>
-                                    <option value="desatualizado">Desatualizado</option>
-                                    <option value="em falta">Em falta</option>
-                                    <option value="corrompido">Corrompido</option>
-                                    <option value="em excesso">Em excesso</option>
-                                    <option value="outros">Outros</option>
-                               </select>
-                               <input  class="Txt-serialN" type="text" placeholder="Quantidade"><br>                                    
+                                <input  class="Txt-serialN" type="text" placeholder="Quantidade">
+                                    <select class="Select">
+                                            <option value="sel">Selecione</option>
+                                            <option value="quebrado">Quebrado</option>
+                                            <option value="desatualizado">Desatualizado</option>
+                                            <option value="em falta">Em falta</option>
+                                            <option value="corrompido">Corrompido</option>
+                                            <option value="em excesso">Em excesso</option>
+                                            <option value="outros">Outros</option>
+                                    </select><br> 
+                                                                
                         <input class="CheckProb" type="checkbox" name="fonte">
                             <label for="fonte" class="txtProb">Fonte</label>
+                            <input  class="Txt-serialN" type="text" placeholder="Quantidade">
                             <select class="Select">
                                 <option value="sel">Selecione</option>
                                 <option value="quebrado">Quebrado</option>
@@ -66,22 +70,25 @@
                                 <option value="corrompido">Corrompido</option>
                                 <option value="em excesso">Em excesso</option>
                                 <option value="outros">Outros</option>
-                           </select>
-                           <input  class="Txt-serialN" type="text" placeholder="Quantidade"><br>
+                        </select><br>
+
+                        
                         <input class="CheckProb" type="checkbox" name="hd">
                             <label for="hd" class="txtProb">HD</label>
-                            <select class="Select">
-                                <option value="sel">Selecione</option>
-                                <option value="quebrado">Quebrado</option>
-                                <option value="desatualizado">Desatualizado</option>
-                                <option value="em falta">Em falta</option>
-                                <option value="corrompido">Corrompido</option>
-                                <option value="em excesso">Em excesso</option>
-                                <option value="outros">Outros</option>
-                           </select>
-                           <input  class="Txt-serialN" type="text" placeholder="Quantidade"><br>
+                                <input  class="Txt-serialN" type="text" placeholder="Quantidade">
+                                    <select class="Select">
+                                            <option value="sel">Selecione</option>
+                                            <option value="quebrado">Quebrado</option>
+                                            <option value="desatualizado">Desatualizado</option>
+                                            <option value="em falta">Em falta</option>
+                                            <option value="corrompido">Corrompido</option>
+                                            <option value="em excesso">Em excesso</option>
+                                            <option value="outros">Outros</option>
+                                    </select><br>
+                        
                         <input class="CheckProb" type="checkbox" name="monitor">
                             <label for="monitor" class="txtProb">Monitor</label>
+                            <input  class="Txt-serialN" type="text" placeholder="Quantidade">
                             <select class="Select">
                                 <option value="sel">Selecione</option>
                                 <option value="quebrado">Quebrado</option>
@@ -90,10 +97,11 @@
                                 <option value="corrompido">Corrompido</option>
                                 <option value="em excesso">Em excesso</option>
                                 <option value="outros">Outros</option>
-                           </select>
-                           <input  class="Txt-serialN" type="text" placeholder="Quantidade"><br>
+                        </select><br>                     
+
                         <input class="CheckProb" type="checkbox" name="mouse">
                             <label for="mouse" class="txtProb">Mouse</label>
+                            <input  class="Txt-serialN" type="text" placeholder="Quantidade">
                             <select class="Select">
                                 <option value="sel">Selecione</option>
                                 <option value="quebrado">Quebrado</option>
@@ -102,10 +110,11 @@
                                 <option value="corrompido">Corrompido</option>
                                 <option value="em excesso">Em excesso</option>
                                 <option value="outros">Outros</option>
-                           </select>
-                           <input  class="Txt-serialN" type="text" placeholder="Quantidade"><br>
+                        </select><br>
+
                             <input class="CheckProb" type="checkbox" name="outros">
                                 <label for="outros" class="txtProb">Teclado</label>
+                                <input  class="Txt-serialN" type="text" placeholder="Quantidade">
                                 <select class="Select">
                                     <option value="sel">Selecione</option>
                                     <option value="quebrado">Quebrado</option>
@@ -114,11 +123,11 @@
                                     <option value="corrompido">Corrompido</option>
                                     <option value="em excesso">Em excesso</option>
                                     <option value="outros">Outros</option>
-                               </select>
-                               <input  class="Txt-serialN" type="text" placeholder="Quantidade"><br>
+                                </select><br>
+
                             <input class="CheckProb" type="checkbox" name="outros">
                                 <label for="outros" class="txtProb">Windows</label>
-                            <div class="Sec-prob">
+                                <input  class="Txt-serialN" type="text" placeholder="Quantidade">
                                 <select class="Select">
                                     <option value="sel">Selecione</option>
                                     <option value="quebrado">Quebrado</option>
@@ -127,54 +136,38 @@
                                     <option value="corrompido">Corrompido</option>
                                     <option value="em excesso">Em excesso</option>
                                     <option value="outros">Outros</option>
-                               </select>
-                            </div>
-                               <input  class="Txt-serialN" type="text" placeholder="Quantidade"><br>
-                        </div>
-                </div>
-                    
-                <div id="Caixa-Texto-1"> 
-                    <label class="Titulo">Atividade Exercida</label><br>
-                    <textarea class="Atv-Exer" name="atv-exer" placeholder="Digite Aqui"></textarea>
-                </div>
-    
-                
-                <div id="Caixa-Texto-2">
-                    <label class="Titulo">Problemas Solucionados</label>
-                    <textarea class="Prob-Solu" name="prob-solu" placeholder="Digite Aqui"></textarea>
-                </div>
-        
-                <div id="Fotos">
-                    <label class="Titulo">Fotos</label>
-                    <div class="Linha">
-                        <div class="Fundo">
-                            <label for="foto"><img src="img/icon_add_foto.png "></label>
-                            <input type="file" name="foto" id="foto">
-                        </div>
-                        <div class="Fundo">
-                            <label for="foto">+</label>
-                            <input type="file" name="foto" id="foto">
-                        </div>
-                    </div>
-                    <div class="Linha">
-                        <div class="Fundo">
-                            <label for="foto">+</label>
-                            <input type="file" name="foto" id="foto">
-                        </div>
-                        <div class="Fundo">
-                            <label for="foto"><img src="img/icon_add_foto.png "> </label>
-                            <input type="file" name="foto" id="foto">
-                        </div>
-                    </div>
+                                </select>
+                            <br>
+                    </div> 
+            </div>
 
-                </div>
-                
-                <div id="Btn">
-                    <input class="Btn" type="submit" value="Voltar">
-                    <input class="Btn" type="submit" value="Registrar">
-                </div>
-                
-            </form>
-        </fieldset>
-    </body>
+            <div id="Caixa-Texto-1">
+                <label class="Titulo">Atividade Exercida</label><br>
+                <textarea class="Atv-Exer" name="atv-exer" placeholder="Digite Aqui"></textarea>
+            </div>
+
+
+            <div id="Caixa-Texto-2">
+                <label class="Titulo">Problemas Solucionados</label>
+                <textarea class="Prob-Solu" name="prob-solu" placeholder="Digite Aqui"></textarea>
+            </div>
+
+            <div id="Fotos">
+                <label class="Titulo">Fotos</label>
+                    <label for="foto" class="Solte-Aqui">
+                        <span class="Solte-Titulo">Clique aqui</span>
+                        ou
+                        <input type="file" name="foto[]" id="foto" accept="image/*" multiple> 
+                    </label>
+            </div>
+
+            <div id="Btn">
+                <input class="Btn" type="submit" name="btnVoltar" value="Voltar">
+                <input class="Btn" type="submit" name="btnRegistrar" value="Registrar">
+            </div>
+
+        </form>
+    </fieldset>
+</body>
+
 </html>
