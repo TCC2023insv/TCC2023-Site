@@ -66,9 +66,10 @@ body{
     color:#2E355F;
     background-color: #A79CAC;
     border-radius: 6px;
-    font-size: 25px;
+    font-size: 20px;
     padding: 0 0 0 5px;
     margin-top: 20px;
+    text-align: center;
 }
 
 .CheckProb{
@@ -85,6 +86,7 @@ body{
     font-family: 'Roboto Mono', monospace;
     color:#2E355F;
     letter-spacing: 5px;
+    float: right;
 }
 
 .Txt-serialN{
