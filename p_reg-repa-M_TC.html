@@ -46,21 +46,15 @@
             <div id="Caixa-direita">
                 <div id="Problemas">
                     <label class="Titulo">Problemas</label><br>
-                    <input class="CheckProb" type="checkbox" name="apps">
-                    <label for="apps" class="txtProb">APPs</label>
-                    <select class="Select" name="prob-apps">
-                                    <option value="sel">Selecione</option>
-                                    <option value="quebrado">Quebrado</option>
-                                    <option value="desatualizado">Desatualizado</option>
-                                    <option value="em falta">Em falta</option>
-                                    <option value="corrompido">Corrompido</option>
-                                    <option value="em excesso">Em excesso</option>
-                                    <option value="outros">Outros</option>
-                               </select><br>
-                    <input class="Txt-serialN" type="text" placeholder="Serial Nº"><br>
-                    <input class="CheckProb" type="checkbox" name="fonte">
-                    <label for="fonte" class="txtProb">Fonte</label>
-                    <select class="Select" name="prob-fonte">
+                    
+                    <!-- Problems 1 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="apps">
+                        <label class="txtProb" for="apps">APPs</label>
+                    
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
                                 <option value="sel">Selecione</option>
                                 <option value="quebrado">Quebrado</option>
                                 <option value="desatualizado">Desatualizado</option>
@@ -68,11 +62,35 @@
                                 <option value="corrompido">Corrompido</option>
                                 <option value="em excesso">Em excesso</option>
                                 <option value="outros">Outros</option>
-                           </select><br>
-                    <input class="Txt-serialN" type="text" placeholder="Serial Nº"><br>
-                    <input class="CheckProb" type="checkbox" name="hd">
-                    <label for="hd" class="txtProb">HD</label>
-                    <select class="Select" name="prob-hd">
+                        </select> 
+                    </div>      
+
+                    <!-- Problema 2 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="fonte">
+                        <label for="fonte" class="txtProb">Fonte</label>
+                        
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                        
+                    <!-- Problema 3 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="hd">
+                        <label for="hd" class="txtProb">HD</label>
+                            
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
                                 <option value="sel">Selecione</option>
                                 <option value="quebrado">Quebrado</option>
                                 <option value="desatualizado">Desatualizado</option>
@@ -80,57 +98,83 @@
                                 <option value="corrompido">Corrompido</option>
                                 <option value="em excesso">Em excesso</option>
                                 <option value="outros">Outros</option>
-                           </select><br>
-                    <input class="Txt-serialN" type="text" placeholder="Serial Nº"><br>
-                    <input class="CheckProb" type="checkbox" name="monitor">
-                    <label for="monitor" class="txtProb">Monitor</label>
-                    <select class="Select" name="prob-monitor">
-                                <option value="sel">Selecione</option>
-                                <option value="quebrado">Quebrado</option>
-                                <option value="desatualizado">Desatualizado</option>
-                                <option value="em falta">Em falta</option>
-                                <option value="corrompido">Corrompido</option>
-                                <option value="em excesso">Em excesso</option>
-                                <option value="outros">Outros</option>
-                           </select><br>
-                    <input class="Txt-serialN" type="text" placeholder="Serial Nº"><br>
-                    <input class="CheckProb" type="checkbox" name="mouse">
-                    <label for="mouse" class="txtProb">Mouse</label>
-                    <select class="Select" name="prob-mouse">
-                                <option value="sel">Selecione</option>
-                                <option value="quebrado">Quebrado</option>
-                                <option value="desatualizado">Desatualizado</option>
-                                <option value="em falta">Em falta</option>
-                                <option value="corrompido">Corrompido</option>
-                                <option value="em excesso">Em excesso</option>
-                                <option value="outros">Outros</option>
-                           </select><br>
-                    <input class="Txt-serialN" type="text" placeholder="Serial Nº"><br>
-                    <input class="CheckProb" type="checkbox" name="teclado">
-                    <label for="teclado" class="txtProb">Teclado</label>
-                    <select class="Select" name="prob-teclado">
-                                    <option value="sel">Selecione</option>
-                                    <option value="quebrado">Quebrado</option>
-                                    <option value="desatualizado">Desatualizado</option>
-                                    <option value="em falta">Em falta</option>
-                                    <option value="corrompido">Corrompido</option>
-                                    <option value="em excesso">Em excesso</option>
-                                    <option value="outros">Outros</option>
-                               </select><br>
-                    <input class="Txt-serialN" type="text" placeholder="Serial Nº"><br>
-                    <input class="CheckProb" type="checkbox" name="Windows">
-                    <label for="Windows" class="txtProb">Windows</label>
-                    <select class="Select" name="prob-windows">
-                                    <option value="sel">Selecione</option>
-                                    <option value="quebrado">Quebrado</option>
-                                    <option value="desatualizado">Desatualizado</option>
-                                    <option value="em falta">Em falta</option>
-                                    <option value="corrompido">Corrompido</option>
-                                    <option value="em excesso">Em excesso</option>
-                                    <option value="outros">Outros</option>
-                               </select><br>
-                    <input class="Txt-serialN" type="text" placeholder="Serial Nº"><br>
-                </div>
+                        </select>
+                    </div>
+                    
+                    <!-- Problema 4 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="monitor">
+                        <label for="monitor" class="txtProb">Monitor</label>
+                            
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>  
+                    </div>
+                                           
+
+                    <!-- Problema 5 -->
+                    <div>   
+                        <input class="CheckProb" type="checkbox" name="mouse">
+                        <label for="mouse" class="txtProb">Mouse</label>
+                        
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                        
+
+                    <!-- Problema 6  -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="outros">
+                        <label for="outros" class="txtProb">Teclado</label>
+                        
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                            
+                    <!-- Problema 7 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="outros">
+                        <label for="outros" class="txtProb">Windows</label>
+                        
+                        <input  class="Quant" type="text" placeholder="Quant">
+                        
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                </div>      
             </div>
 
             <div id="Caixa-Texto-1">
@@ -146,27 +190,11 @@
 
             <div id="Fotos">
                 <label class="Titulo">Fotos</label>
-                <div class="Linha">
-                    <div class="Fundo">
-                        <label for="foto"><img src="img/icon_add_foto.png "></label>
-                        <input type="file" name="foto[]" id="foto" accept="image/jpeg,image/jpg,image/png,image/img" multiple>
-                    </div>
-                    <div class="Fundo">
-                        <label for="foto">+</label>
-                        <input type="file" name="foto[]" id="foto" accept="image/jpeg,image/jpg,image/png,image/img" multiple>
-                    </div>
-                </div>
-                <div class="Linha">
-                    <div class="Fundo">
-                        <label for="foto">+</label>
-                        <input type="file" name="foto[]" id="foto" accept="image/jpeg,image/jpg,image/png,image/img" multiple>
-                    </div>
-                    <div class="Fundo">
-                        <label for="foto"><img src="img/icon_add_foto.png "> </label>
-                        <input type="file" name="foto[]" id="foto" accept="image/jpeg,image/jpg,image/png,image/img" multiple>
-                    </div>
-                </div>
-
+                    <label for="foto" class="Solte-Aqui">
+                        <span class="Solte-Titulo">Clique aqui</span>
+                        ou
+                        <input type="file" name="foto[]" id="foto" accept="image/*" multiple> 
+                    </label>
             </div>
 
             <div id="Btn">
