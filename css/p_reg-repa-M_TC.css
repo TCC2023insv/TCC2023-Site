@@ -5,6 +5,7 @@
     padding: 0;
     text-decoration: none; 
     list-style: none;
+    
 }
 
 body{
@@ -70,7 +71,7 @@ body{
     font-size: 20px;
     padding: 0 0 0 5px;
     margin-top: 20px;
-    width: 150px;
+    width: 120px;
     display: inline-block;
 }
 
@@ -86,27 +87,29 @@ body{
     background-color: #FFEEDD ;
     font-size: 20px;
     font-family: 'Roboto Mono', monospace;
-    color:hsl(231, 35%, 28%);
+    color: #2E355F;
     letter-spacing: 5px;
-    float: right;
+    margin-top: -10px;
+    margin-left: 10px;
 }
 
 .Quant{
     border-radius: 8px;
     width: 100px;
-    height:35px;
-    background-color: #A79CAC;
+    height:32px;
+    background-color: #FFEEDD;
     font-size: 20px;
     font-family: 'Roboto Mono', monospace;
-    color:#FFEEDD;
+    color: #2E355F;
     letter-spacing: 5px;
-    border: none;
     padding: 3px;
     text-align: center;
+    border-width: 1px;
+    margin-left: 10px;
 }
 /* Cor do placeholder */
 input::placeholder {
-    color: #FFEEDD;
+    color: #2E355F;
   }
 
 #Caixa-Texto-1{
@@ -239,7 +242,7 @@ input[type=file]::file-selector-button:hover {
 
 
 
-/* Parte da esquerda */
+/* Parte da DIREITA */
 #Caixa-esquerda{
     margin-top: 50px;
     float: right;
@@ -300,6 +303,7 @@ input[type=file]::file-selector-button:hover {
     margin-top: 15px;
     padding: 5px 10px 5px 10px;
     width: 230px;
+    border: none;
 }
 
 #Responsavel{
@@ -313,4 +317,5 @@ input[type=file]::file-selector-button:hover {
     font-weight: bold;
     margin-top: 15px;
     padding: 5px 10px 5px 10px;
+    border-width: 1px;
 }

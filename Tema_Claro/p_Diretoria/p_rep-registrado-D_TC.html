@@ -1,0 +1,81 @@
+<!--<?php
+//    require("php/conexao/conexaoBD.php");
+
+//    $conexao = ConectarBanco();
+//    $dataReparo = $_GET['data'];
+
+//    $sql_query = $conexao->query(SELECT `Data`, `Acao`, `Problemas_Solucionados`, `Responsavel`, 
+//    `Login_Monitor`, `Laboratorio` FROM `reparo` WHERE Data = '$dataReparo') or die ($conexao->error);
+?> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../css/p_rep-registrado.css">
+        <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
+        <title>Reparo</title>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="btncheck">
+                <img src="img/icon.png">
+            </label>
+
+            <label class="logo">LOGO</label>
+            <ul>
+                <li><a href="p_cadastros-D_TC.html">Cadastros</a></li>
+                <li><a class="active" href="">Laboratórios</a></li>
+                <li><a href="../p_login_TC.html">Sair</a></li>
+            </ul>
+        </nav>
+
+        <div id="Caixa">
+            <div id="Caixa1">
+                <div id="Caixa-direita">
+                    <div id="Sele-Lab">
+                        <div id="Titulo-E">
+                            <label>Laboratório</label>
+                        </div>
+                        <div id="Lab">
+                            <label>Lab 1</label>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div id="Caixa-esquerda">
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- aqui começa o loop para mostrar os logins e nomes -->
+        <!-- <?php
+            $i = 0;
+            while ($i < 10)
+            //while ($reparo = $sql_query->fetch_assoc())
+            {
+        ?> -->
+
+        <!-- aqui é a tabela com os nomes escritos (não excluam os ultimos echo) para estilizar -->
+        <!-- <tr>
+            <td><?php echo "Data : exemploData"; ?></td>
+            <td><?php echo "Atividade exercida: exemploAtv"; $i++; ?></td>
+            <td><?php echo "Problemas_Sol : exemploSolucoes"; ?></td>
+            <td><?php echo "Responsavel: exemploResponsavel"; $i++; ?></td>
+            <td><?php echo "Laboratorio: exemploLaboratorio"; $i++; ?></td>
+
+            <td><?php echo "Data: " . $reparo['Data']; ?></td>
+            <td><?php echo "Ação: " . $reparo['Acao']; ?></td>
+            <td><?php echo "Problemas Solucionados: " . $reparo['Problemas_Solucionados']; ?></td>
+            <td><?php echo "Responsável: " . $reparo['Responsavel']; ?></td>
+            <td><?php echo "Laboratório: " . $reparo['Laboratorio']; ?></td>
+        </tr> -->
+        <!-- <?php
+            } 
+        ?>  -->
+    </body>
+</html>
