@@ -28,7 +28,7 @@
                         $novoMonitor->EntrarComoMonitor($login, $senha);
                         break;
                     default:
-                    header("Location: ../p_login_TC.html");
+                    header("Location: ../tema_claro/p_login_TC.html");
                         break;
                 }
         }

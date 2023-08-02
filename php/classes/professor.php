@@ -19,10 +19,10 @@
 
                 $_SESSION['login'] = $professor;
 
-                return header("Location: ../p_inicial-P_TC.php");
+                return header("Location: ../tema_claro/p_Professor/p_inicial-P_TC.php");
             }
             $conexao->close();
-            return header("Location: ../p_login_TC.html");
+            return header("Location: ../tema_claro/p_login_TC.html");
         }
     }
 ?>

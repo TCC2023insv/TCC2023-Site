@@ -1,11 +1,11 @@
-<!-- <?php
-    // require("php/conexao/conexaoBD.php");
+<?php
+    require("../../php/conexao/conexaoBD.php");
 
-    // $conexao = ConectarBanco();
+    $conexao = ConectarBanco();
 
-    // $sql_query = $conexao->query("SELECT `Data`, `Responsavel`, `Laboratorio` FROM `reparo` WHERE
-    //  Laboratorio = 'Lab 1'") or die ($conexao->error);
-    ?> -->
+    $sql_query = $conexao->query("SELECT `Data`, `Responsavel`, `Laboratorio` FROM `reparo` WHERE
+     Laboratorio = 'Lab 1'") or die ($conexao->error);
+    ?>
 
     <!DOCTYPE html>
     <html lang="pt-BR">
@@ -33,15 +33,18 @@
     
             <h1>Lab 1</h1>
             <?php
-                $i = 0;
-                while ($i < 10)
-                // while ($reparo = $sql_query->fetch_assoc())
+                //$i = 0;
+                //while ($i < 10)
+                 while ($reparo = $sql_query->fetch_assoc())
                 {
             ?>
     
             <div>
-                <div class="Itens"><?php echo "<a href='p_rep-registrado_TC.php'>00/00/0000</a>"; ?></div>
-                <div class="Itens"><?php echo "Responsável"; $i++; ?></div>
+            <div class="Itens"><?php echo "Data: <a href='p_rep-registrado_TC.php?data=" . $reparo['data']. "'"; ?></div>
+                <div class="Itens"><?php echo "Responsável: " . $reparo['Responsavel']; ?></div>
+                <div class="Itens"><?php echo "Laboratório: " . $reparo['Laboratorio']; ?></div></div>
+                <!-- <div class="Itens"><?php echo "<a href='p_rep-registrado_TC.php'>00/00/0000</a>"; ?></div>
+                <div class="Itens"><?php echo "Responsável"; $i++; ?></div> -->
             </div>
 
              <!-- <?php echo "<td>Data: <a href='p_rep-registrado_TC.php?data=" . $reparo['data']. "'>exemploData</a></td>"; ?>

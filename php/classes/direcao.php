@@ -19,10 +19,10 @@
 
                 $_SESSION['login'] = $direcao;
 
-                echo header("Location: ../p_inicial-D_TC.html");
+                echo header("Location: ../tema_claro/p_Diretoria/p_inicial-D_TC.html");
             }
             $conexao->close();
-            echo header("Location: ../p_login_TC.html");
+            echo header("Location: ../tema_claro/p_login_TC.html");
         }
     }
 ?>

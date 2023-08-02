@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="../css/p_login.css">
-        <!-- Configuração de media query-->
-        <script src="php/conexao/conexaoBD.php"></script>
-        <script src="php/classes/usuarios.php"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Página de Login</title>
-    </head>
 
-    <body>
-        <fieldset class="caixa">
-            <h1>Login</h1>
-            <form method="post" action="php/Entrar.php" class="Forms">
-                <label>Entrar como:</label>
-                <br>
-                <select name="identificacao" class="Select">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/p_login.css">
+    <!-- Configuração de media query-->
+    <script src="php/conexao/conexaoBD.php"></script>
+    <script src="php/classes/usuarios.php"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+</head>
+
+<body>
+    <fieldset class="caixa">
+        <h1>Login</h1>
+        <form method="post" action="../php/Entrar.php" class="Forms">
+            <label>Entrar como:</label>
+            <br>
+            <select name="identificacao" class="Select">
                             <option value="Selec">Selecione</option>
                             <option value="Dir">Diretoria</option>
                             <option value="Prof">Professor</option> 
                             <option value="Mon">Monitor</option>
                         </select>
-                <br>
-                <label>Login:</label>
-                <input class="Txt" type="text" name="login" placeholder="Digite aqui" required>
-                <br><br>
-                <label>Senha:</label>
-                <input class="Txt" type="password" name="senha" placeholder="Digite aqui" required>
-                <br><br>
-                <div class="Botao">
-                    <input id="Btn" type="submit" name="entrar" value="Entrar">
-                </div>
-            </form>
-        </fieldset>
-    </body>
+            <br>
+            <label>Login:</label>
+            <input class="Txt" type="text" name="login" placeholder="Digite aqui" required>
+            <br><br>
+            <label>Senha:</label>
+            <input class="Txt" type="password" name="senha" placeholder="Digite aqui" required>
+            <br><br>
+            <div class="Botao">
+                <input id="Btn" type="submit" name="entrar" value="Entrar">
+            </div>
+        </form>
+    </fieldset>
+</body>
+
 </html>
