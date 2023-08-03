@@ -24,7 +24,7 @@
     </nav>
 
     <fieldset id="Caixa">
-        <form method="post" enctype="multipart/form-data" action="php/registrarReparo.php" id="Forms">
+        <form method="post" enctype="multipart/form-data" action="../../php/registrarReparo.php" id="Forms">
 
             <div id="Caixa-esquerda">
                 <div id="Sel-Labs">
@@ -46,32 +46,14 @@
             <div id="Caixa-direita">
                 <div id="Problemas">
                     <label class="Titulo">Problemas</label><br>
-                    
+
                     <!-- Problems 1 -->
                     <div>
                         <input class="CheckProb" type="checkbox" name="apps">
                         <label class="txtProb" for="apps">APPs</label>
-                    
-                        <input  class="Quant" type="text" placeholder="Quant">
-                        
-                        <select class="Select">
-                            <option value="sel">Selecione</option>
-                            <option value="quebrado">Quebrado</option>
-                            <option value="desatualizado">Desatualizado</option>
-                            <option value="em falta">Em falta</option>
-                            <option value="corrompido">Corrompido</option>
-                            <option value="em excesso">Em excesso</option>
-                            <option value="outros">Outros</option>
-                        </select> 
-                    </div>      
 
-                    <!-- Problema 2 -->
-                    <div>
-                        <input class="CheckProb" type="checkbox" name="fonte">
-                        <label for="fonte" class="txtProb">Fonte</label>
-                        
-                        <input  class="Quant" type="text" placeholder="Quant">
-                        
+                        <input class="Quant" type="text" placeholder="Quant" name="quantApps">
+
                         <select class="Select">
                             <option value="sel">Selecione</option>
                             <option value="quebrado">Quebrado</option>
@@ -82,14 +64,32 @@
                             <option value="outros">Outros</option>
                         </select>
                     </div>
-                        
+
+                    <!-- Problema 2 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="fonte">
+                        <label for="fonte" class="txtProb">Fonte</label>
+
+                        <input class="Quant" type="text" placeholder="Quant" name="quantFonte">
+
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
                     <!-- Problema 3 -->
                     <div>
                         <input class="CheckProb" type="checkbox" name="hd">
                         <label for="hd" class="txtProb">HD</label>
-                            
-                        <input  class="Quant" type="text" placeholder="Quant">
-                        
+
+                        <input class="Quant" type="text" placeholder="Quant" name="quantHD">
+
                         <select class="Select">
                                 <option value="sel">Selecione</option>
                                 <option value="quebrado">Quebrado</option>
@@ -100,33 +100,14 @@
                                 <option value="outros">Outros</option>
                         </select>
                     </div>
-                    
+
                     <!-- Problema 4 -->
                     <div>
                         <input class="CheckProb" type="checkbox" name="monitor">
                         <label for="monitor" class="txtProb">Monitor</label>
-                            
-                        <input  class="Quant" type="text" placeholder="Quant">
-                        
-                        <select class="Select">
-                            <option value="sel">Selecione</option>
-                            <option value="quebrado">Quebrado</option>
-                            <option value="desatualizado">Desatualizado</option>
-                            <option value="em falta">Em falta</option>
-                            <option value="corrompido">Corrompido</option>
-                            <option value="em excesso">Em excesso</option>
-                            <option value="outros">Outros</option>
-                        </select>  
-                    </div>
-                                           
 
-                    <!-- Problema 5 -->
-                    <div>   
-                        <input class="CheckProb" type="checkbox" name="mouse">
-                        <label for="mouse" class="txtProb">Mouse</label>
-                        
-                        <input  class="Quant" type="text" placeholder="Quant">
-                        
+                        <input class="Quant" type="text" placeholder="Quant" name="quantMonitor">
+
                         <select class="Select">
                             <option value="sel">Selecione</option>
                             <option value="quebrado">Quebrado</option>
@@ -137,15 +118,34 @@
                             <option value="outros">Outros</option>
                         </select>
                     </div>
-                        
+
+
+                    <!-- Problema 5 -->
+                    <div>
+                        <input class="CheckProb" type="checkbox" name="mouse">
+                        <label for="mouse" class="txtProb">Mouse</label>
+
+                        <input class="Quant" type="text" placeholder="Quant" name="quantMouse">
+
+                        <select class="Select">
+                            <option value="sel">Selecione</option>
+                            <option value="quebrado">Quebrado</option>
+                            <option value="desatualizado">Desatualizado</option>
+                            <option value="em falta">Em falta</option>
+                            <option value="corrompido">Corrompido</option>
+                            <option value="em excesso">Em excesso</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
 
                     <!-- Problema 6  -->
                     <div>
                         <input class="CheckProb" type="checkbox" name="outros">
                         <label for="outros" class="txtProb">Teclado</label>
-                        
-                        <input  class="Quant" type="text" placeholder="Quant">
-                        
+
+                        <input class="Quant" type="text" placeholder="Quant" name="quantTeclado">
+
                         <select class="Select">
                             <option value="sel">Selecione</option>
                             <option value="quebrado">Quebrado</option>
@@ -156,14 +156,14 @@
                             <option value="outros">Outros</option>
                         </select>
                     </div>
-                            
+
                     <!-- Problema 7 -->
                     <div>
                         <input class="CheckProb" type="checkbox" name="outros">
                         <label for="outros" class="txtProb">Windows</label>
-                        
-                        <input  class="Quant" type="text" placeholder="Quant">
-                        
+
+                        <input class="Quant" type="text" placeholder="Quant" name="quantWindows">
+
                         <select class="Select">
                             <option value="sel">Selecione</option>
                             <option value="quebrado">Quebrado</option>
@@ -174,7 +174,7 @@
                             <option value="outros">Outros</option>
                         </select>
                     </div>
-                </div>      
+                </div>
             </div>
 
             <div id="Caixa-Texto-1">
@@ -190,7 +190,7 @@
 
             <div id="Fotos">
                 <label class="Titulo">Fotos</label>
-                    <label for="foto" class="Solte-Aqui">
+                <label for="foto" class="Solte-Aqui">
                         <span class="Solte-Titulo">Clique aqui</span>
                         ou
                         <input type="file" name="foto[]" id="foto" accept="image/*" multiple> 

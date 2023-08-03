@@ -19,7 +19,7 @@
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="btncheck">
-                <img src="img/icon.png">
+                <img src="../../img/icon.png">
             </label>
 
             <label class="logo">LOGO</label>

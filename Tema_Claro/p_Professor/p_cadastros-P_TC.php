@@ -1,10 +1,10 @@
-<!-- //<?php
-//    require("php/conexao/conexaoBD.php");
+<?php
+   require("../../php/conexao/conexaoBD.php");
 
-//    $conexao = ConectarBanco();
+   $conexao = ConectarBanco();
 
-//    $sql_query = $conexao->query("SELECT `Login`, `Nome` FROM `monitor`") or die ($conexao->error);
-//?> -->
+   $sql_query = $conexao->query("SELECT `Login`, `Nome` FROM `monitor`") or die ($conexao->error);
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -33,20 +33,14 @@
         <div id="Cadastrar"><a href="p_cad-mon-P_TC.html" class="Cad">Cadastrar Monitor</a></div> 
                   
         <?php
-            $i = 0;
-            while ($i < 10)
-            // while ($reparo = $sql_query->fetch_assoc())
+            while ($monitor = $sql_query->fetch_assoc())
             {
         ?>
 
         <div id="Cadastros">
-            <div class="Itens">exemploNome</div>
-            <div class="Itens">exemploLogin</div>
+            <div class="Itens"><?php echo $monitor['Nome']; ?></div>
+            <div class="Itens"><?php echo $monitor['Login']; ?></div>
         </div>
-
-        <!-- aqui é a tabela com os nomes escritos (não excluam os dois ultimos echo) para estilizar -->
-        <!-- <td><?php echo "Nome: " . $professor['Nome']; ?></td>
-        <td><?php echo "Login: " . $professor['Login']; ?></td> -->
 
         <?php
             } 

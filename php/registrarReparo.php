@@ -24,17 +24,33 @@
     //     }
     // }
 
+    function RegistrarProblema($problemaSelecionado)
+    {
+        if ($problemaSelecionado == "sel")
+        {
+            return "";
+        }
+        return $problemaSelecionado;
+    }
+
     if (isset($_POST['btnRegistrar']))
     {
         $laboratorio = $_POST['sele-lab'];
         $data = $_POST['data'];
-        $problemaApps = $_POST['prob-apps'];
-        $problemaFonte = $_POST['prob-fonte'];
-        $problemaHD = $_POST['prob-hd'];
-        $problemaMonitor = $_POST['prob-monitor'];
-        $problemaMouse = $_POST['prob-mouse'];
-        $problemaTeclado = $_POST['prob-teclado'];
-        $problemaWindows = $_POST['prob-windows'];
+        $problemaApps = RegistrarProblema($_POST['prob-apps']);
+        $quantApps = $_POST['quantApps'];
+        $problemaFonte = RegistrarProblema($_POST['prob-fonte']);
+        $quantFonte = $_POST['quantFonte'];
+        $problemaHD = RegistrarProblema($_POST['prob-hd']);
+        $quantHD = $_POST['quantHD'];
+        $problemaMonitor = RegistrarProblema($_POST['prob-monitor']);
+        $quantMonitor = $_POST['quantMonitor'];
+        $problemaMouse = RegistrarProblema($_POST['prob-mouse']);
+        $quantMouse = $_POST['quantMouse'];
+        $problemaTeclado = RegistrarProblema($_POST['prob-teclado']);
+        $quantTeclado = $_POST['quantTeclado'];
+        $problemaWindows = RegistrarProblema($_POST['prob-windows']);
+        $quantWindows = $_POST['quantWindows'];
 
         $atividadeExercida = $_POST['atv-exer'];
         $problemasSolucionados = $_POST['prob-solu'];
@@ -44,9 +60,10 @@
         responsavel, login_monitor, laboratorio) VALUES ('$data', '$atividadeExercida', 
         '$problemasSolucionados', '$responsavel','$monitor', '$laboratorio')");
 
-        $conexao->query("INSERT INTO dispositivo (nome, problema) VALUES ('Apps', '$problemaApps'), 
-        ('Fonte', '$problemaFonte'), ('HD', '$problemaHD'), ('Monitor', '$problemaMonitor'), 
-        ('Mouse', '$problemaMouse'), ('Teclado', '$problemaTeclado'), ('Windows', '$problemaWindows')");
+        $conexao->query("INSERT INTO dispositivo (nome, problema, quantidade) VALUES ('Apps', '$problemaApps', '$quantApps'),  
+        ('Fonte', '$problemaFonte', '$quantFonte'), ('HD', '$problemaHD', '$quantHD'), 
+        ('Monitor', '$problemaMonitor', '$quantMonitor'), ('Mouse', '$problemaMouse', '$quantMouse'), 
+        ('Teclado', '$problemaTeclado', '$quantTeclado'), ('Windows', '$problemaWindows', '$quantWindows')");
 
         $consultaIDS = "SELECT id FROM dispositivo ORDER BY id DESC LIMIT 7";
         $resultado = mysqli_query($conexao, $consultaIDS);
@@ -129,10 +146,10 @@
             }
         }
         $conexao->close();
-        return header("Location: ../../tcc2023-site/p_reg-repa-M_TC.html");
+        return header("Location: ../../../tcc2023-site/tema_claro/p_Monitor/p_reg-repa-M_TC.html");
     }
     elseif (isset($_POST['btnVoltar']))
     {
-        return header("Location: ../../tcc2023-site/p_inicial-M_TC.php");
+        return header("Location: ../../../tcc2023-site/tema_claro/p_Monitor/p_inicial-M_TC.php");
     }
 ?>

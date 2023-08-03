@@ -22,7 +22,7 @@
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="btncheck">
-                <img src="img/icon.png">
+                <img src="../../img/icon.png">
             </label>
 
         <label class="logo">LOGO</label>
@@ -33,12 +33,12 @@
     </nav>
 
     <div class="Labs1-2">
-        <a class="Links" href="">Lab 1</a>
-        <a class="Links" href="">Lab 2</a>
+        <a class="Links" href="p_reparos-lab1-M_TC.php">Lab 1</a>
+        <a class="Links" href="p_reparos-lab2-M_TC.php">Lab 2</a>
     </div>
     <div class="Labs3-4">
-        <a class="Links" href="">Lab 3</a>
-        <a class="Links" href="">Lab 4</a>
+        <a class="Links" href="p_reparos-lab3-M_TC.php">Lab 3</a>
+        <a class="Links" href="p_reparos-lab4-M_TC.php">Lab 4</a>
     </div>
 
 </html>
