@@ -34,6 +34,7 @@
                 <td><?php echo "Problemas_Sol : exemploSolucoes"; ?></td>
                 <td><?php echo "Responsavel: exemploResponsavel"; $i++; ?></td>
                 <td><?php echo "Laboratorio: exemploLaboratorio"; $i++; ?></td>
+                
                 <!-- <td><?php echo "Data: " . $reparo['Data']; ?></td>
                 <td><?php echo "Ação: " . $reparo['Acao']; ?></td>
                 <td><?php echo "Problemas Solucionados: " . $reparo['Problemas_Solucionados']; ?></td>

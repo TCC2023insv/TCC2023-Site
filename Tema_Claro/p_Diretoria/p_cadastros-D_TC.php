@@ -30,7 +30,7 @@
             </ul>
         </nav>
         
-       <div id="Cadastrar"><a href="p_cad-prof-D_TC.html" class="Cad">Cadastrar Professor</a></div> 
+       <a href="p_cad-prof-D_TC.html" class="Cad" id="Cadastrar">Cadastrar Professor</a>
         
         <?php
             while ($professor = $sql_query->fetch_assoc())

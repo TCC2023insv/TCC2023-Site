@@ -25,8 +25,8 @@
 
             <label class="logo">LOGO</label>
             <ul>
-                <li><a href="">Cadastros</a></li>
-                <li><a class="active" href="">Laboratórios</a></li>
+                <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
+                <li><a href="p_inicial-D_TC.html">Laboratórios</a></li>
                 <li><a href="../p_login_TC.html">Sair</a></li>
             </ul>
         </nav>
@@ -38,7 +38,7 @@
         ?>
 
             <div id="Bloco">
-                <div class="Itens"><?php echo "<a href='p_rep-registrado_TC.php?data=" . date('d/m/Y', strtotime($reparo['Data'])) ."'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</a>"; ?></div>
+                <div class="Itens"><?php echo "<a href='../p_rep-registrado_TC.php?data=" . date('d/m/Y', strtotime($reparo['Data'])) ."'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</a>"; ?></div>
                 <div class="Itens"><?php echo $reparo['Responsavel']; ?></div>
             </div>
 

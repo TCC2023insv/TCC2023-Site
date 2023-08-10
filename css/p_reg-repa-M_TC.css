@@ -71,14 +71,16 @@ body{
     font-size: 20px;
     padding: 0 0 0 5px;
     margin-top: 20px;
-    width: 120px;
+    margin-left: 25px;
+    width: 130px;
     display: inline-block;
+    text-align: center;
 }
-
+/* 
 .CheckProb{
     height: 20px;
     width: 80px;
-}
+} */
 
 .Select{
     border-radius: 10px;

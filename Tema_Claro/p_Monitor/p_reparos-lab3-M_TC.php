@@ -42,7 +42,7 @@
             ?>
     
             <div id="Bloco">
-                <div class="Itens"><?php echo "<a href='p_rep-registrado_TC.php?data=" . date('d/m/Y', strtotime($reparo['Data'])) ."'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</a>"; ?></div>
+                <div class="Itens"><?php echo "<a href='../p_rep-registrado_TC.php?data=" . date('d/m/Y', strtotime($reparo['Data'])) ."'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</a>"; ?></div>
                 <div class="Itens"><?php echo $reparo['Responsavel']; ?></div>
             </div>
     

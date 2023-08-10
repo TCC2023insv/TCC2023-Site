@@ -30,12 +30,12 @@ body{
 }
     
 #Caixa-direita{
-    margin-top: 25px;
+    margin-top: 30px;
     float: right;
     margin-right: 67px;
     height: auto;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 #Sele-Lab{
@@ -64,11 +64,237 @@ body{
     color: #2E355F;
     border-color: #2E355F;
     border-radius: 8px;
-    width: 240px;
-    height:40px;
+    width: 230px;
     font-size: 25px;
     letter-spacing: 5px;
     font-weight: bold;
-    margin: 20px;
+    margin: 15px;
+    border: 1px solid #2E355F;
+    padding: 0 0 0 10px;
+}
+
+#Data-Resp{
+    background-color: #FFEEDD;
+    border-radius: 10px;
+    width: 290px;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Data{
+    background-color: #2E355F;
+    color: #FFEEDD;
+    font-size: 30px;
+    border-radius: 8px;
+    margin-top: 15px;
+    padding: 5px 10px 5px 10px;
+    width: 230px;
+    border: none;
+}
+
+#Responsavel{
+    background-color: #FFEEDD;
+    color: #2E355F;
+    border-radius: 8px;
+    width: 230px;
+    height:30px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 14px;
+    padding: 5px 10px 5px 10px;
+    border-width: 1px;
+}
+
+
+/* CAIXA DA ESQUERDA */
+
+.Titulo{
+    background-color: #2E355F;
+    color: #FFEEDD;
+    font-size: 25px;
+    text-align: center;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#Caixa-esquerda{
+    margin-top: -20px;
+    margin-left: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+}
+
+#Problemas{
+    background-color: #FFEEDD;
+    width: 600px;
+    height: auto;
+    border-radius: 15px;
+    padding: 25px;
+    line-height: 40px;
+    margin-top: 50px; 
+    margin-left: 59px;
+}
+
+.txtProb{
+    color:#2E355F;
+    background-color: #A79CAC;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 0 0 0 5px;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 125px;
+    display: inline-block;
+    text-align: center;
+}
+
+.Quant{
+    border: 1px solid #2E355F;
+    border-radius: 8px;
+    
+    background-color: #FFEEDD;
+    color: #2E355F;
+    
+    width: auto;
+    height:32px;
+    padding: 5px 35px 5px 35px;
+    margin-left: 10px;
+
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: 20;
+}
+
+.Select{
+    border: 1px solid #2E355F;
+    border-radius: 8px;
+
+    background-color: #FFEEDD ;
+    color: #2E355F;
+
+    width: 175px;
+    font-size: 20px;
+    padding: 5px 20px 5px 20px;
+    
+    letter-spacing: 5px;
+    font-weight: 20;
+    
+}
+
+
+/* CAIXAS DE TEXTO */
+
+#Caixa2{
+    display: flex;
+    flex-direction: column; 
+}
+
+
+#Caixa-Texto{
+    background-color: #FFEEDD;
+    width: 950px;
+    height: auto;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 50px; 
+    margin-left: 75px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.Titulo-AE{
+    background-color: #2E355F;
+    color: #FFEEDD;
+    font-size: 25px;
+    text-align: center;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    padding: 5px;
+    margin-right: 550px;
+}
+
+.Titulo-PS{
+    background-color: #2E355F;
+    color: #FFEEDD;
+    font-size: 25px;
+    text-align: center;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    padding: 5px;
+    margin-right: 490px;
+}
+
+.Atv-Exer{
+    background-color: #A79CAC;
+    color: #FFEEDD;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 5px;
+    padding: 8px;
+    margin-top: 20px;
+    width: 930px;
+    height: 150px;
+}
+
+
+.Prob-Solu{
+    background-color: #A79CAC;
+    color: #FFEEDD;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 5px;
+    padding: 8px;
+    margin-top: 20px;
+    width: 930px;
+    height: 150px;
+}
+
+#Fotos{
+    background-color: #FFEEDD;
+    width: 950px;
+    height: auto;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 50px; 
+    margin-left: 75px;
+}
+
+/* BOTÕES */
+
+.Btn{
+    background-color: #2E355F;
+    font-family: 'Roboto Mono', monospace;
+    color: #FFEEDD;
+    width: auto;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-top: 40px;
+    border: none;
+    padding: 5px 8px 2px 8px;
+    float: right;
+    margin-right: 80px;
+    margin-bottom: 20px;
 
 }
+
+.Btn:hover{
+    background-color: #4C5381;
+    transform: scale(1.1);
+    transition: all 0.5s
+}
+

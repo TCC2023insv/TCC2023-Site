@@ -24,8 +24,8 @@
 
             <label class="logo">LOGO</label>
             <ul>
-                <li><a href="">Cadastros</a></li>
-                <li><a class="active" href="">Laboratórios</a></li>
+                <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
+                <li><a href="p_inicial-D_TC.html">Laboratórios</a></li>
                 <li><a href="../p_login_TC.html">Sair</a></li>
             </ul>
         </nav>
@@ -37,7 +37,7 @@
         ?>
 
         <div>
-            <div class="Itens"><?php echo "<a href='p_rep-registrado_TC.php'>00/00/0000</a>"; ?></div>
+            <div class="Itens"><?php echo "<a href='../p_rep-registrado_TC.php'>00/00/0000</a>"; ?></div>
             <div class="Itens"><?php echo "Responsável"; $i++; ?></div>
         </div>
 
