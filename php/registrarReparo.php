@@ -94,7 +94,7 @@
     
                 if ($armazenou)
                 {
-                    $conexao->query("INSERT INTO arquivos (data_reparo, path) VALUES ('$data', '$path')");
+                    $conexao->query("INSERT INTO arquivos (id_reparo, path) VALUES ('$id_reparo', '$path')");
                 }
             }
         }
