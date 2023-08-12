@@ -3,7 +3,7 @@
 
     $conexao = ConectarBanco();
 
-    $sql_query = $conexao->query("SELECT `Data`, `Responsavel`, `Laboratorio` FROM `reparo` WHERE
+    $sql_query = $conexao->query("SELECT `ID`, `Data`, `Responsavel`, `Laboratorio` FROM `reparo` WHERE
      Laboratorio = 'Lab 1'") or die ($conexao->error);
     ?>
 
@@ -33,16 +33,12 @@
     
             <h1>Lab 1</h1>
             <?php
-                 while ($reparo = $sql_query->fetch_assoc())
+                while ($reparo = $sql_query->fetch_assoc())
                 {
-            ?>
-    
-            <div id="Bloco">
-                <div class="Itens"><?php echo "<a href='../p_rep-registrado_TC.php?data=" . date('d/m/Y', strtotime($reparo['Data'])) ."'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</a>"; ?></div>
-                <div class="Itens"><?php echo $reparo['Responsavel']; ?></div>
-            </div>
-    
-            <?php
+                echo "<a href='../p_rep-registrado_TC.php?id=" . $reparo['ID'] ."'>" . "<div id='Bloco'>";
+                    echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
+                    echo "<div class='Itens'>" . $reparo['Responsavel'] . "</div>";
+                echo "</div></a>";
                 } 
             ?> 
         </body>

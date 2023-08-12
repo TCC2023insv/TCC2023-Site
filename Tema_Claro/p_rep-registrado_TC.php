@@ -2,13 +2,13 @@
 //    require("php/conexao/conexaoBD.php");
 
 //    $conexao = ConectarBanco();
-//    $dataReparo = $_GET['data'];
+//    $IDReparo = $_GET['id'];
 
 //    $sql_query_rep = $conexao->query("SELECT `Data`, `Acao`, `Problemas_Solucionados`, `Responsavel`, 
-//    `Login_Monitor`, `Laboratorio` FROM `reparo` WHERE Data = '$dataReparo'") or die ($conexao->error);
+//    `Login_Monitor`, `Laboratorio` FROM `reparo` WHERE ID = '$IDReparo'") or die ($conexao->error);
     // $sql_query_prob = $conexao->query("SELECT dispositivo.Nome, dispositivo.Problema FROM dispositivo
     // JOIN dispositivo_reparo ON dispositivo.ID = dispositivo_reparo.ID_Dispositivo
-    // WHERE dispositivo_reparo.Data_Reparo = '$dataReparo'") or die ($conexao->error); ?> -->
+    // WHERE dispositivo_reparo.ID_Reparo = '$IDReparo'") or die ($conexao->error); ?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,9 +30,9 @@
     <!-- aqui é a tabela com os nomes escritos (não excluam os ultimos echo) para estilizar -->
             <tr>
                 <td><?php echo "Data : exemploData"; ?></td>
-                <td><?php echo "Acao: exemploAcao"; $i++; ?></td>
+                <td><?php echo "Acao: exemploAcao"; ?></td>
                 <td><?php echo "Problemas_Sol : exemploSolucoes"; ?></td>
-                <td><?php echo "Responsavel: exemploResponsavel"; $i++; ?></td>
+                <td><?php echo "Responsavel: exemploResponsavel"; ?></td>
                 <td><?php echo "Laboratorio: exemploLaboratorio"; $i++; ?></td>
                 
                 <!-- <td><?php echo "Data: " . $reparo['Data']; ?></td>
@@ -56,13 +56,11 @@
         <td><?php echo "Dispositivo: exemploDispositivo"; ?></td>
         <td><?php echo "Problema: exemploProblema";?></td>
         <!-- <td><?php echo "Dispositivo: " . $problema['Nome']; ?></td>
-        <td><?php echo "Problema: " . $problema['Problema'];?></td> -->
+        <td><?php echo "Problema: " . $problema['Problema']; $j++;?></td> -->
     </tr>
     <?php
         }
     ?>
-    
-
     
 </body>
 </html>

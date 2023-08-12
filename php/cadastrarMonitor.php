@@ -13,5 +13,5 @@
     ( '" . $loginMonitor . "', '" . $nomeMonitor . "', '" . $senhaMonitor . "', '" .$professor ."')");
 
     $conexao->close();
-    return header("Location: ../../tcc2023-site/p_inicial-P_TC.php");
+    return header("Location: ../../tcc2023-site/tema_claro/p_professor/p_inicial-P_TC.php");
 ?>

@@ -6,24 +6,6 @@
 
     $monitor = $_SESSION['login'];
 
-    // function RegistrarImagem($nomeDaFoto, $pasta, $data, $conexao)
-    // {
-    //     if ($_FILES[$nomeDaFoto]['name'] != null)
-    //     {
-            // $nomeDoArquivo = $_FILES[$nomeDaFoto]['name'];
-            // $novoNomeDoArquivo = uniqid();
-            // $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
-
-            // $path = $pasta . $novoNomeDoArquivo . "." . $extensao;
-            // $armazenou = move_uploaded_file($_FILES[$nomeDaFoto]['tmp_name'], $path);
-
-            // if ($armazenou)
-            // {
-            //     $conexao->query("INSERT INTO arquivos (data_reparo, path) VALUES ('$data', '$path')");
-            // }
-    //     }
-    // }
-
     function RegistrarProblema($problemaSelecionado)
     {
         if ($problemaSelecionado == "sel")
@@ -56,9 +38,18 @@
         $problemasSolucionados = $_POST['prob-solu'];
         $responsavel = $_POST['responsavel'];
         
-        $conexao->query("INSERT INTO reparo (data, acao, problemas_solucionados, 
+        $sql = "INSERT INTO reparo (data, acao, problemas_solucionados, 
         responsavel, login_monitor, laboratorio) VALUES ('$data', '$atividadeExercida', 
-        '$problemasSolucionados', '$responsavel','$monitor', '$laboratorio')");
+        '$problemasSolucionados', '$responsavel','$monitor', '$laboratorio')";
+
+        if ($conexao->query($sql) === true)
+        {
+            $id_reparo = $conexao->insert_id;
+        }
+
+        // $conexao->query("INSERT INTO reparo (data, acao, problemas_solucionados, 
+        // responsavel, login_monitor, laboratorio) VALUES ('$data', '$atividadeExercida', 
+        // '$problemasSolucionados', '$responsavel','$monitor', '$laboratorio')");
 
         $conexao->query("INSERT INTO dispositivo (nome, problema, quantidade) VALUES ('Apps', '$problemaApps', '$quantApps'),  
         ('Fonte', '$problemaFonte', '$quantFonte'), ('HD', '$problemaHD', '$quantHD'), 
@@ -78,53 +69,15 @@
 
         for ($i = 0; $i < 7; $i++)
         {
-            $query3 = "INSERT INTO dispositivo_reparo (id_dispositivo, data_reparo) 
-            VALUES ($ID_dispositivos[$i], '$data')";
-            $resultado = mysqli_query($conexao, $query3);
+            $conexao->query("INSERT INTO dispositivo_reparo (id_dispositivo, id_reparo) 
+            VALUES ($ID_dispositivos[$i], '$id_reparo')");
+            // $query3 = "INSERT INTO dispositivo_reparo (id_dispositivo, id_reparo) 
+            // VALUES ($ID_dispositivos[$i], '$id_reparo')";
+            // $resultado = mysqli_query($conexao, $query3);
         }
-
-            // para colocar no html
-            // if ($arquivo1['error'])
-            // {
-            //     echo "Falha ao enviar o arquivo";
-            // }
-            // if ($extensao != "png" && $extensao != "jpg" && $extensao != "jpeg")
-            // {
-            //     echo "Tipo de arquivo não aceito.";
-            // }
-
 
          $pasta = "../arquivos/";
 
-        // if (isset($_FILES['foto1']))
-        // {
-        //     $nomeDoArquivo = $_FILES['foto1']['name'];
-        //     $novoNomeDoArquivo = uniqid();
-        //     $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
-
-        //     $path = $pasta . $novoNomeDoArquivo . "." . $extensao;
-        //     $armazenou = move_uploaded_file($_FILES['foto1']['tmp_name'], $path);
-    
-        //     if ($armazenou)
-        //     {
-        //         $conexao->query("INSERT INTO arquivos (data_reparo, path) VALUES ('$data', '$path')");
-        //     }
-        // }
-
-        // if (isset($_FILES['foto2']))
-        // {
-        //     $nomeDoArquivo = $_FILES['foto2']['name'];
-        //     $novoNomeDoArquivo = uniqid();
-        //     $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
-
-        //     $path = $pasta . $novoNomeDoArquivo . "." . $extensao;
-        //     $armazenou = move_uploaded_file($_FILES['foto2']['tmp_name'], $path);
-    
-        //     if ($armazenou)
-        //     {
-        //         $conexao->query("INSERT INTO arquivos (data_reparo, path) VALUES ('$data', '$path')");
-        //     }
-        // }
 
         if (isset($_FILES['foto']))
         {
