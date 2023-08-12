@@ -47,10 +47,6 @@
             $id_reparo = $conexao->insert_id;
         }
 
-        // $conexao->query("INSERT INTO reparo (data, acao, problemas_solucionados, 
-        // responsavel, login_monitor, laboratorio) VALUES ('$data', '$atividadeExercida', 
-        // '$problemasSolucionados', '$responsavel','$monitor', '$laboratorio')");
-
         $conexao->query("INSERT INTO dispositivo (nome, problema, quantidade) VALUES ('Apps', '$problemaApps', '$quantApps'),  
         ('Fonte', '$problemaFonte', '$quantFonte'), ('HD', '$problemaHD', '$quantHD'), 
         ('Monitor', '$problemaMonitor', '$quantMonitor'), ('Mouse', '$problemaMouse', '$quantMouse'), 
@@ -71,9 +67,6 @@
         {
             $conexao->query("INSERT INTO dispositivo_reparo (id_dispositivo, id_reparo) 
             VALUES ($ID_dispositivos[$i], '$id_reparo')");
-            // $query3 = "INSERT INTO dispositivo_reparo (id_dispositivo, id_reparo) 
-            // VALUES ($ID_dispositivos[$i], '$id_reparo')";
-            // $resultado = mysqli_query($conexao, $query3);
         }
 
          $pasta = "../arquivos/";
