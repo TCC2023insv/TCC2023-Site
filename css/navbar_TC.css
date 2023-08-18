@@ -2,7 +2,7 @@
 /* Navbar da página inicial */
 
 nav{
-    background: #2E355F;
+    background: #224169;
     height: 80px;
     width: 100%;
 }
@@ -31,7 +31,7 @@ nav ul li{
 
 nav ul li a{
     color: #2E355F;
-    background-color: #FFEEDD;
+    background-color: #c2d5f0;
     font-size: 22px;
     padding: 7px 13px;
     border-radius: 8px;
