@@ -8,9 +8,11 @@
 }
 
 body{
-    background-color: #FFEEDD;
+    /* background-color: #FFEEDD; */
+    /* background-color: #a6c1e9; */
+    background-color: #c2d5f0;
     font-family: 'Roboto Mono', monospace;
-    color:#2E355F;
+    color:#F0EEFF;
     font-weight: bold;
     letter-spacing: 5px;
 }
@@ -24,10 +26,14 @@ body{
     left: 0; right: 0;
     margin: auto; 
     
-    background-color: #A79CAC;
-    border-radius: 20px;
+    /* background-color: #608FB7; */
+    /* background-color: #315884; */
+    /* background-color: #385376; */
+    background-color: #224169;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
+    border: none;
 }
 
 h1{
@@ -45,10 +51,10 @@ h1{
 }
 
 .Select{
-    border-radius: 10px;
+    border-radius: 8px;
     width: 315px;
     height:35px;
-    background-color: #FFEEDD ;
+    background-color: #F0EEFF ;
     font-size: 20px;
     font-family: 'Roboto Mono', monospace;
     color:#2E355F;
@@ -58,32 +64,37 @@ h1{
 }
 
 .Txt{
-    border-radius: 10px;
+    border-radius: 8px;
     width: 315px;
     height:35px;
-    background-color: #FFEEDD ;
+    background-color: #F0EEFF ;
     font-size: 20px;
     font-family: 'Roboto Mono', monospace;
     color:#2E355F;
     letter-spacing: 5px;
     padding-left: 10px;
+    border: none;
 }
 
+input::placeholder {
+    color: #2E355F;
+  }
 
 #Btn{
     font-family: 'Roboto Mono', monospace;
     font-size: 28px;
-    color: #FFEEDD;
-    border-radius: 15px;
+    color: #F0EEFF;
+    border-radius: 10px;
     width: 150px;
-    height:45px;
-    background-color: #2E355F;
+    height: 45px;
+    background-color: #161B33;
     letter-spacing: 3px;
+    border:none;
 }
 
 .Botao{
-    margin-top: 15px;
-    margin-left: 170px;
+    margin-top: 10px;
+    margin-left: 165px;
 }
 
 .Btn:hover{
