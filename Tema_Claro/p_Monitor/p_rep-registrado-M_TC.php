@@ -11,6 +11,9 @@
     FROM dispositivo JOIN dispositivo_reparo ON dispositivo.ID = dispositivo_reparo.ID_Dispositivo
     WHERE dispositivo_reparo.ID_Reparo = '$ID_Reparo'") or die ($conexao->error);
 
+    $sql_query_img = $conexao->query("SELECT path FROM arquivos WHERE ID_Reparo = '$ID_Reparo'")
+    or die ($conexao->error);
+
     if ($sql_query && mysqli_num_rows($sql_query) > 0) {
         $reparo = mysqli_fetch_assoc($sql_query);
     }
@@ -126,7 +129,16 @@
 
                 <div id="Fotos">
                     <label class="Titulo">Fotos</label>
-                    <br><br>Imagens
+                    <br><br>
+                        <?php
+                            while ($fotos = $sql_query_prob->fetch_assoc())
+                            {
+                        ?>
+                        <!-- <img src=""> -->
+                        <?php
+                            echo $fotos;
+                            }
+                        ?>
                 </div>
     
             </div>
