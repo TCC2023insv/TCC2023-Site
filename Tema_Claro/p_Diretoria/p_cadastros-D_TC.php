@@ -24,8 +24,9 @@
 
             <label class="logo">LOGO</label>
             <ul>
-                <li><a class="active">Cadastros</a></li>
-                <li><a href="p_inicial-D_TC.html">Laboratórios</a></li>
+                <li><a href="p_D_Inicial_TC.php">Diagnósticos</a></li>
+                <li><a href="">Ocorrências</a></li>
+                <li><a class="active" href="">Cadastros</a></li>
                 <li><a href="../p_login_TC.html">Sair</a></li>
             </ul>
         </nav>

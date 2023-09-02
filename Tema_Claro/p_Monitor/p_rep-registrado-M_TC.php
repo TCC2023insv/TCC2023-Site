@@ -11,7 +11,7 @@
     FROM dispositivo JOIN dispositivo_reparo ON dispositivo.ID = dispositivo_reparo.ID_Dispositivo
     WHERE dispositivo_reparo.ID_Reparo = '$ID_Reparo'") or die ($conexao->error);
 
-    $sql_query_img = $conexao->query("SELECT path FROM arquivos WHERE ID_Reparo = '$ID_Reparo'")
+    $sql_query_img = $conexao->query("SELECT `Path` FROM `arquivos` WHERE ID_Reparo = '$ID_Reparo'")
     or die ($conexao->error);
 
     if ($sql_query && mysqli_num_rows($sql_query) > 0) {
@@ -30,15 +30,16 @@
         <title>Reparo</title>
     </head>
     <body>
-        <nav>
+    <nav>
             <input type="checkbox" id="check">
             <label for="check" class="btncheck">
                 <img src="img/icon.png">
             </label>
-
+    
             <label class="logo">LOGO</label>
             <ul>
-                <li><a class="active" href="">Laboratórios</a></li>
+                <li><a href="p_reg-repa-M_TC.html">Registrar</a></li>
+                <li><a class="active" href="p_M_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="../p_login_TC.html">Sair</a></li>
             </ul>
         </nav>
@@ -131,12 +132,10 @@
                     <label class="Titulo">Fotos</label>
                     <br><br>
                         <?php
-                            while ($fotos = $sql_query_prob->fetch_assoc())
+                            while ($fotos = $sql_query_img->fetch_assoc())
                             {
-                        ?>
-                        <!-- <img src=""> -->
-                        <?php
-                            echo $fotos;
+                                $img = "<img src=../" . $fotos['Path'] . ">";
+                                echo $img;
                             }
                         ?>
                 </div>

@@ -96,6 +96,6 @@
     }
     elseif (isset($_POST['btnVoltar']))
     {
-        return header("Location: ../../../tcc2023-site/tema_claro/p_Monitor/p_inicial-M_TC.php");
+        return header("Location: ../../../tcc2023-site/tema_claro/p_Monitor/p_M_Inicial_TC.php");
     }
 ?>

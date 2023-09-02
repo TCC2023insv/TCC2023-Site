@@ -19,7 +19,7 @@
 
                 $_SESSION['login'] = $monitor;
 
-                return header("Location: ../tema_claro/p_Monitor/p_inicial-M_TC.php");
+                return header("Location: ../tema_claro/p_Monitor/p_M_Inicial_TC.php");
             }
             $conexao->close();
             return header("Location: ../tema_claro/p_login_TC.html");
