@@ -30,15 +30,16 @@
         <title>Reparo</title>
     </head>
     <body>
-        <nav>
+    <nav>
             <input type="checkbox" id="check">
             <label for="check" class="btncheck">
                 <img src="img/icon.png">
             </label>
-
+    
             <label class="logo">LOGO</label>
             <ul>
-                <li><a class="active" href="">Laboratórios</a></li>
+                <li><a href="p_reg-repa-M_TC.html">Registrar</a></li>
+                <li><a class="active" href="p_M_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="../p_login_TC.html">Sair</a></li>
             </ul>
         </nav>

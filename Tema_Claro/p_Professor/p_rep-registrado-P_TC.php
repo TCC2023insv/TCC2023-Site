@@ -27,7 +27,7 @@
         <title>Reparo</title>
     </head>
     <body>
-        <nav>
+    <nav>
             <input type="checkbox" id="check">
             <label for="check" class="btncheck">
                 <img src="img/icon.png">
@@ -35,8 +35,9 @@
     
             <label class="logo">LOGO</label>
             <ul>
+                <li><a class="active" href="P_P_Inicial_TC.php">Diagnósticos</a></li>
+                <li><a href="">Ocorrências</a></li>
                 <li><a href="p_cadastros-P_TC.php">Cadastros</a></li>
-                <li><a class="active" href="">Laboratórios</a></li>
                 <li><a href="../p_login_TC.html">Sair</a></li>
             </ul>
         </nav>

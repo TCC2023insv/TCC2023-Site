@@ -13,5 +13,5 @@
     ( '" . $loginProfessor . "', '" . $nomeProfessor . "', '" . $senhaProfessor . "', '" .$direcao."')");
 
     $conexao->close();
-    return header("Location: ../../tcc2023-site/tema_claro/p_diretoria/p_inicial-D_TC.html");
+    return header("Location: ../../tcc2023-site/tema_claro/p_diretoria/P_D-P_Inicial_TC.php");
 ?>
