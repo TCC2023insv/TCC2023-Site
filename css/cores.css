@@ -1,0 +1,13 @@
+:root{
+    /* TEMA CLARO */
+    --color-claro-50: #F0EEFF;
+    --color-claro-60: #c2d5f0;
+    --color-claro-100: #224169;
+    --color-claro-200: #1b3658;
+    --color-claro-900: #161b33;
+
+    /* TEMA ESCURO */
+    --color-escuro-50: #323853;
+    --color-escuro-100: #224169;
+    --color-escuro-900: #0D0C1D;
+}
