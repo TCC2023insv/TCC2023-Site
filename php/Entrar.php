@@ -1,10 +1,10 @@
 <?php
-
     $tipoDeLogin = $_POST['identificacao'];
     $login = $_POST['login'];
     $senha = $_POST['senha'];
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+        // if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        if (isset($_POST['entrar']))
         { 
                 switch ($tipoDeLogin) {
                     case 'Dir':
