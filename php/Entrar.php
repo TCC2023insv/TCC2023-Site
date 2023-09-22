@@ -11,21 +11,21 @@
                         echo "direcao";
                         include('classes/direcao.php');
                         $novaDirecao = new direcao();
-                        $novaDirecao->EntrarComoDirecao($login, $senha);
+                        $novaDirecao->Entrar($login, $senha);
                         break;
                     
                     case 'Prof':
                         echo "professor";
                         include('classes/professor.php');
                         $novoProfessor = new professor();
-                        $novoProfessor->EntrarComoProfessor($login, $senha);
+                        $novoProfessor->Entrar($login, $senha);
                         break;
 
                     case 'Mon':
                         echo "monitor";
                         include('classes/monitor.php');
                         $novoMonitor = new monitor();
-                        $novoMonitor->EntrarComoMonitor($login, $senha);
+                        $novoMonitor->Entrar($login, $senha);
                         break;
                     default:
                     header("Location: ../tema_claro/p_login_TC.html");
