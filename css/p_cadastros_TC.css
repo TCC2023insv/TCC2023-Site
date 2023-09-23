@@ -8,14 +8,14 @@
 }
 
 body{
-    background-color: #FFEEDD;
+    background-color: #C2D5F0;
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;
 }
 
 #Cadastrar{
-    background-color: #2E355F;
+    background-color: #224169;
     font-size: 22px;
     border-radius: 8px;
     height: 50px;
@@ -28,11 +28,11 @@ body{
 }
 
 .Cad{
-   color: #FFEEDD
+   color: #F0EEFF;
 }
 
 #Cadastros{
-    background-color: #C6B5CD;
+    background-color: #224169;
     border-radius: 10px;
     position: relative;
     display: flex;
@@ -44,7 +44,7 @@ body{
 
 
 .Itens{
-    color: #FFEEDD;
+    color: #F0EEFF;
     height: 40px;
     width: 229px;
     border-radius: 8px;
