@@ -134,7 +134,7 @@
                         <?php
                             while ($fotos = $sql_query_img->fetch_assoc())
                             {
-                                $img = "<img src=../" . $fotos['Path'] . ">";
+                                $img = "<img src=" . $fotos['Path'] . ">";
                                 echo $img;
                             }
                         ?>
