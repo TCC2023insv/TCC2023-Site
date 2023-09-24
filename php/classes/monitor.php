@@ -61,6 +61,7 @@
         public function RegistrarReparo()
         {
             require('../conexao/conexaoBD.php');
+            require('diagnosticos.php');
 
             $conexao = ConectarBanco();
             session_start();
@@ -75,41 +76,29 @@
                 }
                 return $problemaSelecionado;
             }
-        
-                $laboratorio = $_POST['sele-lab'];
-                $data = $_POST['data'];
-                $problemaApps = RegistrarProblema($_POST['prob-apps']);
-                $quantApps = $_POST['quantApps'];
-                $problemaFonte = RegistrarProblema($_POST['prob-fonte']);
-                $quantFonte = $_POST['quantFonte'];
-                $problemaHD = RegistrarProblema($_POST['prob-hd']);
-                $quantHD = $_POST['quantHD'];
-                $problemaMonitor = RegistrarProblema($_POST['prob-monitor']);
-                $quantMonitor = $_POST['quantMonitor'];
-                $problemaMouse = RegistrarProblema($_POST['prob-mouse']);
-                $quantMouse = $_POST['quantMouse'];
-                $problemaTeclado = RegistrarProblema($_POST['prob-teclado']);
-                $quantTeclado = $_POST['quantTeclado'];
-                $problemaWindows = RegistrarProblema($_POST['prob-windows']);
-                $quantWindows = $_POST['quantWindows'];
-        
-                $atividadeExercida = $_POST['atv-exer'];
-                $problemasSolucionados = $_POST['prob-solu'];
-                $responsavel = $_POST['responsavel'];
+
+            $diagnostico = new diagnostico($_POST['sele-lab'], $_POST['data'], RegistrarProblema($_POST['prob-apps']),
+            $_POST['quantApps'],  RegistrarProblema($_POST['prob-fonte']), $_POST['quantFonte'],
+            RegistrarProblema($_POST['prob-hd']), $_POST['quantHD'], RegistrarProblema($_POST['prob-monitor']),
+            $_POST['quantMonitor'], RegistrarProblema($_POST['prob-mouse']), $_POST['quantMouse'],
+            RegistrarProblema($_POST['prob-teclado']), $_POST['quantTeclado'], RegistrarProblema($_POST['prob-windows']),
+            $_POST['quantWindows'], $_POST['atv-exer'], $_POST['prob-solu'], $_POST['responsavel']);
                 
                 $sql = "INSERT INTO reparo (data, acao, problemas_solucionados, 
-                responsavel, login_monitor, laboratorio) VALUES ('$data', '$atividadeExercida', 
-                '$problemasSolucionados', '$responsavel','$monitor', '$laboratorio')";
+                responsavel, login_monitor, laboratorio) VALUES ('$diagnostico->data', '$diagnostico->atividadeExercida', 
+                '$diagnostico->problemasSolucionados', '$diagnostico->responsavel','$monitor', '$diagnostico->laboratorio')";
         
                 if ($conexao->query($sql) === true)
                 {
                     $id_reparo = $conexao->insert_id;
                 }
         
-                $conexao->query("INSERT INTO dispositivo (nome, problema, quantidade) VALUES ('Apps', '$problemaApps', '$quantApps'),  
-                ('Fonte', '$problemaFonte', '$quantFonte'), ('HD', '$problemaHD', '$quantHD'), 
-                ('Monitor', '$problemaMonitor', '$quantMonitor'), ('Mouse', '$problemaMouse', '$quantMouse'), 
-                ('Teclado', '$problemaTeclado', '$quantTeclado'), ('Windows', '$problemaWindows', '$quantWindows')");
+                $conexao->query("INSERT INTO dispositivo (nome, problema, quantidade) VALUES ('Apps', '$diagnostico->problemaApps', 
+                '$diagnostico->quantApps'), ('Fonte', '$diagnostico->problemaFonte', '$diagnostico->quantFonte'), 
+                ('HD', '$diagnostico->problemaHD', '$diagnostico->quantHD'), ('Monitor', '$diagnostico->problemaMonitor', 
+                '$diagnostico->quantMonitor'), ('Mouse', '$diagnostico->problemaMouse', '$diagnostico->quantMouse'), ('Teclado', 
+                '$diagnostico->problemaTeclado', '$diagnostico->quantTeclado'), ('Windows', '$diagnostico->problemaWindows', 
+                '$diagnostico->quantWindows')");
         
                 $consultaIDS = "SELECT id FROM dispositivo ORDER BY id DESC LIMIT 7";
                 $resultado = mysqli_query($conexao, $consultaIDS);
@@ -152,11 +141,6 @@
                 }
                 $conexao->close();
                 return header("Location: ../../../tcc2023-site/tema_claro/p_Monitor/p_reg-repa-M_TC.html");
-            // }
-            // elseif (isset($_POST['btnVoltar']))
-            // {
-            //     return header("Location: ../../../tcc2023-site/tema_claro/p_Monitor/p_M_Inicial_TC.php");
-            // }
         }
     }
 

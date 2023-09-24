@@ -21,76 +21,29 @@
         public $problemasSolucionados;
         public $responsavel;
 
-        public function SetLaboratorio($lab)
+        function __construct($laboratorio, $data, $problemaApps, $quantApps, $problemaFonte, $quantFonte, $problemaHD, 
+        $quantHD, $problemaMonitor, $quantMonitor, $problemaMouse, $quantMouse, $problemaTeclado, $quantTeclado, 
+        $problemaWindows, $quantWindows, $atividadeExercida, $problemasSolucionados, $responsavel)
         {
-            $this->laboratorio = $lab;
-        }
-        public function GetLaboratorio()
-        {
-            return $this->laboratorio;
-        }
-
-        public function SetData($data)
-        {
+            $this->laboratorio = $laboratorio;
             $this->data = $data;
-        }
-        public function GetData()
-        {
-            return $this->data;
-        }
-
-        public function SetProblemaApps($problemaApps)
-        {
             $this->problemaApps = $problemaApps;
-        }
-        public function GetProblemaApps()
-        {
-            return $this->problemaApps;
-        }
-
-        public function SetQuantApps($quantApps)
-        {
             $this->quantApps = $quantApps;
-        }
-        public function GetQuantApps()
-        {
-            return $this->quantApps;
-        }
-
-        public function SetProblemaFonte($problemaFonte)
-        {
             $this->problemaFonte = $problemaFonte;
-        }
-        public function GetProblemaFonte()
-        {
-            return $this->problemaFonte;
-        }
-
-        public function SetQuantFonte($quantFonte)
-        {
             $this->quantFonte = $quantFonte;
-        }
-        public function GetQuantFonte()
-        {
-            return $this->quantFonte;
-        }
-
-        public function SetProblemaHD($problemaHD)
-        {
             $this->problemaHD = $problemaHD;
-        }
-        public function GetProblemaHD()
-        {
-            return $this->problemaHD;
-        }
-
-        public function SetQuantHD($quantHD)
-        {
             $this->quantHD = $quantHD;
-        }
-        public function GetQuantHD()
-        {
-            return $this->quantHD;
+            $this->problemaMonitor = $problemaMonitor;
+            $this->quantMonitor = $quantMonitor;
+            $this->problemaMouse = $problemaMouse;
+            $this->quantMouse = $quantMouse;
+            $this->problemaTeclado = $problemaTeclado;
+            $this->quantTeclado = $quantTeclado;
+            $this->problemaWindows = $problemaWindows;
+            $this->quantWindows = $quantWindows;
+            $this->atividadeExercida = $atividadeExercida;
+            $this->problemasSolucionados = $problemasSolucionados;
+            $this->responsavel = $responsavel;
         }
     }
 ?>
