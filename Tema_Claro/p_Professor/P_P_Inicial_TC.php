@@ -3,8 +3,6 @@
 
     $conexao = ConectarBanco();
 
-    $professor = $_SESSION['login'];
-
     $sql_query = $conexao->query("SELECT `ID`, `Data`, `Responsavel`, `Laboratorio` FROM `reparo` 
     ORDER BY `Data` DESC")
     or die ($conexao->error);

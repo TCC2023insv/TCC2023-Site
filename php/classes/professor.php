@@ -1,14 +1,47 @@
 <?php
-    require('../conexao/conexaoBD.php');
     class professor
     {
-        public $professor;
+        public $nome;
+        public $login;
         public $senha;
-
-        public function Entrar($professor, $senha)
+        public function GetNome($nome)
         {
+            $this->nome = $nome;
+        }
+        public function SetNome()
+        {
+            return $this->nome;
+        }
+
+        public function GetLogin($login)
+        {
+            $this->login = $login;
+        }
+        public function SetLogin()
+        {
+            return $this->login;
+        }
+
+        public function GetSenha($senha)
+        {
+            $this->senha = $senha;
+        }
+        public function SetSenha()
+        {
+            return $this->senha;
+        }
+
+        public function Entrar($login, $senha)
+        {
+            require('conexao/conexaoBD.php');
+
+            $professor = new professor();
+            $professor->GetLogin($login);
+            $professor->GetSenha($senha);
+
             $conexao = ConectarBanco();
-            $query = "SELECT * FROM professor WHERE login = '$professor' AND senha = '$senha'";
+            $query = "SELECT * FROM professor WHERE login = '$professor->login' AND senha = 
+            '$professor->senha'";
             $resultado = mysqli_query($conexao, $query);
 
             if (mysqli_num_rows($resultado) > 0) 
@@ -17,7 +50,7 @@
 
                 session_start();
 
-                $_SESSION['login'] = $professor;
+                $_SESSION['login'] = $professor->login;
 
                 return header("Location: ../tema_claro/p_professor/p_p_inicial_tc.php");
             }
@@ -27,16 +60,23 @@
 
         public function CadastrarMonitor($nomeMonitor, $loginMonitor, $senhaMonitor)
         {
-            $conexao = ConectarBanco();
+            require('../conexao/conexaoBD.php');
+            require('monitor.php');
+
+            $monitor = new monitor();
+            $monitor->GetNome($nomeMonitor);
+            $monitor->GetLogin($loginMonitor);
+            $monitor->GetSenha($senhaMonitor);
             session_start();
-        
+            $conexao = ConectarBanco();
             $professor = $_SESSION['login'];
         
             $conexao->query("INSERT INTO monitor (login, nome, senha, login_professor) VALUES 
-            ( '" . $loginMonitor . "', '" . $nomeMonitor . "', '" . $senhaMonitor . "', '" .$professor ."')");
+            ( '" . $monitor->login . "', '" . $monitor->nome . "', '" . $monitor->senha . "', '" 
+            .$professor ."')");
         
             $conexao->close();
-            return header("Location: ../../../tcc2023-site/tema_claro/p_professor/p_inicial-P_TC.php");
+            return header("Location: ../../../tcc2023-site/tema_claro/p_professor/p_p_inicial_tc.php");
         }
     }
 

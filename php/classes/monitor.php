@@ -1,14 +1,47 @@
 <?php
-    require('../conexao/conexaoBD.php');
     class monitor
     {
-        public $monitor;
+        public $nome;
+        public $login;
         public $senha;
 
-        public function Entrar($monitor, $senha)
+        public function GetNome($nome)
         {
+            $this->nome = $nome;
+        }
+        public function SetNome()
+        {
+            return $this->nome;
+        }
+
+        public function GetLogin($login)
+        {
+            $this->login = $login;
+        }
+        public function SetLogin()
+        {
+            return $this->login;
+        }
+
+        public function GetSenha($senha)
+        {
+            $this->senha = $senha;
+        }
+        public function SetSenha()
+        {
+            return $this->senha;
+        }
+
+        public function Entrar($login, $senha)
+        {
+            require('conexao/conexaoBD.php');
+
+            $monitor = new monitor();
+            $monitor->GetLogin($login);
+            $monitor->GetSenha($senha);
+
             $conexao = ConectarBanco();
-            $query = "SELECT * FROM monitor WHERE login = '$monitor' AND senha = '$senha'";
+            $query = "SELECT * FROM monitor WHERE login = '$monitor->login' AND senha = '$monitor->senha'";
             $resultado = mysqli_query($conexao, $query);
 
             if (mysqli_num_rows($resultado) > 0) 
@@ -17,7 +50,7 @@
 
                 session_start();
 
-                $_SESSION['login'] = $monitor;
+                $_SESSION['login'] = $monitor->login;
 
                 return header("Location: ../tema_claro/p_Monitor/p_M_Inicial_TC.php");
             }
@@ -27,6 +60,8 @@
 
         public function RegistrarReparo()
         {
+            require('../conexao/conexaoBD.php');
+
             $conexao = ConectarBanco();
             session_start();
         
