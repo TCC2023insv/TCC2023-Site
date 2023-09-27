@@ -23,7 +23,7 @@
                     <img src="img/icon.png">
                 </label>
     
-                <label class="logo">LOGO</label>
+                <label class="logo">MonitoraLab</label>
                 <ul>
                     <li><a class="active" href="">Diagnósticos</a></li>
                     <li><a href="">Ocorrências</a></li>
@@ -32,8 +32,15 @@
                 </ul>
             </nav>
     
-            <h1>Diagnósticos</h1>
-            
+            <h1>Lab 1</h1>
+        
+            <!-- <select class="Selecionar-LAB">
+				<option value="Lab1"> Lab 1</option>
+				<option value="lab2"> Lab 2</option>
+				<option value="lab3"> Lab 3</option> 
+				<option value="lab4"> Lab 4</option>
+			</select>
+             -->
             <?php
                 while ($reparo = $sql_query->fetch_assoc())
                 {

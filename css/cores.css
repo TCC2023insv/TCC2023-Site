@@ -1,10 +1,18 @@
 /* TEMA CLARO */
 .tema-claro, :root{
 
+	/* NAVBAR */
+	--fundo-navbar: #161B33;
+	--fundo-a: #c2d5f0;
+	--texto-nav: #161B33;
+	--fundo-hover: #224169;
+	--texto-hover: #C2D5F0;
+
 	--fundo-1: #5f82b1;
 	--fundo-2: #c2d5f0;
 
 	--fundo-gradiente: linear-gradient(135deg, var(--fundo-1), var(--fundo-2));
+	--fundo-gradiente-2: linear-gradient(135deg, #6190CE, #8DB3E5 );
 
 	--icone: #224169;
 	--fundo-caixa: #224169;
@@ -20,6 +28,14 @@
 
 /* TEMA ESCURO */
 .tema-escuro, :root{
+
+	/* NAVBAR */
+	--fundo-navbar: #0D0C1D;
+	--fundo-a: #F0EEFF;
+	--texto-nav: #0D0C1D;
+	--fundo-hover: #224169;
+	--texto-hover: #C2D5F0;
+
 	--fundo-gradiente: linear-gradient(135deg, #436085 0%, #3b405c 100%);
 
 
