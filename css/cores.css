@@ -1,10 +1,5 @@
 /* TEMA CLARO */
 .tema-claro, :root{
-	--color-claro-50: #F0EEFF;
-	--color-claro-60: #c2d5f0;
-	--color-claro-100: #224169;
-	--color-claro-200: #1b3658;
-	--color-claro-900: #161b33;
 
 	--fundo-1: #5f82b1;
 	--fundo-2: #c2d5f0;
@@ -19,19 +14,17 @@
 	--texto-placehoder: ;
 	--botao: #161b33; 
 	--botao-hover: #323853;
+	--botao-texto: ;
 	--fundo-nav: #224169;
 }
 
 /* TEMA ESCURO */
 .tema-escuro, :root{
-	--color-escuro-50: #323853;
-	--color-escuro-100: #224169;
-	--color-escuro-900: #0D0C1D;
-
 	--fundo-gradiente: linear-gradient(135deg, #436085 0%, #3b405c 100%);
 
 
 	--fundo: #224169; 
+	--fundo-2: #224169;
 	--icone: #c2d5f0;
 	--fundo-caixa: #0D0C1D;
 	--texto: #F0EEFF; 
@@ -39,5 +32,6 @@
 	--cor-txt: #0D0C1D;
 	--texto-placehoder: ;
 	--botao: #323853;
-	--botao-hover:
+	--botao-texto: ;
+	--botao-hover: ;
 }
