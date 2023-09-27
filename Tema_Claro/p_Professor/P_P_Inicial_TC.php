@@ -27,7 +27,7 @@
                 <label class="logo">LOGO</label>
                 <ul>
                     <li><a class="active" href="">Diagnósticos</a></li>
-                    <li><a href="">Ocorrências</a></li>
+                    <li><a href="p_reg-ocorrencia.html">Ocorrências</a></li>
                     <li><a href="p_cadastros-P_TC.php">Cadastros</a></li>
                     <li><a href="../p_login_TC.html">Sair</a></li>
                 </ul>
