@@ -1,5 +1,4 @@
 <?php
-    require('conexao/conexaoBD.php');
     class direcao
     {
         public $direcao;
@@ -7,6 +6,8 @@
 
         public function Entrar($direcao, $senha)
         {
+            require('conexao/conexaoBD.php');
+
             $conexao = ConectarBanco();
             $query = "SELECT * FROM direcao WHERE login = '$direcao' AND senha = '$senha'";
             $resultado = mysqli_query($conexao, $query);
@@ -27,6 +28,9 @@
         
         public function CadastrarProfessor($nomeProfessor, $loginProfessor, $senhaProfessor)
         {
+            require('../conexao/conexaoBD.php');
+            require('professor.php');
+            
             $professor = new professor();
             $professor->GetNome($nomeProfessor);
             $professor->GetLogin($loginProfessor);
