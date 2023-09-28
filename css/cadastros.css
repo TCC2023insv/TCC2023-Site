@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
+@import url('../css/cores.css');
+
+
+html {
+	min-height: 100vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style: none;
+}
+
+body{
+    background-color: var(--fundo-gradiente-2);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+    min-height: 100vh;
+}
+
+#Cadastrar{
+    background-color: var(--fundo-1);
+    color: var(--texto);
+    padding: 0.8%;
+
+    font-size: 130%;
+    
+    margin-left: 5.7%;
+    
+}
+
+#Cadastros{
+    background-color: var(--fundo-2);
+    color: var(--texto-2);
+    height: 90px;
+    margin: 2% 5.7%;  
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Itens{
+    background-color: var(--fundo-txt);
+    height: 25%;
+    border-radius: 1%;
+    font-size: 120%;
+    padding: 0.5% 1%;
+    margin: 0 0% 0 3%;
+    text-align: center;
+}
+
+h1{
+    color: var(--texto);
+    font-size: 130%;
+    margin: 0 -2.5% 0 3%;
+}

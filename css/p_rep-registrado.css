@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
+@import url(../css/cores.css);
 
 *{
     margin: 0;
@@ -9,14 +10,14 @@
 }
 
 body{
-    background-color: #FFEEDD;
+    background-color: var(--fundo-gradiente-2);
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;
 }
 
 #Caixa{
-    background-color: #A79CAC;
+    background-color: var(--fundo-caixa-2);
 
     width: 1152px;
     height: auto;

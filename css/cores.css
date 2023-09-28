@@ -29,6 +29,10 @@
 
 	--fundo-1: #161B33;
 	--fundo-2: #C2D5F0;
+	--fundo-label: #224169;
+
+	--fundo-caixa-2:#c2d5f0;
+
 	--fundo-bloco: #C2D5F0;
 }
 
@@ -62,6 +66,10 @@
 	--botao: #323853;
 	--botao-texto: ;
 	--botao-hover: ;
+
+	--fundo-caixa-2: #161b33;
+
+	--fundo-label:#323853;
 
 	
 	--fundo-bloco: #0D0C1D;

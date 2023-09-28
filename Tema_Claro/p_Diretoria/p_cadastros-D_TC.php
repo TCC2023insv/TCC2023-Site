@@ -31,10 +31,11 @@
             </ul>
         </nav>
         
-        <br><br>
+        <br><br><br>
         <a href="p_cad-prof-D_TC.html" class="Cad" id="Cadastrar">Cadastrar Professor</a>
         <br><br>
         
+
         <?php
             while ($professor = $sql_query->fetch_assoc())
             {

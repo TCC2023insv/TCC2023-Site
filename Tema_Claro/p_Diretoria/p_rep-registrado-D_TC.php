@@ -22,6 +22,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" type="text/css" href="../../css/registrados-diag.css"> -->
         <link rel="stylesheet" type="text/css" href="../../css/p_rep-registrado.css">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
         <title>Reparo</title>
@@ -33,7 +34,7 @@
                 <img src="img/icon.png">
             </label>
     
-            <label class="logo">LOGO</label>
+            <label class="logo">MonitoraLab</label>
             <ul>
                 <li><a class="active" href="p_D_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="">Ocorrências</a></li>
