@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
-        <link rel="stylesheet" type="text/css" href="../../css/p_cadastros_TC.css">
+        <link rel="stylesheet" type="text/css" href="../../css/cadastros.css">
         <title>Cadastros</title>
     </head>
     <body>
@@ -22,7 +22,7 @@
                 <img src="img/icon.png">
             </label>
 
-            <label class="logo">LOGO</label>
+            <label class="logo">MonitoraLab</label>
             <ul>
                 <li><a href="p_D_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="">Ocorrências</a></li>
@@ -31,7 +31,9 @@
             </ul>
         </nav>
         
+        <br><br>
         <a href="p_cad-prof-D_TC.html" class="Cad" id="Cadastrar">Cadastrar Professor</a>
+        <br><br>
         
         <?php
             while ($professor = $sql_query->fetch_assoc())
@@ -39,8 +41,8 @@
         ?>
 
         <div id="Cadastros">
-            <div class="Itens"><?php echo $professor['Nome']; ?></div>
-            <div class="Itens"><?php echo $professor['Login']; ?></div>
+            <h1>Nome:</h1> <div class="Itens"><?php echo $professor['Nome']; ?></div>
+            <h1>Login:</h1> <div class="Itens"><?php echo $professor['Login']; ?></div>
         </div>
 
         <?php

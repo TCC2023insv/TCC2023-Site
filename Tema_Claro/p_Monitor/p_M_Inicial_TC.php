@@ -23,7 +23,7 @@
                     <img src="img/icon.png">
                 </label>
     
-                <label class="logo">LOGO</label>
+                <label class="logo">MonitoraLab</label>
                 <ul>
                 <li><a href="p_reg-repa-M_TC.html">Registrar</a></li>
                 <li><a class="active" href="">Diagnósticos</a></li>
@@ -31,7 +31,7 @@
                 </ul>
             </nav>
     
-            <h1>Diagnósticos</h1>
+            <h1>Lab1</h1>
             
             <?php
                 while ($reparo = $sql_query->fetch_assoc())
@@ -39,8 +39,7 @@
                 echo "<a href='p_rep-registrado-M_TC.php?id=" . $reparo['ID'] ."'>" . "<div id='Bloco'>";
                     echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
                     echo "<div class='Itens'>" . $reparo['Responsavel'] . "</div>";
-                    echo "<div class='Itens'>" . $reparo['Laboratorio'] . "</div>";
-                echo "</div></a>";
+                    echo "</div></a>";
                 } 
             ?> 
         </body>

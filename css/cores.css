@@ -1,4 +1,6 @@
 /* TEMA CLARO */
+
+
 .tema-claro, :root{
 
 	/* NAVBAR */
@@ -8,15 +10,15 @@
 	--fundo-hover: #224169;
 	--texto-hover: #C2D5F0;
 
-	--fundo-1: #5f82b1;
-	--fundo-2: #c2d5f0;
+	--fundo-gradiente: linear-gradient(135deg, #5f82b1, #c2d5f0);
+	--fundo-gradiente-2: linear-gradient(135deg, #395D8D, #91B4E3 );
 
-	--fundo-gradiente: linear-gradient(135deg, var(--fundo-1), var(--fundo-2));
-	--fundo-gradiente-2: linear-gradient(135deg, #6190CE, #8DB3E5 );
+	/* TEXTO */
+	--texto: #F0EEFF; 
+	--texto-2:  ;
 
 	--icone: #224169;
 	--fundo-caixa: #224169;
-	--texto: #F0EEFF; 
 	--fundo-txt: #F0EEFF;
 	--cor-txt: #224169;
 	--texto-placehoder: ;
@@ -24,7 +26,12 @@
 	--botao-hover: #323853;
 	--botao-texto: ;
 	--fundo-nav: #224169;
+
+	--fundo-1: #161B33;
+	--fundo-2: #C2D5F0;
+	--fundo-bloco: #C2D5F0;
 }
+
 
 /* TEMA ESCURO */
 .tema-escuro, :root{
@@ -37,17 +44,25 @@
 	--texto-hover: #C2D5F0;
 
 	--fundo-gradiente: linear-gradient(135deg, #436085 0%, #3b405c 100%);
+	--fundo-gradiente-2: linear-gradient(135deg, #1C375A, #345681 );
 
 
-	--fundo: #224169; 
-	--fundo-2: #224169;
+	--fundo-1: #0d0C1D; 
+	--fundo-2: #0D0C1D;
+
+	/* TEXTO */
+	--texto: #F0EEFF; 
+	--texto-2: #0D0C1D;
+
 	--icone: #c2d5f0;
 	--fundo-caixa: #0D0C1D;
-	--texto: #F0EEFF; 
 	--fundo-txt: #F0EEFF;
 	--cor-txt: #0D0C1D;
 	--texto-placehoder: ;
 	--botao: #323853;
 	--botao-texto: ;
 	--botao-hover: ;
+
+	
+	--fundo-bloco: #0D0C1D;
 }

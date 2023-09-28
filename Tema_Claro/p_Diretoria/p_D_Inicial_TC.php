@@ -47,7 +47,6 @@
                 echo "<a href='p_rep-registrado-D_TC.php?id=" . $reparo['ID'] ."'>" . "<div id='Bloco'>";
                     echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
                     echo "<div class='Itens'>" . $reparo['Responsavel'] . "</div>";
-                    echo "<div class='Itens'>" . $reparo['Laboratorio'] . "</div>";
                 echo "</div></a>";
                 } 
             ?> 
