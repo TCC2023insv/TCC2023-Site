@@ -20,17 +20,17 @@
 
                 $_SESSION['login'] = $direcao;
 
-                echo header("Location: ../tema_claro/p_Diretoria/p_D_Inicial_TC.php");
+                return true;
             }
             $conexao->close();
-            echo header("Location: ../tema_claro/p_login_TC.html");
+            return false;
         }
         
         public function CadastrarProfessor($nomeProfessor, $loginProfessor, $senhaProfessor)
         {
             require('../conexao/conexaoBD.php');
             require('professor.php');
-            
+
             $professor = new professor();
             $professor->GetNome($nomeProfessor);
             $professor->GetLogin($loginProfessor);

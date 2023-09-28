@@ -52,10 +52,10 @@
 
                 $_SESSION['login'] = $monitor->login;
 
-                return header("Location: ../tema_claro/p_Monitor/p_M_Inicial_TC.php");
+                return true;
             }
             $conexao->close();
-            return header("Location: ../tema_claro/p_login_TC.html");
+            return false;
         }
 
         public function RegistrarReparo()

@@ -38,7 +38,7 @@
                 <li><a class="active" href="P_P_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="">Ocorrências</a></li>
                 <li><a href="p_cadastros-P_TC.php">Cadastros</a></li>
-                <li><a href="../p_login_TC.html">Sair</a></li>
+                <li><a href="../p_login_tc.php">Sair</a></li>
             </ul>
         </nav>
 

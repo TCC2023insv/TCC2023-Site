@@ -1,5 +1,5 @@
 <?php
-    class Ocorrencias
+    class ocorrencia
     {
         public $responsavel;
         public $data;

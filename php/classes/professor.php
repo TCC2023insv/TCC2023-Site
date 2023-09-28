@@ -52,10 +52,10 @@
 
                 $_SESSION['login'] = $professor->login;
 
-                return header("Location: ../tema_claro/p_professor/p_p_inicial_tc.php");
+                return true;
             }
             $conexao->close();
-            return header("Location: ../tema_claro/p_login_tc.html");
+            return false;
         }
 
         public function CadastrarMonitor($nomeMonitor, $loginMonitor, $senhaMonitor)
@@ -86,7 +86,7 @@
 
             session_start();
             $professor = $_SESSION['login'];
-            $Ocorrencia = new Ocorrencias($professor, $data, $descricao);
+            $Ocorrencia = new ocorrencia($professor, $data, $descricao);
 
             $conexao = ConectarBanco();
             $resultado = mysqli_query($conexao, "SELECT nome FROM professor WHERE login = '" . 

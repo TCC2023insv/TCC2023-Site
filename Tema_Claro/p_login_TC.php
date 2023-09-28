@@ -1,3 +1,11 @@
+<?php
+	session_start(); // Inicie a sessão
+
+	if (isset($_SESSION['login_incorreto']) && $_SESSION['login_incorreto'] === true) {
+		echo "<script> alert('Usuário ou senha incorreto.')</script>";
+		$_SESSION['login_incorreto'] = false; // Defina a variável de sessão como false após exibir o alerta
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

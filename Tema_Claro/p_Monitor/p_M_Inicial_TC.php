@@ -27,7 +27,7 @@
                 <ul>
                 <li><a href="p_reg-repa-M_TC.html">Registrar</a></li>
                 <li><a class="active" href="">Diagnósticos</a></li>
-                <li><a href="../p_login_TC.html">Sair</a></li>
+                <li><a href="../p_login_tc.php">Sair</a></li>
                 </ul>
             </nav>
     
