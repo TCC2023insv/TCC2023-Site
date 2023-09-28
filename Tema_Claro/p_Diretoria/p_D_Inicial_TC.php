@@ -28,7 +28,7 @@
                     <li><a class="active" href="">Diagnósticos</a></li>
                     <li><a href="">Ocorrências</a></li>
                     <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
-                    <li><a href="../p_login_tc.php">Sair</a></li>
+                    <li><a href="../../php/classes/direcao.php?resp=sair">Sair</a></li>
                 </ul>
             </nav>
     

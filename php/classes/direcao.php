@@ -25,6 +25,20 @@
             $conexao->close();
             return false;
         }
+
+        public function Sair()
+        {
+            echo "<script>var dialogo = confirm('Tem certeza de que deseja sair?')
+            if (dialogo)
+            {
+                window.location.href = '../../tema_claro/p_login_tc.php';
+            }
+            else
+            {
+                window.location.href = '../../tema_claro/p_diretoria/p_d_inicial_tc.php';
+                }
+                </script>";
+        }
         
         public function CadastrarProfessor($nomeProfessor, $loginProfessor, $senhaProfessor)
         {
@@ -54,5 +68,11 @@
     {
         $direcao = new direcao();
         $direcao->CadastrarProfessor($_POST['nome'], $_POST['login'], $_POST['senha']);
+    }
+
+    if (isset($_GET['resp']))
+    {
+        $direcao = new direcao();
+        $direcao->Sair();
     }
 ?>

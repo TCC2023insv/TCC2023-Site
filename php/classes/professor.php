@@ -58,6 +58,20 @@
             return false;
         }
 
+        public function Sair()
+        {
+            echo "<script>var dialogo = confirm('Tem certeza de que deseja sair?')
+            if (dialogo)
+            {
+                window.location.href = '../../Tema_Claro/p_login_tc.php';
+            }
+            else
+            {
+                window.location.href = '../../Tema_Claro/p_Professor/p_p_inicial_tc.php';
+                }
+                </script>";
+        }
+
         public function CadastrarMonitor($nomeMonitor, $loginMonitor, $senhaMonitor)
         {
             require('../conexao/conexaoBD.php');
@@ -115,5 +129,11 @@
     {
         $professor = new professor();
         $professor->RegistrarOcorrencia($_POST['data'], $_POST['txtDescricao']);
+    }
+
+    if (isset($_GET['resp']))
+    {
+        $professor = new professor();
+        $professor->Sair();
     }
 ?>

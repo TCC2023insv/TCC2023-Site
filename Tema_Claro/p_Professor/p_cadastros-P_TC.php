@@ -27,7 +27,7 @@
                 <li><a href="P_P_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="">Ocorrências</a></li>
                 <li><a  class="active">Cadastros</a></li>
-                <li><a href="../p_login_tc.php">Sair</a></li>
+                <li><a href="../../php/classes/professor.php?resp=sair">Sair</a></li>
             </ul>
         </nav>
 
