@@ -36,7 +36,7 @@
                 <img src="img/icon.png">
             </label>
     
-            <label class="logo">LOGO</label>
+            <label class="logo">MonitoraLab</label>
             <ul>
                 <li><a href="p_reg-repa-M_TC.html">Registrar</a></li>
                 <li><a class="active" href="p_M_Inicial_TC.php">Diagnósticos</a></li>
@@ -62,19 +62,19 @@
                                 }
                             ?>
                         </div>
-
-                        <div id="Data-Resp">
-                            <?php
-                                if (isset($reparo))
-                                {
-                            ?>
-                            <label id="Data"><?php echo date('d/m/Y', strtotime($reparo['Data'])); ?></label>
-                            <label id="Responsavel"><?php echo $reparo['Responsavel']; ?></label>
-                            <?php
-                                }
-                            ?>
-                        </div>
                     </div>
+                    <div id="Data-Resp">
+                        <?php
+                            if (isset($reparo))
+                            {
+                        ?>
+                        <label id="Data"><?php echo date('d/m/Y', strtotime($reparo['Data'])); ?></label>
+                        <label id="Responsavel"><?php echo $reparo['Responsavel']; ?></label>
+                        <?php
+                            }
+                        ?>
+                    </div>
+                    
                 </div>
 
                 <div id="Caixa-esquerda">
@@ -102,34 +102,34 @@
             <div id="Caixa2">   
                 <div id="Caixa-Texto">
 
-                    <label class="Titulo-AE">Atividade Exercida</label>
+                    <label class="Titulo-2">Atividade Exercida</label>
 
                     <?php
                         if (isset($reparo))
                             {
                     ?>
-                    <label class="Atv-Exer"><?php echo $reparo['Acao']; ?></label>
+                    <label class="Caixa-Texto"><?php echo $reparo['Acao']; ?></label>
                     <?php
                             }
                     ?>
                 </div>
     
                 <div id="Caixa-Texto">
-                    <label class="Titulo-PS">Problemas Solucionados</label>
+                    <label class="Titulo-2">Problemas Solucionados</label>
 
                     <!-- TESTAR COM BANCO DE DADOS -->
                     <?php
                         if (isset($reparo))
                             {
                     ?>      
-                    <label class="Prob-Solu"><?php echo $reparo['Problemas_Solucionados']; ?></label>
+                    <label class="Caixa-Texto"><?php echo $reparo['Problemas_Solucionados']; ?></label>
                     <?php
                         }
                 ?>
                 </div>
 
                 <div id="Fotos">
-                    <label class="Titulo">Fotos</label>
+                    <label class="Titulo-3">Fotos</label>
                     <br><br>
                         <?php
                             while ($fotos = $sql_query_img->fetch_assoc())
