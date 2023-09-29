@@ -9,59 +9,72 @@
 }
 
 body{
-    background-image: var(--fundo-gradiente);
+    background-image: var(--fundo-gradiente-2);
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;
 }
 
 #caixa{
-    background-color: var(--color-claro-60);
-    height: 200px;
+    background-color: var(--fundo-caixa);
+    height: 250px;
     width: 80%;
     display: flex;
     border: none;
-    border-radius: 1%;
     margin-top: 5%;
     margin-left: 10%;
     padding: 2%;
 }
 
+.caixa-ocorrencia{
+    background-color: var(--fundo-caixa);
+    width: 90%;
+    height: auto;
+    padding: 6% 0 6% 4%;
+    line-height: 40px;
+}
+
 #Titulo{
-    background-color: var(--color-claro-900);
-    color: var(--color-claro-50);
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
     text-align: center;
     width: auto;
-    height: 30%;
-    font-size: 170%;
-    padding-left: 1%;
+    height: auto;
+    font-size: 130%;
+    padding: 0.5%;
     text-align: center;
-    border-radius: 2%;
+    margin-right: 45%;
 }
 
 #data{
-    background-color: var(--color-claro-900);
-    color: var(--color-claro-50);
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
     font-size: 200%;
-    border-radius: 2%;
     /* margin-top: 10%; */
     padding: 2%;
     width: auto;
-    height: 30%;
+    height: 30px;
     border: none;
-    margin-left:5% ;
+    float: right;
 }
 
 .txtOcorrencia{
     border: none;
-    background-color: var(--color-claro-100);
-    border-radius: 2%;
-    margin-top: 10%;
-    margin-left: 2%;
-    display: flex;
-    width: 80%;
+    background-color: var(--fundo-txt-2);
+    width: 950px;
+    height: auto;
+    padding: 25px;
+    margin-top: 50px; 
+    margin-left: 75px;
 }
 
 input::placeholder{
-    color: var(--color-claro-50);
+    color: var(--texto);
+}
+
+#button{
+    border: none;
+    height: 40px;
+    padding: 1%;
+    background-color: var(--botao);
 }
