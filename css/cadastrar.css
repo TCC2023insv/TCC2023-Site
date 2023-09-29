@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
+@import url('../css/cores.css');
+
+html{
+    min-height: 100vh;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body{
+    background-color: var(--fundo-gradiente-2);
+    font-family: 'Roboto Mono', monospace;
+    color: var(--texto);
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+
+.caixa{
+    width: 565px;
+    height: 575px;
+
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+    
+    background-color: var(--fundo-caixa);
+    border-radius: 1%;
+    border: none;
+}
+
+input::placeholder{
+    color: var(--texto-placeholder);
+    font-weight: bold;
+}
+
+h1{
+    margin-top: 8%;
+    text-align: center;
+    font-size: 230%;
+    font-weight: bold;
+}
+
+.Forms{
+    margin-top: 6%;
+    font-size: 160%;
+    font-weight: bold;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Titulo{
+    align-self: flex-start;
+    margin-left: 15%;
+}
+
+.Txt{
+    border-radius: 1%;
+    width: 70%;
+    height:40px;
+    background-color: var(--fundo-txt);
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--cor-txt);
+    letter-spacing: 5px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+#Btn{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 100%;
+    color: var(--botao-texto);
+    border-radius: 1%;
+    border: none;
+    width: 110%;
+    height: 40px;
+    background-color: var(--botao);
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.Botao{
+    margin-top: 2%;
+    margin-left: 35%;
+}
+
+#Btn:hover{
+    background-color: var(--botao-hover);
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+@media screen and (max-width:500px) 
+{
+    .caixa{
+        /* tamanho
+        width: 340px;
+        height:500px;
+
+        /*posição*/
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto; 
+        flex-direction: column;
+        
+        /* resto */
+        background-color: var(--fundo-caixa);
+        border-radius: 15px;
+        display: flex; 
+       
+    }
+
+    h1{
+        margin-top: 25px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .Forms{
+        margin-top: 30px;
+        font-size: 25px;
+        font-weight: bold;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .Titulo{
+        align-self: flex-start;
+        margin-left: 40px;
+        font-size:20px;
+    }
+    
+    .Txt{
+        border-radius: 8px;
+        width: 280px;
+        height: 30px;
+        background-color: var(--fundo-txt) ;
+        font-size: 20px;
+        font-family: 'Roboto Mono', monospace;
+        color:var(--cor-txt);
+        letter-spacing: 5px;
+        margin-top: 8px;
+    }
+    
+
+    #Btn{
+        font-family: 'Roboto Mono', monospace;
+        font-size: 20px;
+        color: var(--botao-texto);
+        border-radius: 10px;
+        width: 150px;
+        height: 40px;
+        background-color: var(--botao);
+        letter-spacing: 3px;
+    }
+
+    .Botao
+    {
+        margin-top: 5px;
+        margin-left: 120px;
+    }
+    
+}
