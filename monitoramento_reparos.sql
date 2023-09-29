@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 12-Ago-2023 às 15:35
+-- Tempo de geração: 28/09/2023 às 19:19
 -- Versão do servidor: 10.4.28-MariaDB
--- versão do PHP: 8.2.4
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,121 +18,136 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: monitoramento_reparos
---
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela arquivos
+-- Banco de dados: `monitoramento_reparos`
 --
 
 CREATE DATABASE monitoramento_reparos;
 USE monitoramento_reparos;
 
-CREATE TABLE arquivos (
-  ID int(11) NOT NULL,
-  ID_Reparo int(11) NOT NULL,
-  Path varchar(150) NOT NULL
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `arquivos`
+--
+
+CREATE TABLE `arquivos` (
+  `ID` int(11) NOT NULL,
+  `ID_Reparo` int(11) NOT NULL,
+  `Path` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela direcao
+-- Estrutura para tabela `direcao`
 --
 
-CREATE TABLE direcao (
-  Login varchar(30) NOT NULL,
-  Senha varchar(30) NOT NULL
+CREATE TABLE `direcao` (
+  `Login` varchar(30) NOT NULL,
+  `Senha` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela direcao
+-- Despejando dados para a tabela `direcao`
 --
 
-INSERT INTO direcao (Login, Senha) VALUES
+INSERT INTO `direcao` (`Login`, `Senha`) VALUES
 ('direcao', 'direcao');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela dispositivo
+-- Estrutura para tabela `dispositivo`
 --
 
-CREATE TABLE dispositivo (
-  ID int(11) NOT NULL,
-  Nome varchar(30) NOT NULL,
-  Problema varchar(50) NOT NULL,
-  Quantidade int(11) NOT NULL
+CREATE TABLE `dispositivo` (
+  `ID` int(11) NOT NULL,
+  `Nome` varchar(30) NOT NULL,
+  `Problema` varchar(50) NOT NULL,
+  `Quantidade` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela dispositivo_reparo
+-- Estrutura para tabela `dispositivo_reparo`
 --
 
-CREATE TABLE dispositivo_reparo (
-  ID_Dispositivo int(11) NOT NULL,
-  ID_Reparo int(11) NOT NULL
+CREATE TABLE `dispositivo_reparo` (
+  `ID_Dispositivo` int(11) NOT NULL,
+  `ID_Reparo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela monitor
+-- Estrutura para tabela `monitor`
 --
 
-CREATE TABLE monitor (
-  Login varchar(30) NOT NULL,
-  Nome varchar(30) NOT NULL,
-  Senha varchar(30) NOT NULL,
-  Login_Professor varchar(30) NOT NULL
+CREATE TABLE `monitor` (
+  `Login` varchar(30) NOT NULL,
+  `Nome` varchar(30) NOT NULL,
+  `Senha` varchar(30) NOT NULL,
+  `Login_Professor` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela monitor
+-- Despejando dados para a tabela `monitor`
 --
 
-INSERT INTO monitor (Login, Nome, Senha, Login_Professor) VALUES
+INSERT INTO `monitor` (`Login`, `Nome`, `Senha`, `Login_Professor`) VALUES
 ('isa_belle', 'isabelle', 'belleisa', 'j_amaral'),
-('monitor_victor', 'victor', 'victormonitor', 'j_amaral');
+('ste_phanie', 'stephanie', 'senha123', 'j_amaral');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela professor
+-- Estrutura para tabela `ocorrencia`
 --
 
-CREATE TABLE professor (
-  Login varchar(30) NOT NULL,
-  Nome varchar(30) NOT NULL,
-  Senha varchar(30) NOT NULL,
-  Login_Direcao varchar(30) NOT NULL
+CREATE TABLE `ocorrencia` (
+  `ID` int(11) NOT NULL,
+  `data` date NOT NULL,
+  `descricao` varchar(500) NOT NULL,
+  `responsavel` varchar(30) NOT NULL,
+  `login_prof` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `professor`
+--
+
+CREATE TABLE `professor` (
+  `Login` varchar(30) NOT NULL,
+  `Nome` varchar(30) NOT NULL,
+  `Senha` varchar(30) NOT NULL,
+  `Login_Direcao` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela professor
+-- Despejando dados para a tabela `professor`
 --
 
-INSERT INTO professor (Login, Nome, Senha, Login_Direcao) VALUES
+INSERT INTO `professor` (`Login`, `Nome`, `Senha`, `Login_Direcao`) VALUES
+('fabiano_lopes', 'fabiano lopes', 'senha123', 'direcao'),
 ('j_amaral', 'amaral', 'senha123', 'direcao');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela reparo
+-- Estrutura para tabela `reparo`
 --
 
-CREATE TABLE reparo (
-  ID int(11) NOT NULL,
-  Data date NOT NULL,
-  Acao varchar(300) NOT NULL,
-  Problemas_Solucionados varchar(300) NOT NULL,
-  Responsavel varchar(30) NOT NULL,
-  Login_Monitor varchar(30) NOT NULL,
-  Laboratorio varchar(15) NOT NULL
+CREATE TABLE `reparo` (
+  `ID` int(11) NOT NULL,
+  `Data` date NOT NULL,
+  `Acao` varchar(300) NOT NULL,
+  `Problemas_Solucionados` varchar(300) NOT NULL,
+  `Responsavel` varchar(30) NOT NULL,
+  `Login_Monitor` varchar(30) NOT NULL,
+  `Laboratorio` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -140,109 +155,128 @@ CREATE TABLE reparo (
 --
 
 --
--- Índices para tabela arquivos
+-- Índices de tabela `arquivos`
 --
-ALTER TABLE arquivos
-  ADD PRIMARY KEY (ID),
-  ADD KEY FK_ID_Reparo (ID_Reparo);
+ALTER TABLE `arquivos`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `FK_ID_Reparo` (`ID_Reparo`);
 
 --
--- Índices para tabela direcao
+-- Índices de tabela `direcao`
 --
-ALTER TABLE direcao
-  ADD PRIMARY KEY (Login);
+ALTER TABLE `direcao`
+  ADD PRIMARY KEY (`Login`);
 
 --
--- Índices para tabela dispositivo
+-- Índices de tabela `dispositivo`
 --
-ALTER TABLE dispositivo
-  ADD PRIMARY KEY (ID);
+ALTER TABLE `dispositivo`
+  ADD PRIMARY KEY (`ID`);
 
 --
--- Índices para tabela dispositivo_reparo
+-- Índices de tabela `dispositivo_reparo`
 --
-ALTER TABLE dispositivo_reparo
-  ADD PRIMARY KEY (ID_Dispositivo) USING BTREE,
-  ADD KEY FK_dispositivo (ID_Dispositivo) USING BTREE,
-  ADD KEY FK_reparo (ID_Reparo);
+ALTER TABLE `dispositivo_reparo`
+  ADD PRIMARY KEY (`ID_Dispositivo`) USING BTREE,
+  ADD KEY `FK_dispositivo` (`ID_Dispositivo`) USING BTREE,
+  ADD KEY `FK_reparo` (`ID_Reparo`);
 
 --
--- Índices para tabela monitor
+-- Índices de tabela `monitor`
 --
-ALTER TABLE monitor
-  ADD PRIMARY KEY (Login),
-  ADD KEY FK_professor (Login_Professor);
+ALTER TABLE `monitor`
+  ADD PRIMARY KEY (`Login`),
+  ADD KEY `FK_professor` (`Login_Professor`);
 
 --
--- Índices para tabela professor
+-- Índices de tabela `ocorrencia`
 --
-ALTER TABLE professor
-  ADD PRIMARY KEY (Login),
-  ADD KEY FK_direcao (Login_Direcao);
+ALTER TABLE `ocorrencia`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `prof_ocorrencias` (`login_prof`);
 
 --
--- Índices para tabela reparo
+-- Índices de tabela `professor`
 --
-ALTER TABLE reparo
-  ADD PRIMARY KEY (ID),
-  ADD KEY FK_Monitor (Login_Monitor);
+ALTER TABLE `professor`
+  ADD PRIMARY KEY (`Login`),
+  ADD KEY `FK_direcao` (`Login_Direcao`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- Índices de tabela `reparo`
 --
+ALTER TABLE `reparo`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `FK_Monitor` (`Login_Monitor`);
 
 --
--- AUTO_INCREMENT de tabela arquivos
---
-ALTER TABLE arquivos
-  MODIFY ID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
---
--- AUTO_INCREMENT de tabela dispositivo
---
-ALTER TABLE dispositivo
-  MODIFY ID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=265;
-
---
--- AUTO_INCREMENT de tabela reparo
---
-ALTER TABLE reparo
-  MODIFY ID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- Restrições para despejos de tabelas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
--- Limitadores para a tabela arquivos
+-- AUTO_INCREMENT de tabela `arquivos`
 --
-ALTER TABLE arquivos
-  ADD CONSTRAINT FK_ID_Reparo FOREIGN KEY (ID_Reparo) REFERENCES reparo (ID);
+ALTER TABLE `arquivos`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
--- Limitadores para a tabela dispositivo_reparo
+-- AUTO_INCREMENT de tabela `dispositivo`
 --
-ALTER TABLE dispositivo_reparo
-  ADD CONSTRAINT FK_dispositivo FOREIGN KEY (ID_Dispositivo) REFERENCES dispositivo (ID),
-  ADD CONSTRAINT FK_reparo FOREIGN KEY (ID_Reparo) REFERENCES reparo (ID);
+ALTER TABLE `dispositivo`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=398;
 
 --
--- Limitadores para a tabela monitor
+-- AUTO_INCREMENT de tabela `ocorrencia`
 --
-ALTER TABLE monitor
-  ADD CONSTRAINT FK_professor FOREIGN KEY (Login_Professor) REFERENCES professor (Login);
+ALTER TABLE `ocorrencia`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- Limitadores para a tabela professor
+-- AUTO_INCREMENT de tabela `reparo`
 --
-ALTER TABLE professor
-  ADD CONSTRAINT FK_direcao FOREIGN KEY (Login_Direcao) REFERENCES direcao (Login);
+ALTER TABLE `reparo`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- Limitadores para a tabela reparo
+-- Restrições para tabelas despejadas
 --
-ALTER TABLE reparo
-  ADD CONSTRAINT FK_Monitor FOREIGN KEY (Login_Monitor) REFERENCES monitor (Login);
+
+--
+-- Restrições para tabelas `arquivos`
+--
+ALTER TABLE `arquivos`
+  ADD CONSTRAINT `FK_ID_Reparo` FOREIGN KEY (`ID_Reparo`) REFERENCES `reparo` (`ID`);
+
+--
+-- Restrições para tabelas `dispositivo_reparo`
+--
+ALTER TABLE `dispositivo_reparo`
+  ADD CONSTRAINT `FK_dispositivo` FOREIGN KEY (`ID_Dispositivo`) REFERENCES `dispositivo` (`ID`),
+  ADD CONSTRAINT `FK_reparo` FOREIGN KEY (`ID_Reparo`) REFERENCES `reparo` (`ID`);
+
+--
+-- Restrições para tabelas `monitor`
+--
+ALTER TABLE `monitor`
+  ADD CONSTRAINT `FK_professor` FOREIGN KEY (`Login_Professor`) REFERENCES `professor` (`Login`);
+
+--
+-- Restrições para tabelas `ocorrencia`
+--
+ALTER TABLE `ocorrencia`
+  ADD CONSTRAINT `prof_ocorrencias` FOREIGN KEY (`login_prof`) REFERENCES `professor` (`Login`);
+
+--
+-- Restrições para tabelas `professor`
+--
+ALTER TABLE `professor`
+  ADD CONSTRAINT `FK_direcao` FOREIGN KEY (`Login_Direcao`) REFERENCES `direcao` (`Login`);
+
+--
+-- Restrições para tabelas `reparo`
+--
+ALTER TABLE `reparo`
+  ADD CONSTRAINT `FK_Monitor` FOREIGN KEY (`Login_Monitor`) REFERENCES `monitor` (`Login`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

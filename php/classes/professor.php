@@ -1,92 +1,22 @@
 <?php
-    class professor
+    require('usuarios.php');
+    class Professor extends Usuarios
     {
-        public $nome;
-        public $login;
-        public $senha;
-        public function GetNome($nome)
-        {
-            $this->nome = $nome;
-        }
-        public function SetNome()
-        {
-            return $this->nome;
-        }
-
-        public function GetLogin($login)
-        {
-            $this->login = $login;
-        }
-        public function SetLogin()
-        {
-            return $this->login;
-        }
-
-        public function GetSenha($senha)
-        {
-            $this->senha = $senha;
-        }
-        public function SetSenha()
-        {
-            return $this->senha;
-        }
-
-        public function Entrar($login, $senha)
-        {
-            require('conexao/conexaoBD.php');
-
-            $professor = new professor();
-            $professor->GetLogin($login);
-            $professor->GetSenha($senha);
-
-            $conexao = ConectarBanco();
-            $query = "SELECT * FROM professor WHERE login = '$professor->login' AND senha = 
-            '$professor->senha'";
-            $resultado = mysqli_query($conexao, $query);
-
-            if (mysqli_num_rows($resultado) > 0) 
-            {
-                $conexao->close();
-
-                session_start();
-
-                $_SESSION['login'] = $professor->login;
-
-                return true;
-            }
-            $conexao->close();
-            return false;
-        }
-
-        public function Sair()
-        {
-            echo "<script>var dialogo = confirm('Tem certeza de que deseja sair?')
-            if (dialogo)
-            {
-                window.location.href = '../../Tema_Claro/p_login_tc.php';
-            }
-            else
-            {
-                window.location.href = '../../Tema_Claro/p_Professor/p_p_inicial_tc.php';
-                }
-                </script>";
-        }
-
         public function CadastrarMonitor($nomeMonitor, $loginMonitor, $senhaMonitor)
         {
             require('../conexao/conexaoBD.php');
             require('monitor.php');
 
-            $monitor = new monitor();
-            $monitor->GetNome($nomeMonitor);
-            $monitor->GetLogin($loginMonitor);
-            $monitor->GetSenha($senhaMonitor);
+            $Monitor = new Monitor();
+            $Monitor->GetNome($nomeMonitor);
+            $Monitor->GetLogin($loginMonitor);
+            $Monitor->GetSenha($senhaMonitor);
             session_start();
             $conexao = ConectarBanco();
             $professor = $_SESSION['login'];
         
             $conexao->query("INSERT INTO monitor (login, nome, senha, login_professor) VALUES 
-            ( '" . $monitor->login . "', '" . $monitor->nome . "', '" . $monitor->senha . "', '" 
+            ( '" . $Monitor->login . "', '" . $Monitor->nome . "', '" . $Monitor->senha . "', '" 
             .$professor ."')");
         
             $conexao->close();
@@ -100,7 +30,7 @@
 
             session_start();
             $professor = $_SESSION['login'];
-            $Ocorrencia = new ocorrencia($professor, $data, $descricao);
+            $Ocorrencia = new Ocorrencia($professor, $data, $descricao);
 
             $conexao = ConectarBanco();
             $resultado = mysqli_query($conexao, "SELECT nome FROM professor WHERE login = '" . 
@@ -110,7 +40,7 @@
                 $row = mysqli_fetch_assoc($resultado);
                 $responsavel = $row['nome'];
             }
-            $conexao->query("INSERT INTO ocorrencias (data, descricao, responsavel, login_prof) 
+            $conexao->query("INSERT INTO ocorrencia (data, descricao, responsavel, login_prof) 
             VALUES ('" . $Ocorrencia->data . "', '" . $Ocorrencia->descricao . "', '" . 
             $responsavel . "', '" . $professor . "')");
             $conexao->close();
@@ -121,19 +51,19 @@
 
     if (isset($_POST['cadastrarMonitor']))
     {
-        $professor = new professor();
-        $professor->CadastrarMonitor($_POST['nome'], $_POST['login'], $_POST['senha']);
+        $Professor = new Professor();
+        $Professor->CadastrarMonitor($_POST['nome'], $_POST['login'], $_POST['senha']);
     }
 
     if (isset($_POST['btnRegistrarOcorrencia']))
     {
-        $professor = new professor();
-        $professor->RegistrarOcorrencia($_POST['data'], $_POST['txtDescricao']);
+        $Professor = new Professor();
+        $Professor->RegistrarOcorrencia($_POST['data'], $_POST['txtDescricao']);
     }
 
     if (isset($_GET['resp']))
     {
-        $professor = new professor();
-        $professor->Sair();
+        $Professor = new Professor();
+        $Professor->Sair();
     }
 ?>

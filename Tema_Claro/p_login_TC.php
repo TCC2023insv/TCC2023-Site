@@ -37,7 +37,7 @@
 	
 	<fieldset class="caixa">
 		<h1>MonitoraLab</h1>
-		<form method="post" action="../php/Entrar.php" class="Forms">
+		<form method="post" action="../php/classes/usuarios.php" class="Forms">
 			<label>Entrar como:</label>
 			
 			<!-- <br> -->

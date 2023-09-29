@@ -24,7 +24,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- <link rel="stylesheet" type="text/css" href="../../css/registrados-diag.css"> -->
         <link rel="stylesheet" type="text/css" href="../../css/p_rep-registrado.css">
-        <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
+        <link rel="stylesheet" type="text/css" href="../../css/navbar_tc.css">
         <title>Reparo</title>
     </head>
     <body>
@@ -39,7 +39,7 @@
                 <li><a class="active" href="p_D_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="">Ocorrências</a></li>
                 <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
-                <li><a href="../../php/classes/direcao.php?resp=sair">Sair</a></li>
+                <li><a href="../../php/classes/direcao.php?resp=">Sair</a></li>
             </ul>
         </nav>
 

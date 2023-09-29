@@ -1,5 +1,5 @@
 <?php
-    class diagnostico
+    class Diagnostico
     {
         public $laboratorio;
         public $data;
