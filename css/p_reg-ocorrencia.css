@@ -9,14 +9,14 @@
 }
 
 body{
-    background-image: var(--fundo-gradiente);
+    background-image: var(--fundo-gradiente-2);
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;
 }
 
 #caixa{
-    background-color: var(--color-claro-60);
+    background-color: var(--fundo-caixa);
     height: 200px;
     width: 80%;
     display: flex;
@@ -28,8 +28,8 @@ body{
 }
 
 #Titulo{
-    background-color: var(--color-claro-900);
-    color: var(--color-claro-50);
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
     text-align: center;
     width: auto;
     height: 30%;
@@ -40,16 +40,16 @@ body{
 }
 
 #data{
-    background-color: var(--color-claro-900);
-    color: var(--color-claro-50);
-    font-size: 200%;
-    border-radius: 2%;
-    /* margin-top: 10%; */
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    
+    font-size: 130%;
+    text-align: center;
+
     padding: 2%;
-    width: auto;
-    height: 30%;
+    width: 160%;
     border: none;
-    margin-left:5% ;
+    margin-left:5%;
 }
 
 .txtOcorrencia{

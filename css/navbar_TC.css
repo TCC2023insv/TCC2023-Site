@@ -36,11 +36,46 @@ nav ul li a{
     background-color: var(--fundo-a);
     font-size: 100%;
     padding: 4% 10px;
-    border-radius: 1%;
     text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+    border-radius: 2px;
 }
 
-a.active,a:hover{
+a.Btn-Sair{
+    color: var(--texto-nav);
+    background-color: var(--fundo-a);
+    font-size: 100%;
+    padding: 8% 10px;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+    border-radius: 2px;
+}
+
+a.Btn-Diag{
+    color: var(--texto-nav);
+    background-color: var(--fundo-a);
+    font-size: 100%;
+    padding: 3% 10px;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+    border-radius: 2px;
+}
+
+a.active{
+    background: var(--fundo-hover);
+    color: var(--texto-hover);
+    font-size: 100%;
+    padding: 4% 10px;
+
+}
+
+a:hover{
     background: var(--fundo-hover);
     color: var(--texto-hover);
     transition: .5s;
@@ -68,8 +103,7 @@ a.active,a:hover{
         background-color: #2E355F;
         color: #FFEEDD; 
         width: 280px;
-        height: 95px;
-        border-radius: 15px; 
+        height: 95px; 
     }
 }
 

@@ -24,8 +24,8 @@ body{
 
 
 .caixa{
-    width: 565px;
-    height: 575px;
+    width: 32%;
+    height: 545px;
 
     position: absolute;
     top: 0; bottom: 0;
@@ -33,25 +33,25 @@ body{
     margin: auto;
     
     background-color: var(--fundo-caixa);
-    border-radius: 1%;
-    border: none;
+    border:none;
+    border-radius: 5px;
 }
 
 input::placeholder{
     color: var(--texto-placeholder);
-    font-weight: bold;
+    font-weight: normal;
 }
 
 h1{
     margin-top: 8%;
     text-align: center;
-    font-size: 230%;
+    font-size: 220%;
     font-weight: bold;
 }
 
 .Forms{
-    margin-top: 6%;
-    font-size: 160%;
+    margin-top: 7%;
+    font-size: 130%;
     font-weight: bold;
     
     display: flex;
@@ -61,13 +61,12 @@ h1{
 
 .Titulo{
     align-self: flex-start;
-    margin-left: 15%;
+    margin-left: 12%;
 }
 
 .Txt{
-    border-radius: 1%;
-    width: 70%;
-    height:40px;
+    width: 78%;
+    height: 32px;
     background-color: var(--fundo-txt);
     font-size: 20px;
     font-family: 'Roboto Mono', monospace;
@@ -75,27 +74,58 @@ h1{
     letter-spacing: 5px;
     margin-top: 10px;
     padding-left: 10px;
+    border: none;
+    border-radius: 2px;
+}
+
+.Botao{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-right: 36%;
+    margin-top: 3%;
+    margin-left: 35%;
 }
 
 #Btn{
     font-family: 'Roboto Mono', monospace;
-    font-size: 100%;
+    font-size: 90%;
+    background-color: var(--botao-2);
     color: var(--botao-texto);
-    border-radius: 1%;
+    
     border: none;
-    width: 110%;
-    height: 40px;
-    background-color: var(--botao);
+    width: 60%;
+    height: 30%;
+    padding: 1.5%;
+
     letter-spacing: 3px;
     text-align: center;
+    border-radius: 2px;
 }
 
-.Botao{
-    margin-top: 2%;
-    margin-left: 35%;
+#Btn-Voltar{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 90%;
+    background-color: var(--botao-2);
+    color: var(--botao-texto);
+    border: none;
+    width: auto;
+    height: auto;
+    font-weight: normal;
+    text-align: center;
+    padding: 1% 1% 1% 2%;
+    float: left;
+    margin: 0% 10%;
+    border-radius: 2px;
 }
 
 #Btn:hover{
+    background-color: var(--botao-hover);
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+#Btn-Voltar:hover{
     background-color: var(--botao-hover);
     transform: scale(1.1);
     transition: all 0.5s;
@@ -116,8 +146,7 @@ h1{
         flex-direction: column;
         
         /* resto */
-        background-color: var(--fundo-caixa);
-        border-radius: 15px;
+        background-color: var(--fundo-caixa); 
         display: flex; 
        
     }
@@ -145,8 +174,7 @@ h1{
         font-size:20px;
     }
     
-    .Txt{
-        border-radius: 8px;
+    .Txt{ 
         width: 280px;
         height: 30px;
         background-color: var(--fundo-txt) ;
@@ -161,8 +189,7 @@ h1{
     #Btn{
         font-family: 'Roboto Mono', monospace;
         font-size: 20px;
-        color: var(--botao-texto);
-        border-radius: 10px;
+        color: var(--botao-texto); 
         width: 150px;
         height: 40px;
         background-color: var(--botao);

@@ -11,7 +11,7 @@
     <html lang="pt-BR">
         <head>
             <meta charset="UTF-8">
-            <link rel="stylesheet" type="text/css" href="../../css/p_inicial">
+            <link rel="stylesheet" type="text/css" href="../../css/p_inicial.css">
             <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Diagnósticos</title>
@@ -28,7 +28,7 @@
                     <li><a class="active" href="">Diagnósticos</a></li>
                     <li><a href="">Ocorrências</a></li>
                     <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
-                    <li><a href="../../php/classes/direcao.php?resp=sair">Sair</a></li>
+                    <li><a class="Btn-Sair" href="../../php/classes/direcao.php?resp=sair">Sair</a></li>
                 </ul>
             </nav>
     

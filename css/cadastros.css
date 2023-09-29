@@ -46,7 +46,6 @@ body{
 .Itens{
     background-color: var(--fundo-txt);
     height: 25%;
-    border-radius: 1%;
     font-size: 120%;
     padding: 0.5% 1%;
     margin: 0 0% 0 3%;
