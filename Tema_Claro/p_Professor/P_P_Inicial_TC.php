@@ -29,7 +29,7 @@
                     <li><a class="active" href="">Diagnósticos</a></li>
                     <li><a href="p_reg-ocorrencia.html">Ocorrências</a></li>
                     <li><a href="p_cadastros-P_TC.php">Cadastros</a></li>
-                    <li><a href="../../php/classes/professor.php?resp=sair">Sair</a></li>
+                    <li><a href="../../php/classes/usuarios.php?resp=sair">Sair</a></li>
                 </ul>
             </nav>
     

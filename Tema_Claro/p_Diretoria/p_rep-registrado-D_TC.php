@@ -39,7 +39,7 @@
                 <li><a class="active" href="p_D_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="">Ocorrências</a></li>
                 <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
-                <li><a href="../../php/classes/direcao.php?resp=">Sair</a></li>
+                <li><a href="../../php/classes/usuarios.php?resp=">Sair</a></li>
             </ul>
         </nav>
 
