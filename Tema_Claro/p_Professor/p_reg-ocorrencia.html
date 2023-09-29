@@ -20,14 +20,14 @@
             <li><a href="P_P_Inicial_TC.php">Diagnósticos</a></li>
             <li><a class="active">Ocorrências</a></li>
             <li><a  href="p_cadastros-P_TC.php">Cadastros</a></li>
-            <li><a href="../p_login_TC.html">Sair</a></li>
+            <li><a href="../../php/classes/professor.php?resp=sair">Sair</a></li>
         </ul>
     </nav>
 
   <form action="../../php/classes/professor.php" method="post" id="caixa">
     <label id="Titulo">Registrar Ocorrência</label><br>
-    <input id="data" name="data" type="date"><br><br>
-    <textarea class="txtOcorrencia" name="txtDescricao" placeholder="Digite a ocorrência aqui"></textarea>
+    <input id="data" name="data" type="date" required><br><br>
+    <textarea class="txtOcorrencia" name="txtDescricao" placeholder="Digite a ocorrência aqui" required></textarea>
     <button type="submit" name="btnRegistrarOcorrencia">Registrar</button>
   </form>
 </body>

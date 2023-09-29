@@ -52,10 +52,24 @@
 
                 $_SESSION['login'] = $monitor->login;
 
-                return header("Location: ../tema_claro/p_Monitor/p_M_Inicial_TC.php");
+                return true;
             }
             $conexao->close();
-            return header("Location: ../tema_claro/p_login_TC.html");
+            return false;
+        }
+
+        public function Sair()
+        {
+            echo "<script>var dialogo = confirm('Tem certeza de que deseja sair?')
+            if (dialogo)
+            {
+                window.location.href = '../../tema_claro/p_login_tc.php';
+            }
+            else
+            {
+                window.location.href = '../../tema_claro/p_monitor/p_m_inicial_tc.php';
+                }
+                </script>";
         }
 
         public function RegistrarReparo()
@@ -148,5 +162,11 @@
     {
         $monitor = new monitor();
         $monitor->RegistrarReparo();
+    }
+
+    if (isset($_GET['resp']))
+    {
+        $monitor = new monitor();
+        $monitor->Sair();
     }
 ?>
