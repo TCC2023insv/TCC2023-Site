@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
-@import url(../css/cores.css);
+@import url('../css/cores.css');
 
 *{
     margin: 0;
@@ -19,179 +19,177 @@ body{
 #Caixa{
     background-color: var(--fundo-caixa-2);
 
-    width: 1152px;
+    width: 900px;
     height: auto;
 
     position: relative;
     display: flex;
     flex-direction: column;
-    border-radius: 25px;
-    margin: 25px auto;   
-    padding: 20px 0 20px 0;
+    margin: 3% auto;   
+    padding: 2% 0 ;
 }
     
 #Caixa-direita{
-    margin-top: 30px;
+    margin-top: 3%;
     float: right;
-    margin-right: 67px;
+    margin-right: 12%;
     height: auto;
-    /* display: flex;
-    flex-direction: column; */
 }
-
+ 
 #Sele-Lab{
-    background-color: #FFEEDD;
-    border-radius: 12px;
-    width: 290px;
-    height: 110px;
-    padding: 20px 0 0 0 ;
+    background-color: var(--fundo-bloco);
+    width: 110%;
+    height: 40%;
+    padding: 8% 8%;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
 #Titulo-E{
-    background-color: #2E355F;
-    color: #FFEEDD;
-    font-size: 25px;
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 125%;
     text-align: center;
-    border-radius: 8px;
-    padding: 5px 0 5px 0;
-    width: 240px;
+    padding: 2%;
+    width: 95%;
 }
+
 
 #Lab{
-    background-color: #FFEEDD;
-    color: #2E355F;
-    border-color: #2E355F;
-    border-radius: 8px;
-    width: 230px;
-    font-size: 25px;
+    color: var(--texto);
+    
+    border: 2px solid var(--borda);
+    text-align: center;
+
+    width: 98%;
+    font-size: 130%;
     letter-spacing: 5px;
     font-weight: bold;
-    margin: 15px;
-    border: 1px solid #2E355F;
-    padding: 0 0 0 10px;
+
+    margin: 5% 0 0 0;
+    padding: 1% 0;
 }
 
+
+
 #Data-Resp{
-    background-color: #FFEEDD;
-    border-radius: 10px;
-    width: 290px;
-    height: auto;
-    margin-top: 40px;
+    margin-top: 2%;
+    background-color: var(--fundo-bloco);
+    width: 14.2%;
+    height: 11%;
+    padding: 1.5% 6%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
 }
 
+
 #Data{
-    background-color: #2E355F;
-    color: #FFEEDD;
-    font-size: 30px;
-    border-radius: 8px;
-    margin-top: 15px;
-    padding: 5px 10px 5px 10px;
-    width: 230px;
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    
+    font-size: 130%;
+    text-align: center;
+
+    padding: 3%;
+    width: 160%;
     border: none;
 }
 
+
 #Responsavel{
-    background-color: #FFEEDD;
-    color: #2E355F;
-    border-radius: 8px;
-    width: 230px;
-    height:30px;
-    font-size: 25px;
+    color: var(--texto);
+    border: 2px solid var(--borda);
+    text-align: center;
+    
+    width: 164%;
+    font-size: 130%;
     letter-spacing: 5px;
     font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 14px;
-    padding: 5px 10px 5px 10px;
-    border-width: 1px;
+
+    margin: 8% 0 0 0;
+    padding: 1% 0;
 }
 
 
-/* CAIXA DA ESQUERDA */
-
 .Titulo{
-    background-color: #2E355F;
-    color: #FFEEDD;
-    font-size: 25px;
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 150%;
     text-align: center;
     width: auto;
     height: auto;
-    border-radius: 8px;
-    padding: 5px;
+    padding: 0.5%;
 }
 
+
 #Caixa-esquerda{
-    margin-top: -20px;
-    margin-left: 20px;
+    margin-top: 3%;
+    margin-left: 6%;
     height: auto;
     display: flex;
     flex-direction: column; 
 }
 
+
 #Problemas{
-    background-color: #FFEEDD;
-    width: 600px;
+    background-color: var(--fundo-caixa);
+    width: 90%;
     height: auto;
-    border-radius: 15px;
-    padding: 25px;
+    padding: 6% 0 6% 4%;
     line-height: 40px;
-    margin-top: 50px; 
-    margin-left: 59px;
 }
 
+
 .txtProb{
-    color:#2E355F;
-    background-color: #A79CAC;
-    border-radius: 6px;
-    font-size: 20px;
-    padding: 0 0 0 5px;
-    margin-top: 20px;
-    margin-left: 30px;
-    width: 125px;
+    color: var(--texto);
+    background-color: var(--fundo-txt-2);
+    font-size: 110%;
+    padding: 2px 0 2px 5px;
+    margin-top: 4%;
+    width: 25%;
     display: inline-block;
     text-align: center;
 }
 
-.Quant{
-    border: 1px solid #2E355F;
-    border-radius: 8px;
-    
-    background-color: #FFEEDD;
-    color: #2E355F;
-    
-    width: auto;
-    height:32px;
-    padding: 5px 35px 5px 35px;
-    margin-left: 10px;
 
-    font-size: 20px;
-    letter-spacing: 5px;
+.Quant{
+    border: 2px solid var(--borda);
+    color: var(--borda);
+    text-align: center;
+    width: 8%;
+    padding: 0 0 0 5px;
+    margin-left: 1%;
+    display: flex;
+    display: inline-block;
+
+    font-size: 110%;
     font-weight: 20;
 }
+
 
 .Select{
-    border: 1px solid #2E355F;
-    border-radius: 8px;
 
-    background-color: #FFEEDD ;
-    color: #2E355F;
+    border: 2px solid var(--borda);
+    color: var(--borda);
 
-    width: 175px;
-    font-size: 20px;
-    padding: 5px 20px 5px 20px;
-    
+    text-align: center;
+
+    width: 43%;
+    height: 10%;
+    display: flex;
+    display: inline-block;
+    font-size: 125%;
+    padding: 0 2%;
+    margin-left: 1%;
+
     letter-spacing: 5px;
     font-weight: 20;
     
 }
 
-
-/* CAIXAS DE TEXTO */
 
 #Caixa2{
     display: flex;
@@ -200,102 +198,81 @@ body{
 
 
 #Caixa-Texto{
-    background-color: #FFEEDD;
-    width: 950px;
+    background-color: var(--fundo-caixa);
+    
+    margin-top: 4%;
+    margin-left: 6%;
+
+    width: 82%;
     height: auto;
-    border-radius: 15px;
-    padding: 25px;
-    margin-top: 50px; 
-    margin-left: 75px;
+    padding: 3% 0 3% 4%;
+    
     display: flex;
     flex-direction: column; 
 }
 
-.Titulo-AE{
-    background-color: #2E355F;
-    color: #FFEEDD;
-    font-size: 25px;
+
+.Titulo-2{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 130%;
     text-align: center;
     width: auto;
     height: auto;
-    border-radius: 8px;
-    padding: 5px;
-    margin-right: 550px;
+    padding: 0.5%;
+    margin-right: 45%;
 }
 
-.Titulo-PS{
-    background-color: #2E355F;
-    color: #FFEEDD;
-    font-size: 25px;
+
+.Caixa-Texto{
+    background-color: var(--fundo-txt-2);
+    color: var(--texto);
+    font-size: 120%;
+    padding: 2%;
+    margin-top: 3%;
+    width: 90%;
+    height: auto;
+}
+
+
+.Titulo-3{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 130%;
     text-align: center;
     width: auto;
     height: auto;
-    border-radius: 8px;
-    padding: 5px;
-    margin-right: 490px;
-}
-
-.Atv-Exer{
-    background-color: #A79CAC;
-    color: #FFEEDD;
-    font-size: 20px;
-    border: none;
-    border-radius: 8px;
-    font-family: 'Roboto Mono', monospace;
-    letter-spacing: 5px;
-    padding: 8px;
-    margin-top: 20px;
-    width: 930px;
-    height: 150px;
-}
-
-
-.Prob-Solu{
-    background-color: #A79CAC;
-    color: #FFEEDD;
-    font-size: 20px;
-    border: none;
-    border-radius: 8px;
-    font-family: 'Roboto Mono', monospace;
-    letter-spacing: 5px;
-    padding: 8px;
-    margin-top: 20px;
-    width: 930px;
-    height: 150px;
+    padding: 0.5%;
+    margin-right: 85%;
 }
 
 #Fotos{
-    background-color: #FFEEDD;
-    width: 950px;
+    background-color: var(--fundo-caixa);
+    margin-top: 4%;
+    margin-left: 6%;
+
+    width: 82%;
     height: auto;
-    border-radius: 15px;
-    padding: 25px;
-    margin-top: 50px; 
-    margin-left: 75px;
+    padding: 3% 0 3% 4%;
+    
+    display: flex;
+    flex-direction: column; 
 }
 
-/* BOTÕES */
-
 .Btn{
-    background-color: #2E355F;
-    font-family: 'Roboto Mono', monospace;
-    color: #FFEEDD;
+    background-color: var(--botao);
+    color: var(--texto);
     width: auto;
     height: 45px;
-    border-radius: 10px;
-    font-size: 30px;
-    margin-top: 40px;
-    border: none;
-    padding: 5px 8px 2px 8px;
+    font-size: 155%;
+    margin: 4% 8% 1% 0;
+    padding: 1% 1% 0 1.5%;
     float: right;
-    margin-right: 80px;
-    margin-bottom: 20px;
-
 }
 
 .Btn:hover{
-    background-color: #4C5381;
+    background-color: var((--botao-hover));
     transform: scale(1.1);
     transition: all 0.5s
 }
-
+ 

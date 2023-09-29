@@ -60,17 +60,19 @@
 
 	--icone: #c2d5f0;
 	--fundo-caixa: #0D0C1D;
+	--fundo-caixa-2: #161B33;
+
 	--fundo-txt: #F0EEFF;
+	--fundo-txt-2: #224169;
 	--cor-txt: #0D0C1D;
+
 	--texto-placehoder: ;
-	--botao: #323853;
-	--botao-texto: ;
-	--botao-hover: ;
+	--botao: #0D0C1D;
+	--botao-hover: #224169;
 
-	--fundo-caixa-2: #161b33;
-
+	--borda: #c2d5f0;
 	--fundo-label:#323853;
 
-	
+
 	--fundo-bloco: #0D0C1D;
 }
