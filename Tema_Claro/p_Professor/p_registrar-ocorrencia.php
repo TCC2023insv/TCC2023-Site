@@ -1,7 +1,7 @@
 <?php
     if (!isset($_SESSION)) session_start();
 
-    if (!isset($_SESSION['login']))
+    if (!isset($_SESSION['login']) or $_SESSION['tipoDeUsuario'] != 'Prof')
     {
         session_destroy();
         header("Location: ../p_login_tc.php");

@@ -57,6 +57,7 @@
             
                             $_SESSION['login'] = $login;
                             $_SESSION['login_incorreto'] = false;
+                            $_SESSION['tipoDeUsuario'] = $tipoDeLogin;
 
                             header("Location: ../../tema_claro/p_diretoria/p_d_inicial_tc.php");
                             
@@ -81,6 +82,7 @@
 
                             $_SESSION['login'] = $login;
                             $_SESSION['login_incorreto'] = false;
+                            $_SESSION['tipoDeUsuario'] = $tipoDeLogin;
 
                             header("Location: ../../tema_claro/p_professor/p_p_inicial_tc.php");
                         }
@@ -104,6 +106,7 @@
 
                             $_SESSION['login'] = $login;
                             $_SESSION['login_incorreto'] = false;
+                            $_SESSION['tipoDeUsuario'] = $tipoDeLogin;
 
                             header("Location: ../../tema_claro/p_monitor/p_m_inicial_tc.php");
                         }
