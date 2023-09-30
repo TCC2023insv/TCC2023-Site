@@ -1,6 +1,14 @@
 <?php
    require("../../php/conexao/conexaoBD.php");
 
+   if (!isset($_SESSION)) session_start();
+
+   if (!isset($_SESSION['login']))
+   {
+       session_destroy();
+       header("Location: ../p_login_tc.php");
+   }
+   
    $conexao = ConectarBanco();
 
    $sql_query = $conexao->query("SELECT `Login`, `Nome` FROM `monitor`") or die ($conexao->error);
@@ -12,6 +20,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
         <link rel="stylesheet" type="text/css" href="../../css/cadastros.css">
+        <script src="../../js/confirmar-saida.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cadastros</title>
     </head>
@@ -27,12 +36,12 @@
                 <li><a href="P_P_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="">Ocorrências</a></li>
                 <li><a  class="active">Cadastros</a></li>
-                <li><a href="../../php/classes/usuarios.php?resp=sair">Sair</a></li>
+                <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
             </ul>
         </nav>
 
         <br><br><br>
-        <a href="p_cad-mon-P_TC.html" class="Cad" id="Cadastrar">Cadastrar Monitor</a>
+        <a href="p_cad-mon-P_TC.php" class="Cad" id="Cadastrar">Cadastrar Monitor</a>
         <br><br>  
 
         <?php

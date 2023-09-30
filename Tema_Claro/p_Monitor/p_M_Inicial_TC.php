@@ -1,6 +1,13 @@
 <?php
     require("../../php/conexao/conexaoBD.php");
 
+    if (!isset($_SESSION)) session_start();
+
+    if (!isset($_SESSION['login']))
+    {
+        session_destroy();
+        header("Location: ../p_login_tc.php");
+    }
     $conexao = ConectarBanco();
 
     $sql_query = $conexao->query("SELECT `ID`, `Data`, `Responsavel`, `Laboratorio` FROM `reparo` 
@@ -13,6 +20,7 @@
             <meta charset="UTF-8">
             <link rel="stylesheet" type="text/css" href="../../css/p_inicial.css">
             <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
+            <script src="../../js/confirmar-saida.js"></script>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Diagnósticos</title>
         </head>
@@ -25,9 +33,9 @@
     
                 <label class="logo">MonitoraLab</label>
                 <ul>
-                <li><a href="p_reg-repa-M_TC.html">Registrar</a></li>
+                <li><a href="p_reg-repa-M_TC.php">Registrar</a></li>
                 <li><a class="active" href="">Diagnósticos</a></li>
-                <li><a href="../../php/classes/usuarios.php?resp=sair">Sair</a></li>
+                <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
                 </ul>
             </nav>
     

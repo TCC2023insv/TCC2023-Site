@@ -1,6 +1,14 @@
 <?php
    require("../../php/conexao/conexaoBD.php");
 
+   if (!isset($_SESSION)) session_start();
+
+   if (!isset($_SESSION['login']))
+   {
+       session_destroy();
+       header("Location: ../p_login_tc.php");
+   }
+   
    $conexao = ConectarBanco();
    $ID_Reparo = $_GET['id'];
 
@@ -27,6 +35,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../../css/p_rep-registrado.css">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
+        <script src="../../js/confirmar-saida.js"></script>
         <title>Reparo</title>
     </head>
     <body>
@@ -38,9 +47,9 @@
     
             <label class="logo">MonitoraLab</label>
             <ul>
-                <li><a href="p_reg-repa-M_TC.html">Registrar</a></li>
+                <li><a href="p_reg-repa-M_TC.php">Registrar</a></li>
                 <li><a class="active" href="p_M_Inicial_TC.php">Diagnósticos</a></li>
-                <li><a href="../../php/classes/usuarios.php?resp=sair">Sair</a></li>
+                <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
             </ul>
         </nav>
 

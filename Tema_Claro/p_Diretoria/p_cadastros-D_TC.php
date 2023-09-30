@@ -1,5 +1,13 @@
 <?php
    require("../../php/conexao/conexaoBD.php");
+   
+   if (!isset($_SESSION)) session_start();
+
+   if (!isset($_SESSION['login']))
+   {
+       session_destroy();
+       header("Location: ../p_login_tc.php");
+   }
 
    $conexao = ConectarBanco();
 
@@ -13,6 +21,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
         <link rel="stylesheet" type="text/css" href="../../css/cadastros.css">
+        <script src="../../js/confirmar-saida.js"></script>
         <title>Cadastros</title>
     </head>
     <body>
@@ -26,13 +35,13 @@
             <ul>
                 <li><a href="p_D_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="">Ocorrências</a></li>
-                <li><a class="active" href="">Cadastros</a></li>
-                <li><a href="../../php/classes/usuarios.php?resp=sair">Sair</a></li>
+                <li><a class="active">Cadastros</a></li>
+                <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
             </ul>
         </nav>
         
         <br><br><br>
-        <a href="p_cad-prof-D_TC.html" class="Cad" id="Cadastrar">Cadastrar Professor</a>
+        <a href="p_cad-prof-D_TC.php" class="Cad" id="Cadastrar">Cadastrar Professor</a>
         <br><br>
         
 

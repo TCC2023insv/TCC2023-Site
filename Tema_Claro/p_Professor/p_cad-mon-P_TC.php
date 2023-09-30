@@ -1,3 +1,12 @@
+<?php
+    if (!isset($_SESSION)) session_start();
+
+    if (!isset($_SESSION['login']))
+    {
+        session_destroy();
+        header("Location: ../p_login_tc.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

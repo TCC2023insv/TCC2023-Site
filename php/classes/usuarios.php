@@ -38,10 +38,9 @@
             $tipoDeLogin = $_POST['identificacao'];
             $login = $_POST['login'];
             $senha = $_POST['senha'];
-            session_start();
 
             if (isset($_POST['entrar']))
-            { 
+            {
                 switch ($tipoDeLogin) {
                     case 'Dir':
                         require('../conexao/conexaoBD.php');
@@ -53,8 +52,8 @@
                         if (mysqli_num_rows($resultado) > 0) 
                         {
                             $conexao->close();
-            
-                            session_start();
+                            
+                            if (!isset($_SESSION)) session_start();
             
                             $_SESSION['login'] = $login;
                             $_SESSION['login_incorreto'] = false;
@@ -78,7 +77,7 @@
                         {
                             $conexao->close();
 
-                            session_start();
+                            if (!isset($_SESSION)) session_start();
 
                             $_SESSION['login'] = $login;
                             $_SESSION['login_incorreto'] = false;
@@ -101,7 +100,7 @@
                         {
                             $conexao->close();
 
-                            session_start();
+                            if (!isset($_SESSION)) session_start();
 
                             $_SESSION['login'] = $login;
                             $_SESSION['login_incorreto'] = false;
@@ -122,16 +121,12 @@
 
         public function Sair()
         {
-            echo "<script>var dialogo = confirm('Tem certeza de que deseja sair?')
-            if (dialogo)
+            if ($_GET['resp'])
             {
-                window.location.href = '../../tema_claro/p_login_tc.php';
+                session_start();
+                session_destroy();
+                header("Location: ../../tema_claro/p_login_tc.php");
             }
-            else
-            {
-                window.location.href = 'javascript: history.go(-1)';
-                }
-                </script>";
         }
     }
 
@@ -140,7 +135,6 @@
         public function CadastrarProfessor($nomeProfessor, $loginProfessor, $senhaProfessor)
         {
             require('../conexao/conexaoBD.php');
-            require('professor.php');
 
             $Professor = new Professor();
             $Professor->GetNome($nomeProfessor);
@@ -166,7 +160,6 @@
         public function CadastrarMonitor($nomeMonitor, $loginMonitor, $senhaMonitor)
         {
             require('../conexao/conexaoBD.php');
-            require('monitor.php');
 
             $Monitor = new Monitor();
             $Monitor->GetNome($nomeMonitor);
@@ -294,7 +287,7 @@
                     }
                 }
                 $conexao->close();
-                return header("Location: ../../../tcc2023-site/tema_claro/p_Monitor/p_reg-repa-M_TC.html");
+                return header("Location: ../../../tcc2023-site/tema_claro/p_Monitor/p_reg-repa-M_TC.php");
         }
     }
 

@@ -1,3 +1,12 @@
+<?php
+    if (!isset($_SESSION)) session_start();
+
+    if (!isset($_SESSION['login']))
+    {
+        session_destroy();
+        header("Location: ../p_login_tc.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/p_reg-repa-M_TC.css">
     <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
+    <script src="../../js/confirmar-saida.js"></script>
     <title>Registrar Reparo</title>
 </head>
 
@@ -18,9 +28,9 @@
 
         <label class="logo">LOGO</label>
         <ul>
-            <li><a class="active" href="p_reg-repa-M_TC.html">Registrar</a></li>
+            <li><a class="active" href="p_reg-repa-M_TC.php">Registrar</a></li>
             <li><a href="p_M_Inicial_TC.php">Diagnósticos</a></li>
-            <li><a href="../../php/classes/usuarios.php?resp=sair">Sair</a></li>
+            <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
         </ul>
     </nav>
 
