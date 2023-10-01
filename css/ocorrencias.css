@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
+@import url('../css/cores.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-image: var(--fundo-gradiente);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.caixa{
+    background-color: var(--fundo-caixa);
+    width: 80%;
+    border: none;
+    border-radius: 2px;
+    
+    margin-top: 4%;
+    position: relative;
+    margin: 5% 8% 0 9%;
+    height: auto;
+    padding: 3% 0 3% 4%;
+    display: flex;
+    flex-direction: column;
+}
+.lbl-input{
+    display: inline;
+}
+.Titulo{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 150%;
+    text-align: center;
+    width: 40%;
+    height: auto;
+    padding: 0.5%;
+    border-radius: 2px;
+}
+
+.data{
+    background-color: var(--fundo-txt);
+    color: var(--texto-2);
+    font-size: 200%;
+    border-radius: 2px;
+    padding: 2%;
+    width: 25%;
+    height: 38px;
+    border: none;
+    font-weight: bold;
+}
+
+.txtOcorrencia{
+    border: none;
+    background-color: var(--fundo-txt-2);
+    color: var(--texto);
+    border-radius: 2px;
+    margin-top: 2%;
+    display: flex;
+    width: 95%;
+    height: 200px;
+    padding: 1%;
+    font-size: 150%;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+textarea::placeholder{
+    color: var(--texto);
+}
+
+.Btn{
+    background-color: var(--botao-hover);
+    color: var(--texto);
+    margin-top: 2%;
+    height: 35px;
+    width: 15%;
+    margin-left: 80%;
+    border: none;
+    border-radius: 2px;
+    letter-spacing: 3px;
+}
+
+.Btn:hover{
+    background-color: var(--botao);
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+/* Texto pra direção */
+
+.txtOcorrencia-2{
+    background-color: var(--fundo-txt-2);
+    color: var(--texto);
+    font-size: 120%;
+    padding: 2%;
+    margin-top: 3%;
+    width: 90%;
+    height: auto;
+}
+
+#profResp{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 150%;
+    text-align: center;
+    width: 40%;
+    height: auto;
+    padding: 0.5%;
+    border-radius: 2px;
+}
+
+.data-2{
+    background-color: var(--fundo-txt);
+    color: var(--texto-2);
+    font-size: 150%;
+    border-radius: 2px;
+    padding: 0.5%;
+    width: 28%;
+    height: auto;
+    border: none;
+    font-weight: bold;
+}
+
+a.BtnVoltar{
+    background-color: var(--botao-hover);
+    color: var(--texto);
+    margin-top: 30%;
+    height: 35px;
+    width: 15%;
+    margin-left: 80%;
+    border: none;
+    border-radius: 2px;
+    letter-spacing: 3px;
+    font-size: 120%;
+}
