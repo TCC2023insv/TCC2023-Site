@@ -15,7 +15,7 @@ html{
 
 
 body{
-    background-color: var(--fundo-gradiente-2);
+    background: var(--fundo-gradiente-2);
     font-family: 'Roboto Mono', monospace;
     color: var(--texto);
     font-weight: bold;

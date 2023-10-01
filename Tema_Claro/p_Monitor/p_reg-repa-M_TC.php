@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/p_reg-repa-M_TC.css">
     <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
     <script src="../../js/confirmar-saida.js"></script>
+    <script src="../../js/inserir-imagem.js"></script>
     <title>Registrar Reparo</title>
 </head>
 
@@ -206,7 +207,7 @@
                 <label for="foto" class="Solte-Aqui">
                         <span class="Solte-Titulo">Clique aqui</span>
                         ou
-                        <input type="file" name="foto[]" id="foto" accept="image/*" multiple> 
+                        <input type="file" name="foto[]" id="foto" accept="image/*" multiple>
                     </label>
             </div>
 

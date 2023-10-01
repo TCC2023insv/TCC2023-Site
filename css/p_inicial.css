@@ -13,7 +13,7 @@ html{
 }
 
 body{
-    background-color: var(--fundo-gradiente-2);
+    background: var(--fundo-gradiente-2);
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;
@@ -36,13 +36,18 @@ h1{
     font-size: 25px;
 }
 
-#Bloco{
+.a{
     background-color: var(--fundo-bloco);
     position: relative;
     display: flex;
     flex-direction: row;
     margin: 2% 5.7%;  
     height: 100px;
+    transition: all ease .5s;
+}
+
+.a:hover{
+    transform: scale(1.05);
 }
 
 .Itens{
