@@ -22,6 +22,7 @@
             <link rel="stylesheet" type="text/css" href="../../css/p_inicial.css">
             <link rel="stylesheet" type="text/css" href="../../css/navbar_tc.css">
             <script src="../../js/confirmar-saida.js"></script>
+            <script src="../../js/sweetalert.js" type="module"></script>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Diagnósticos</title>
         </head>
@@ -31,7 +32,6 @@
                 <label for="check" class="btncheck">
                     <img src="img/icon.png">
                 </label>
-    
                 <label class="logo">MonitoraLab</label>
                 <ul>
                     <li><a class="active" href="">Diagnósticos</a></li>

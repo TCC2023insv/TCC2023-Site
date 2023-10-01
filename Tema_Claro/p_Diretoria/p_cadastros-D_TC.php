@@ -21,6 +21,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
         <link rel="stylesheet" type="text/css" href="../../css/cadastros.css">
+        <script src="../../js/sweetalert.js" type="module"></script>
         <script src="../../js/confirmar-saida.js"></script>
         <title>Cadastros</title>
     </head>

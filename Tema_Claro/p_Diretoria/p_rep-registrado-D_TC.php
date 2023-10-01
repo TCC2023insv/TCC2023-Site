@@ -33,6 +33,7 @@
         <!-- <link rel="stylesheet" type="text/css" href="../../css/registrados-diag.css"> -->
         <link rel="stylesheet" type="text/css" href="../../css/p_rep-registrado.css">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_tc.css">
+        <script src="../../js/sweetalert.js" type="module"></script>
         <script src="../../js/confirmar-saida.js"></script>
         <title>Reparo</title>
     </head>
