@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../../css/cores.css">
     <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
-    <link rel="stylesheet" type="text/css" href="../../css/p_reg-ocorrencia.css">
+    <link rel="stylesheet" type="text/css" href="../../css/ocorrencias.css">
     <script src="../../js/confirmar-saida.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de ocorrências</title>
@@ -34,11 +34,14 @@
         </ul>
     </nav>
 
-  <form action="../../php/classes/usuarios.php" method="post" id="caixa">
-    <label id="Titulo">Registrar Ocorrência</label><br>
-    <input id="data" name="data" type="date" required><br><br>
-    <textarea class="txtOcorrencia" name="txtDescricao" placeholder="Digite a ocorrência aqui" required></textarea>
-    <button type="submit" name="btnRegistrarOcorrencia">Registrar</button>
+  <form action="../../php/classes/usuarios.php" method="post" class="caixa">
+    <div class="lbl-input">
+        <label class="Titulo">Registrar Ocorrência</label>
+        <input class="data" name="data" type="date" required> 
+    </div>
+
+    <textarea class="txtOcorrencia" name="txtDescricao" placeholder="Digite a ocorrência aqui" required></textarea><br>""
+    <button class="Btn" type="submit" name="btnRegistrarOcorrencia">Registrar</button>
   </form>
 </body>
 </html>
