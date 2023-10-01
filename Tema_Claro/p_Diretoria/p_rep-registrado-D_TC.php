@@ -46,7 +46,7 @@
             <label class="logo">MonitoraLab</label>
             <ul>
                 <li><a class="active" href="p_D_Inicial_TC.php">Diagnósticos</a></li>
-                <li><a href="">Ocorrências</a></li>
+                <li><a href="p_ocorrencias.php">Ocorrências</a></li>
                 <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
                 <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
             </ul>

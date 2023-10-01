@@ -6,6 +6,15 @@
         session_destroy();
         header("Location: ../p_login_tc.php");
     }
+
+    require('../../php/conexao/conexaoBD.php');
+    $conexao = ConectarBanco();
+    $sql_query = $conexao->query("SELECT `Nome` FROM monitor WHERE login = '"  . $_SESSION['login'] . "'");
+    while ($monitor = $sql_query->fetch_assoc())
+    {
+        $nomeMonitor = $monitor['Nome'];
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -50,7 +59,7 @@
                 </div>
                 <div id="Data-Resp">
                     <input id="Data" type="date" name="data" required>
-                    <input id="Responsavel" type="text" name="responsavel" placeholder="Responsável" required>
+                    <input id="Responsavel" type="text" name="responsavel" value="<?= $nomeMonitor ?>" placeholder="Responsável" readonly>
                 </div>
             </div>
 
