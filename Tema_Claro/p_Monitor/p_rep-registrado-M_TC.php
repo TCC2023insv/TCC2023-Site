@@ -33,7 +33,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../../css/p_rep-registrado.css">
+        <link rel="stylesheet" type="text/css" href="../../css/diagnostico.css">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
         <script src="../../js/sweetalert.js" type="module"></script>
         <script src="../../js/confirmar-saida.js"></script>
@@ -50,7 +50,7 @@
             <ul>
                 <li><a href="p_reg-repa-M_TC.php">Registrar</a></li>
                 <li><a class="active" href="p_M_Inicial_TC.php">Diagnósticos</a></li>
-                <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
+                <li><a class="Btn-Sair" href="../../php/classes/monitor.php?resp=sair">Sair</a></li>
             </ul>
         </nav>
 

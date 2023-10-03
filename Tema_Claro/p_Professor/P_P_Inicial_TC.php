@@ -39,7 +39,7 @@
                     <li><a class="active" href="">Diagnósticos</a></li>
                     <li><a href="p_reg-ocorrencia.php">Ocorrências</a></li>
                     <li><a href="p_cadastros-P_TC.php">Cadastros</a></li>
-                    <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
+                    <li><a class="Btn-Sair" href="../../php/classes/professor.php?resp=sair">Sair</a></li>
                 </ul>
             </nav>
     

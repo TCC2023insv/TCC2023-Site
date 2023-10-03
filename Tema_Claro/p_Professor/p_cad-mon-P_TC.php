@@ -32,6 +32,7 @@
             <input class="Txt" type="password" name="senha" placeholder="Digite aqui" required>
             <br>
             <div class="Botao">
+                <a href="javascript: history.go(-1)" id="Btn-Voltar">Voltar</a>
                 <button type="submit" id="Btn" name="cadastrarMonitor">Cadastrar</button>
             </div>
         </form>

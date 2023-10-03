@@ -47,8 +47,8 @@
 	--fundo-hover: #224169;
 	--texto-hover: #C2D5F0;
 
-	--fundo-gradiente: linear-gradient(135deg, #436085 0%, #3b405c 100%);
-	--fundo-gradiente-2: linear-gradient(135deg, #1C375A, #345681 );
+	--fundo-gradiente: linear-gradient(135deg, #3b405c 0%, #436085 100%);
+	--fundo-gradiente-2: linear-gradient(135deg, #1C375A 0%, #345681 1);
 
 
 	--fundo-1: #0d0C1D; 
@@ -68,7 +68,9 @@
 
 	--texto-placehoder: ;
 	--botao: #0D0C1D;
-	--botao-hover: #224169;
+	--botao-2: #224169;
+	--botao-hover: #C2D5F0;
+	--botao-hover-2: #224169;
 
 	--borda: #c2d5f0;
 	--fundo-label:#323853;

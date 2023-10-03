@@ -34,9 +34,9 @@
     
                 <label class="logo">MonitoraLab</label>
                 <ul>
-                <li><a href="p_reg-repa-M_TC.php">Registrar</a></li>
+                <li><a class="Btn-Diag" href="p_reg-repa-M_TC.php">Registrar</a></li>
                 <li><a class="active" href="">Diagnósticos</a></li>
-                <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
+                <li><a class="Btn-Sair" href="../../php/classes/monitor.php?resp=sair">Sair</a></li>
                 </ul>
             </nav>
     

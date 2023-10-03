@@ -31,7 +31,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- <link rel="stylesheet" type="text/css" href="../../css/registrados-diag.css"> -->
-        <link rel="stylesheet" type="text/css" href="../../css/p_rep-registrado.css">
+        <link rel="stylesheet" type="text/css" href="../../css/diagnostico.css">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_tc.css">
         <script src="../../js/sweetalert.js" type="module"></script>
         <script src="../../js/confirmar-saida.js"></script>
@@ -49,7 +49,8 @@
                 <li><a class="active" href="p_D_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="p_ocorrencias.php">Ocorrências</a></li>
                 <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
-                <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
+                <!-- <li><a class="Btn-Sair" href="../../php/ -->
+                <!-- <li><a class="Btn-Sair" href="../../php/classes/direcao.php?resp=sair">Sair</a></li> -->
             </ul>
         </nav>
 

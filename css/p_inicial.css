@@ -13,7 +13,7 @@ html{
 }
 
 body{
-    background: var(--fundo-gradiente-2);
+    background: var(--fundo-gradiente);
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;
@@ -46,9 +46,6 @@ h1{
     transition: all ease .5s;
 }
 
-.a:hover{
-    transform: scale(1.05);
-}
 
 .Itens{
     /* background-color: var(--fundo-txt);

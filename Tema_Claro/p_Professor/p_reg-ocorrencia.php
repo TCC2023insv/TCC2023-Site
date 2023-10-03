@@ -26,12 +26,13 @@
             <img src="img/icon.png">
         </label>
 
-        <label class="logo">LOGO</label>
+        <label class="logo">MonitoraLab</label>
         <ul>
             <li><a href="P_P_Inicial_TC.php">Diagnósticos</a></li>
             <li><a class="active">Ocorrências</a></li>
             <li><a  href="p_cadastros-P_TC.php">Cadastros</a></li>
-            <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
+            <li><a class="Btn-Sair" href="../../php/classes/professor.php?resp=sair">Sair</a></li>
+        
         </ul>
     </nav>
 

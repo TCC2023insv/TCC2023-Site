@@ -1,12 +1,3 @@
-<?php
-    if (!isset($_SESSION)) session_start();
-
-    if (!isset($_SESSION['login']) or $_SESSION['tipoDeUsuario'] != 'Dir')
-    {
-        session_destroy();
-        header("Location: ../p_login_tc.php");
-    }
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,8 +14,8 @@
 
 <body>
     <fieldset class="caixa">
-        <h1>Cadastrar Professor</h1>
-        <form method="post" action="../../php/classes/usuarios.php" class="Forms">
+        <h1>Cadastrar <br> Professor</h1>
+        <form method="post" action="../../php/classes/usuario.php" class="Forms">
             <label class="Titulo">Nome:</label>
             <input class="Txt" type="text" name="nome" placeholder="Digite aqui" required>
             <br>
@@ -35,6 +26,7 @@
             <input class="Txt" type="password" name="senha" placeholder="Digite aqui" required>
             <br>
             <div class="Botao">
+                <a href="javascript: history.go(-1)" id="Btn-Voltar">Voltar</a>
                 <button type="submit" id="Btn" name="cadastrarProfessor">Cadastrar</button>
             </div>
         </form>
