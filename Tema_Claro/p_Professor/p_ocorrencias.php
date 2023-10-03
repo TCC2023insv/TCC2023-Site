@@ -29,19 +29,19 @@
 </head>
 <body>
 <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="btncheck">
-                <img src="img/icon.png">
-            </label>
+        <input type="checkbox" id="check">
+        <label for="check" class="btncheck">
+            <img src="img/icon.png">
+        </label>
 
-            <label class="logo">MonitoraLab</label>
-            <ul>
-                <li><a href="p_d_inicial_tc.php">Diagnósticos</a></li>
-                <li><a href="p_ocorrencias.php">Ocorrências</a></li>
-                <li><a class="active">Cadastros</a></li>
-                <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
-            </ul>
-        </nav>
+        <label class="logo">LOGO</label>
+        <ul>
+            <li><a href="P_P_Inicial_TC.php">Diagnósticos</a></li>
+            <li><a class="active">Ocorrências</a></li>
+            <li><a  href="p_cadastros-P_TC.php">Cadastros</a></li>
+            <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a></li>
+        </ul>
+    </nav>
     <!-- <div class='caixa'> -->
     <?php
         while ($ocorrencia = $sql_query->fetch_assoc())
@@ -66,10 +66,7 @@
             <label class="data-2">00/00/0000</label>
             <label id="profResp">Alberto Marques</label>
         </div>
-        ____________________________________________________________________
-       | <label class="txt-titulo">O titulo da ocorrencia fica aqui</label> |
-       |____________________________________________________________________|
-       
+
         <label class="txtOcorrencia-2">abluebluevlue</label> -->
 
         <!-- <div id="Btn">

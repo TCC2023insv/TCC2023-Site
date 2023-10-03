@@ -17,15 +17,15 @@ body{
 
 .caixa{
     background-color: var(--fundo-caixa);
-    width: 80%;
+    width: 68%;
     border: none;
     border-radius: 2px;
     
     margin-top: 4%;
-    position: relative;
-    margin: 5% 8% 0 9%;
+    position: absolute;
+    margin: 5% 0 0 15%;
     height: auto;
-    padding: 3% 0 3% 4%;
+    padding: 3% 0 3% 5%;
     display: flex;
     flex-direction: column;
 }
@@ -53,6 +53,20 @@ body{
     height: 38px;
     border: none;
     font-weight: bold;
+}
+
+.txt-titulo{
+    border-radius: 2px;
+    width: 95%;
+    height:35px;
+    background-color: var(--fundo-txt) ;
+    font-size: 150%;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--cor-txt);
+    letter-spacing: 5px;
+    padding-left: 0%px;
+    border: none;
+    margin-top: 2%;
 }
 
 .txtOcorrencia{
@@ -101,6 +115,7 @@ textarea::placeholder{
     margin-top: 3%;
     width: 90%;
     height: auto;
+    margin-bottom: 3%;
 }
 
 #profResp{

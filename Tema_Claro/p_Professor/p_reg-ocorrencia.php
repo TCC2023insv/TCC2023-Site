@@ -40,8 +40,8 @@
         <label class="Titulo">Registrar Ocorrência</label>
         <input class="data" name="data" type="date" required> 
     </div>
-
-    <textarea class="txtOcorrencia" name="txtDescricao" placeholder="Digite a ocorrência aqui" required></textarea><br>""
+    <input class="txt-titulo" type="text" placeholder="Digite o titulo da ocorrência" required>
+    <textarea class="txtOcorrencia" name="txtDescricao" placeholder="Digite a ocorrência aqui" required></textarea>
     <button class="Btn" type="submit" name="btnRegistrarOcorrencia">Registrar</button>
   </form>
 </body>
