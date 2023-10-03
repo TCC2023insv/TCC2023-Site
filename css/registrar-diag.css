@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
+@import url('../css/cores.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style: none;
+    
+}
+
+body{
+    background-color: var(--fundo-gradiente-2);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+#Caixa{
+    background-color: var(--fundo-caixa-2);
+
+    width: 900px;
+    height: auto;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    margin: 3% auto; 
+    padding: 2% 0 ;
+    border: none;
+}
+
+#Caixa-direita{
+    margin-left: 3%;
+    float: right;
+    margin-right: 12%;
+    height: auto;
+}
+
+#Sel-Labs{
+    background-color: var(--fundo-bloco);
+    width: 110%;
+    height: 40%;
+
+    padding: 8% 8%;
+    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#Titulo-E{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 125%;
+    text-align: center;
+    padding: 2%;
+    width: 95%; 
+}
+
+#Lab{
+    color: var(--texto);
+    background-color: transparent;
+    border: 2px solid var(--borda);
+    text-align: center;
+
+    width: 98%;
+    font-size: 130%;
+    letter-spacing: 5px;
+    font-weight: bold;
+
+   
+    margin: 2% 0 0 0;
+    padding: 1% 0;
+
+}
+
+#Data-Resp{
+    background-color: #FFEEDD;
+    border-radius: 10px;
+    width: 290px;
+    height: 140px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* 
+Parte da DIREITA
+
+
+Laboratórios
+
+
+
+
+Data e Responsável
+#Data-Resp{
+    background-color: #FFEEDD;
+    border-radius: 10px;
+    width: 290px;
+    height: 140px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Data{
+    background-color: #2E355F;
+    color: #FFEEDD;
+    font-size: 30px;
+    border-radius: 8px;
+    margin-top: 15px;
+    padding: 5px 10px 5px 10px;
+    width: 230px;
+    border: none;
+}
+
+#Responsavel{
+    background-color: #FFEEDD;
+    color: #2E355F;
+    border-radius: 8px;
+    width: 230px;
+    height:30px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 5px 10px 5px 10px;
+    border-width: 1px;
+} */
+
+
+
+/* .Titulo{
+    background-color: #2E355F;
+    color: #FFEEDD;
+    font-size: 25px;
+    text-align: center;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    padding: 5px;
+} */
