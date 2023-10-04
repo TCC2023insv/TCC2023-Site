@@ -53,12 +53,12 @@
                         <label>Laboratório</label>
                     </div>
                     <select name="sele-lab" id="Lab-2" required>
-                            <option value="">Selecione</option>
-                            <option value="Lab 1">Lab 1</option>
-                            <option value="Lab 2">Lab 2</option>
-                            <option value="Lab 3">Lab 3</option> 
-                            <option value="Lab 4">Lab 4</option>
-                        </select>
+                        <option class="Select-item" value="">Selecione</option>
+                        <option class="Select-item" value="Lab 1">Lab 1</option>
+                        <option class="Select-item" value="Lab 2">Lab 2</option>
+                        <option class="Select-item" value="Lab 3">Lab 3</option> 
+                        <option class="Select-item" value="Lab 4">Lab 4</option>
+                    </select>
                 </div>
                 <div id="Data-Resp">
                     <input id="Data-2" type="date" name="data" required>
@@ -75,16 +75,16 @@
                     <div>
                         <label name="apps" class="txtProb" for="apps">Apps</label>
 
-                        <input class="Quant-2" id="quantApps" type="text" placeholder="Quant" name="quantApps">
+                        <input class="Quant-2" id="quantApps" type="number" min="0" max="100" placeholder="Quant" name="quantApps">
 
                         <select class="Select-2" id="probApps" name="prob-apps">
-                            <option value="Sel">Selecione</option>
-                            <option value="Quebrado">Quebrado</option>
-                            <option value="Desatualizado">Desatualizado</option>
-                            <option value="Em falta">Em falta</option>
-                            <option value="Corrompido">Corrompido</option>
-                            <option value="Em excesso">Em excesso</option>
-                            <option value="Outros">Outros</option>
+                            <option class="Select-item" value="Sel">Selecione</option>
+                            <option class="Select-item" value="Quebrado">Quebrado</option>
+                            <option class="Select-item" value="Desatualizado">Desatualizado</option>
+                            <option class="Select-item" value="Em falta">Em falta</option>
+                            <option class="Select-item" value="Corrompido">Corrompido</option>
+                            <option class="Select-item" value="Em excesso">Em excesso</option>
+                            <option class="Select-item" value="Outros">Outros</option>
 
                         </select>
                     </div>
@@ -93,16 +93,16 @@
                     <div>
                         <label name="fonte" class="txtProb">Fonte</label>
 
-                        <input class="Quant-2" id="quantFonte" type="text" placeholder="Quant" name="quantFonte">
+                        <input class="Quant-2" id="quantFonte" type="number" min="0" max="100" placeholder="Quant" name="quantFonte">
 
                         <select class="Select-2" id="probFonte" name="prob-fonte">
-                            <option value="sel">Selecione</option>
-                            <option value="quebrado">Quebrado</option>
-                            <option value="desatualizado">Desatualizado</option>
-                            <option value="em falta">Em falta</option>
-                            <option value="corrompido">Corrompido</option>
-                            <option value="em excesso">Em excesso</option>
-                            <option value="outros">Outros</option>
+                            <option class="Select-item" value="sel">Selecione</option>
+                            <option class="Select-item" value="quebrado">Quebrado</option>
+                            <option class="Select-item" value="desatualizado">Desatualizado</option>
+                            <option class="Select-item" value="em falta">Em falta</option>
+                            <option class="Select-item" value="corrompido">Corrompido</option>
+                            <option class="Select-item" value="em excesso">Em excesso</option>
+                            <option class="Select-item" value="outros">Outros</option>
                         </select>
                     </div>
 
@@ -110,17 +110,16 @@
                     <div>
                         <label name="hd" class="txtProb">HD</label>
 
-                        <input class="Quant-2" id="quantHD" type="text" placeholder="Quant" name="quantHD">
+                        <input class="Quant-2" id="quantHD" type="number" min="0" max="100" placeholder="Quant" name="quantHD">
 
                         <select class="Select-2" id="probHD" name="prob-hd">
-
-                                <option value="sel">Selecione</option>
-                                <option value="quebrado">Quebrado</option>
-                                <option value="desatualizado">Desatualizado</option>
-                                <option value="em falta">Em falta</option>
-                                <option value="corrompido">Corrompido</option>
-                                <option value="em excesso">Em excesso</option>
-                                <option value="outros">Outros</option>
+                            <option class="Select-item" value="sel">Selecione</option>
+                            <option class="Select-item" value="quebrado">Quebrado</option>
+                            <option class="Select-item" value="desatualizado">Desatualizado</option>
+                            <option class="Select-item" value="em falta">Em falta</option>
+                            <option class="Select-item" value="corrompido">Corrompido</option>
+                            <option class="Select-item" value="em excesso">Em excesso</option>
+                            <option class="Select-item" value="outros">Outros</option>
                         </select>
                     </div>
 
@@ -128,16 +127,16 @@
                     <div>
                         <label name="monitor" class="txtProb">Monitor</label>
 
-                        <input class="Quant-2" id="quantMonitor" type="text" placeholder="Quant" name="quantMonitor">
+                        <input class="Quant-2" id="quantMonitor" type="number" min="0" max="100" placeholder="Quant" name="quantMonitor">
 
                         <select class="Select-2" id="probMonitor" name="prob-monitor">
-                            <option value="sel">Selecione</option>
-                            <option value="quebrado">Quebrado</option>
-                            <option value="desatualizado">Desatualizado</option>
-                            <option value="em falta">Em falta</option>
-                            <option value="corrompido">Corrompido</option>
-                            <option value="em excesso">Em excesso</option>
-                            <option value="outros">Outros</option>
+                            <option class="Select-item" value="sel">Selecione</option>
+                            <option class="Select-item" value="quebrado">Quebrado</option>
+                            <option class="Select-item" value="desatualizado">Desatualizado</option>
+                            <option class="Select-item" value="em falta">Em falta</option>
+                            <option class="Select-item" value="corrompido">Corrompido</option>
+                            <option class="Select-item" value="em excesso">Em excesso</option>
+                            <option class="Select-item" value="outros">Outros</option>
                         </select>
                     </div>
 
@@ -146,16 +145,16 @@
                     <div>
                         <label name="mouse" class="txtProb">Mouse</label>
 
-                        <input class="Quant-2" id="quantMouse" type="text" placeholder="Quant" name="quantMouse">
+                        <input class="Quant-2" id="quantMouse" type="number" min="0" max="100" placeholder="Quant" name="quantMouse">
 
                         <select class="Select-2" id="probMouse" name="prob-mouse">
-                            <option value="sel">Selecione</option>
-                            <option value="quebrado">Quebrado</option>
-                            <option value="desatualizado">Desatualizado</option>
-                            <option value="em falta">Em falta</option>
-                            <option value="corrompido">Corrompido</option>
-                            <option value="em excesso">Em excesso</option>
-                            <option value="outros">Outros</option>
+                            <option class="Select-item" value="sel">Selecione</option>
+                            <option class="Select-item" value="quebrado">Quebrado</option>
+                            <option class="Select-item" value="desatualizado">Desatualizado</option>
+                            <option class="Select-item" value="em falta">Em falta</option>
+                            <option class="Select-item" value="corrompido">Corrompido</option>
+                            <option class="Select-item" value="em excesso">Em excesso</option>
+                            <option class="Select-item" value="outros">Outros</option>
                         </select>
                     </div>
 
@@ -164,16 +163,16 @@
                     <div>
                         <label name="outros" class="txtProb">Teclado</label>
 
-                        <input class="Quant-2" id="quantTeclado" type="text" placeholder="Quant" name="quantTeclado">
+                        <input class="Quant-2" id="quantTeclado" type="number" min="0" max="100" placeholder="Quant" name="quantTeclado">
 
                         <select class="Select-2" id="probTeclado" name="probTeclado">
-                            <option value="sel">Selecione</option>
-                            <option value="quebrado">Quebrado</option>
-                            <option value="desatualizado">Desatualizado</option>
-                            <option value="em falta">Em falta</option>
-                            <option value="corrompido">Corrompido</option>
-                            <option value="em excesso">Em excesso</option>
-                            <option value="outros">Outros</option>
+                            <option class="Select-item" value="sel">Selecione</option>
+                            <option class="Select-item" value="quebrado">Quebrado</option>
+                            <option class="Select-item" value="desatualizado">Desatualizado</option>
+                            <option class="Select-item" value="em falta">Em falta</option>
+                            <option class="Select-item" value="corrompido">Corrompido</option>
+                            <option class="Select-item" value="em excesso">Em excesso</option>
+                            <option class="Select-item" value="outros">Outros</option>
                         </select>
                     </div>
 
@@ -181,17 +180,16 @@
                     <div>
                         <label name="outros" class="txtProb">Windows</label>
 
-                        <input class="Quant-2" id="quantWindows" type="text" placeholder="Quant" name="quantWindows">
+                        <input class="Quant-2" id="quantWindows" type="number" min="0" max="100" placeholder="Quant" name="quantWindows">
 
                         <select class="Select-2" id="probWindows" name="prob-windows">
-
-                            <option value="sel">Selecione</option>
-                            <option value="quebrado">Quebrado</option>
-                            <option value="desatualizado">Desatualizado</option>
-                            <option value="em falta">Em falta</option>
-                            <option value="corrompido">Corrompido</option>
-                            <option value="em excesso">Em excesso</option>
-                            <option value="outros">Outros</option>
+                            <option class="Select-item" value="sel">Selecione</option>
+                            <option class="Select-item" value="quebrado">Quebrado</option>
+                            <option class="Select-item" value="desatualizado">Desatualizado</option>
+                            <option class="Select-item" value="em falta">Em falta</option>
+                            <option class="Select-item" value="corrompido">Corrompido</option>
+                            <option class="Select-item" value="em excesso">Em excesso</option>
+                            <option class="Select-item" value="outros">Outros</option>
                         </select>
                     </div>
                 </div>

@@ -37,7 +37,7 @@
                 <li><a href="p_d_inicial_tc.php">Diagnósticos</a></li>
                 <li><a href="p_ocorrencias.php">Ocorrências</a></li>
                 <li><a class="active">Cadastros</a></li>
-                <li><a class="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
+                <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
             </ul>
         </nav>
         

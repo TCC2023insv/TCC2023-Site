@@ -14,7 +14,7 @@ html {
 }
 
 body{
-    background: var(--fundo-gradiente-2);
+    background: var(--fundo-gradiente);
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;

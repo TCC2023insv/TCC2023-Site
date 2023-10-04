@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
 @import url('../css/cores.css');
 
+html{
+    min-height: 100vh;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +14,7 @@
 }
 
 body{
-    background-color: var(--fundo-gradiente-2);
+    background: var(--fundo-gradiente);
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;
@@ -95,7 +99,7 @@ body{
     margin-top: 2%;
     background-color: var(--fundo-bloco);
     width: 14.2%;
-    height: 6.5%;
+    height: 5.5%;
     padding: 1.5% 6%;
     display: flex;
     flex-direction: column;
@@ -182,7 +186,7 @@ body{
 
 #Problemas{
     background-color: var(--fundo-caixa);
-    width: 90%;
+    width: 92%;
     height: auto;
     padding: 6% 0 6% 4%;
     line-height: 40px;
@@ -219,9 +223,10 @@ body{
 .Quant-2{
     border: 2px solid var(--borda);
     color: var(--borda);
+    opacity: 0.6;
     background-color: transparent;
     text-align: center;
-    width: 12%;
+    width: 14%;
     padding: 1.5% 0.5% 1.5% 0;
     margin-left: 1%;
     display: flex;
@@ -229,6 +234,10 @@ body{
 
     font-size: 110%;
     font-weight: 20;
+}
+
+select::before{
+    color: aliceblue;
 }
 
 input::placeholder{
@@ -258,12 +267,12 @@ input::placeholder{
 .Select-2{
     border: 2px solid var(--borda);
     color: var(--borda);
-    opacity: 0.5;
+    opacity: 0.6;
     background-color: transparent;
 
     text-align: center;
 
-    width: 43%;
+    width: 48%;
     height: 10%;
     display: flex;
     display: inline-block;
@@ -273,13 +282,17 @@ input::placeholder{
 
     letter-spacing: 5px;
     font-weight: 20;
-    
+    cursor: pointer;
 }
 
-/* .Select-2::select{
-    color: var(--borda);
+.Select-item{
+    background-color: var(--fundo-txt-2);
+    color: var(--texto);
+} 
+
+.Select-2::before{
     opacity: 1;
-} */
+}
 
 #Caixa2{
     display: flex;
@@ -402,7 +415,7 @@ input[type=file]::file-selector-button{
     width: auto;
     height: auto;
     font-size: 125%;
-    margin: 4% 8% 1% 0;
+    margin: 4% 4% 1% 0;
     padding: 1% 1% 1% 1.5%;
     float: right;
     border: none;
