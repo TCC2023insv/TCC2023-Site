@@ -50,7 +50,7 @@
             <ul>
                 <li><a href="p_reg-repa-M_TC.php">Registrar</a></li>
                 <li><a class="active" href="p_M_Inicial_TC.php">Diagnósticos</a></li>
-                <li><a class="Btn-Sair" href="../../php/classes/monitor.php?resp=sair">Sair</a></li>
+                <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
             </ul>
         </nav>
 

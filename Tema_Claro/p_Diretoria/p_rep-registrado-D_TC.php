@@ -49,6 +49,7 @@
                 <li><a class="active" href="p_D_Inicial_TC.php">Diagnósticos</a></li>
                 <li><a href="p_ocorrencias.php">Ocorrências</a></li>
                 <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
+                <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
                 <!-- <li><a class="Btn-Sair" href="../../php/ -->
                 <!-- <li><a class="Btn-Sair" href="../../php/classes/direcao.php?resp=sair">Sair</a></li> -->
             </ul>

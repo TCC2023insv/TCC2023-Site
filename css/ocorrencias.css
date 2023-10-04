@@ -9,7 +9,7 @@
 }
 
 body{
-    background-image: var(--fundo-gradiente);
+    background: var(--fundo-gradiente);
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     letter-spacing: 5px;

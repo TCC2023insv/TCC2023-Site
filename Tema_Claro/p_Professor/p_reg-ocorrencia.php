@@ -32,7 +32,7 @@
             <li><a href="P_P_Inicial_TC.php">Diagnósticos</a></li>
             <li><a class="active">Ocorrências</a></li>
             <li><a  href="p_cadastros-P_TC.php">Cadastros</a></li>
-            <li><a class="Btn-Sair" href="../../php/classes/professor.php?resp=sair">Sair</a></li>
+            <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
         
         </ul>
     </nav>
