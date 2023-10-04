@@ -25,8 +25,8 @@
     <link rel="stylesheet" type="text/css" href="../../css/diagnostico.css">
     <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
     <script src="../../js/sweetalert.js" type="module"></script>
+    <script src="../../js/jquery.js"></script>
     <script src="../../js/confirmar-saida.js"></script>
-    <script src="../../js/inserir-imagem.js"></script>
     <title>Registrar Reparo</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
     </nav>
 
     <fieldset id="Caixa">
-        <form method="post" enctype="multipart/form-data" action="../../php/classes/monitor.php" id="Forms">
+        <form id="Diagnostico" method="post" enctype="multipart/form-data" action="../../php/classes/monitor.php" id="Forms">
 
             <div id="Caixa-direita">
                 <div id="Sele-Lab">
@@ -53,7 +53,7 @@
                         <label>Laboratório</label>
                     </div>
                     <select name="sele-lab" id="Lab-2" required>
-                            <option value="Lab 1">Selecione</option>
+                            <option value="">Selecione</option>
                             <option value="Lab 1">Lab 1</option>
                             <option value="Lab 2">Lab 2</option>
                             <option value="Lab 3">Lab 3</option> 
@@ -75,9 +75,9 @@
                     <div>
                         <label name="apps" class="txtProb" for="apps">Apps</label>
 
-                        <input class="Quant-2" type="text" placeholder="Quant" name="quantApps">
+                        <input class="Quant-2" id="quantApps" type="text" placeholder="Quant" name="quantApps">
 
-                        <select class="Select-2" name="prob-apps">
+                        <select class="Select-2" id="probApps" name="prob-apps">
                             <option value="Sel">Selecione</option>
                             <option value="Quebrado">Quebrado</option>
                             <option value="Desatualizado">Desatualizado</option>
@@ -85,6 +85,7 @@
                             <option value="Corrompido">Corrompido</option>
                             <option value="Em excesso">Em excesso</option>
                             <option value="Outros">Outros</option>
+
                         </select>
                     </div>
 
@@ -92,9 +93,9 @@
                     <div>
                         <label name="fonte" class="txtProb">Fonte</label>
 
-                        <input class="Quant-2" type="text" placeholder="Quant" name="quantFonte">
+                        <input class="Quant-2" id="quantFonte" type="text" placeholder="Quant" name="quantFonte">
 
-                        <select class="Select-2" name="prob-fonte">
+                        <select class="Select-2" id="probFonte" name="prob-fonte">
                             <option value="sel">Selecione</option>
                             <option value="quebrado">Quebrado</option>
                             <option value="desatualizado">Desatualizado</option>
@@ -109,9 +110,10 @@
                     <div>
                         <label name="hd" class="txtProb">HD</label>
 
-                        <input class="Quant-2" type="text" placeholder="Quant" name="quantHD">
+                        <input class="Quant-2" id="quantHD" type="text" placeholder="Quant" name="quantHD">
 
-                        <select class="Select-2" name="prob-hd">
+                        <select class="Select-2" id="probHD" name="prob-hd">
+
                                 <option value="sel">Selecione</option>
                                 <option value="quebrado">Quebrado</option>
                                 <option value="desatualizado">Desatualizado</option>
@@ -126,9 +128,9 @@
                     <div>
                         <label name="monitor" class="txtProb">Monitor</label>
 
-                        <input class="Quant-2" type="text" placeholder="Quant" name="quantMonitor">
+                        <input class="Quant-2" id="quantMonitor" type="text" placeholder="Quant" name="quantMonitor">
 
-                        <select class="Select-2" name="prob-monitor">
+                        <select class="Select-2" id="probMonitor" name="prob-monitor">
                             <option value="sel">Selecione</option>
                             <option value="quebrado">Quebrado</option>
                             <option value="desatualizado">Desatualizado</option>
@@ -144,9 +146,9 @@
                     <div>
                         <label name="mouse" class="txtProb">Mouse</label>
 
-                        <input class="Quant-2" type="text" placeholder="Quant" name="quantMouse">
+                        <input class="Quant-2" id="quantMouse" type="text" placeholder="Quant" name="quantMouse">
 
-                        <select class="Select-2" name="prob-mouse">
+                        <select class="Select-2" id="probMouse" name="prob-mouse">
                             <option value="sel">Selecione</option>
                             <option value="quebrado">Quebrado</option>
                             <option value="desatualizado">Desatualizado</option>
@@ -162,9 +164,9 @@
                     <div>
                         <label name="outros" class="txtProb">Teclado</label>
 
-                        <input class="Quant-2" type="text" placeholder="Quant" name="quantTeclado">
+                        <input class="Quant-2" id="quantTeclado" type="text" placeholder="Quant" name="quantTeclado">
 
-                        <select class="Select-2" name="prob-teclado">
+                        <select class="Select-2" id="probTeclado" name="probTeclado">
                             <option value="sel">Selecione</option>
                             <option value="quebrado">Quebrado</option>
                             <option value="desatualizado">Desatualizado</option>
@@ -179,9 +181,10 @@
                     <div>
                         <label name="outros" class="txtProb">Windows</label>
 
-                        <input class="Quant-2" type="text" placeholder="Quant" name="quantWindows">
+                        <input class="Quant-2" id="quantWindows" type="text" placeholder="Quant" name="quantWindows">
 
-                        <select class="Select-2" name="prob-windows">
+                        <select class="Select-2" id="probWindows" name="prob-windows">
+
                             <option value="sel">Selecione</option>
                             <option value="quebrado">Quebrado</option>
                             <option value="desatualizado">Desatualizado</option>
@@ -196,13 +199,14 @@
 
             <div id="Caixa-Texto">
                 <label class="Titulo-2">Atividade Exercida</label>
-               <textarea class="Caixa-Texto" name="atv-exer" placeholder="Digite Aqui" required></textarea>
+               <textarea class="Caixa-Texto" name="atvExercida" placeholder="Digite Aqui" required></textarea>
             </div>
 
 
             <div id="Caixa-Texto">
                 <label class="Titulo-2">Problemas Solucionados</label>
-                <textarea class="Caixa-Texto" name="prob-solu" placeholder="Digite Aqui" required></textarea>
+                <textarea class="Caixa-Texto" name="probSolucionados" placeholder="Digite Aqui" required></textarea>
+
             </div>
 
             <div id="Fotos">
@@ -222,6 +226,91 @@
 
         </form>
     </fieldset>
+    <script>
+    $(document).ready(function() {
+        $("#Diagnostico").submit(function(e) {
+            e.preventDefault();
+
+            var Lab = $("#Lab-2").val();
+            var data = $("#Data").val();
+            var responsavel = $("#Responsavel").val();
+            var quantApps = $("#quantApps").val();
+            var probApps = $("#probApps").val();
+            var quantFonte = $("#quantFonte").val();
+            var probFonte = $("#probFonte").val();
+            var quantHD = $("#quantHD").val();
+            var probHD = $("#probHD").val();
+            var quantMonitor = $("#quantMonitor").val();
+            var probMonitor = $("#probMonitor").val();
+            var quantMouse = $("#quantMouse").val();
+            var probMouse = $("#probMouse").val();
+            var quantTeclado = $("#quantTeclado").val();
+            var probTeclado = $("#probTeclado").val();
+            var quantWindows = $("#quantWindows").val();
+            var probWindows = $("#probWindows").val();
+            var atvExercida = $("#atvExercida").val();
+            var probSolucionados = $("#probSolucionados").val();
+            var fotos = document.getElementById("foto");
+            var RegistrarReparo = "RegistrarReparo";
+
+            var formData = new FormData();
+
+            for (var i = 0; i < fotos.files.length; i++)
+            {
+                formData.append("foto[]", fotos.files[i]);
+            }
+                formData.append("Lab", Lab);
+                formData.append("data", data);
+                formData.append("responsavel", responsavel);
+                formData.append("quantApps", quantApps);
+                formData.append("probApps", probApps);
+                formData.append("quantFonte", quantFonte);
+                formData.append("probFonte", probFonte);
+                formData.append("quantHD", quantHD);
+                formData.append("probHD", probHD);
+                formData.append("quantMonitor", quantMonitor);
+                formData.append("probMonitor", probMonitor);
+                formData.append("quantMous", quantMouse);
+                formData.append("probMouse", probMouse);
+                formData.append("quantTeclado",quantTeclado);
+                formData.append("probTeclado", probTeclado);
+                formData.append("quantWindows", quantWindows);
+                formData.append("probWindows", probWindows);
+                formData.append("atvExercida", atvExercida);
+                formData.append("probSolucionados", probSolucionados);
+                formData.append("RegistrarReparo", RegistrarReparo);
+
+            $.ajax({
+                type: "POST",
+                url: $(this).attr("action"),
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    swal({
+                    title: "Diagnóstico Registrado!",
+                    text: "O diagnóstico foi registrado com sucesso. Agradecemos a colaboração!",
+                    icon: "success",
+                    button: {confirm: true},
+                    }).then(value =>{
+                        if (value)
+                        {
+                        window.location.href = "javascript: history.go(-1)";
+                        }
+                    });
+                },
+                error: function() {
+                    swal({
+                    title: "Falha no Registro!",
+                    text: "Ocorreu um problema ao registrar o diagnóstico.Tente novamente.",
+                    icon: "error",
+                    button: {confirm: true},
+                    });
+                }
+            });
+        });
+    });
+    </script>
 </body>
 
 </html>

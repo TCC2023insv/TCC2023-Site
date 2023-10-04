@@ -172,22 +172,26 @@
             $conexao = ConectarBanco();
             $professor = $_SESSION['login'];
         
-            $conexao->query("INSERT INTO monitor (login, nome, senha, login_professor) VALUES 
+            if(
+                $conexao->query("INSERT INTO monitor (login, nome, senha, login_professor) VALUES 
             ( '" . $Monitor->login . "', '" . $Monitor->nome . "', '" . $Monitor->senha . "', '" 
-            .$professor ."')");
-        
+            .$professor ."')"))
+            {
+                $conexao->close();
+                return true;
+            }
             $conexao->close();
-            return header("Location: ../../../tcc2023-site/tema_claro/p_professor/p_p_inicial_tc.php");
+            return false;
         }
 
-        public function RegistrarOcorrencia($data, $descricao)
+        public function RegistrarOcorrencia($data, $titulo, $descricao)
         {
             require('../conexao/conexaoBD.php');
             require('ocorrencias.php');
 
             session_start();
             $professor = $_SESSION['login'];
-            $Ocorrencia = new Ocorrencia($professor, $data, $descricao);
+            $Ocorrencia = new Ocorrencia($professor, $data, $titulo, $descricao);
 
             $conexao = ConectarBanco();
             $resultado = mysqli_query($conexao, "SELECT nome FROM professor WHERE login = '" . 
@@ -197,12 +201,16 @@
                 $row = mysqli_fetch_assoc($resultado);
                 $responsavel = $row['nome'];
             }
-            $conexao->query("INSERT INTO ocorrencia (data, descricao, responsavel, login_prof) 
-            VALUES ('" . $Ocorrencia->data . "', '" . $Ocorrencia->descricao . "', '" . 
-            $responsavel . "', '" . $professor . "')");
+            if (
+            $conexao->query("INSERT INTO ocorrencia (data, titulo, descricao, responsavel, login_prof) 
+            VALUES ('" . $Ocorrencia->data . "', '" . $Ocorrencia->titulo . "', '" . 
+            $Ocorrencia->descricao . "', '" . $responsavel . "', '" . $professor . "')"))
+            {
+                $conexao->close();
+                return true;
+            }
             $conexao->close();
-
-            return header("Location: ../../tema_claro/p_professor/p_p_inicial_tc.php");
+            return false;
         }
     }
 
@@ -227,12 +235,12 @@
                 return $problemaSelecionado;
             }
 
-            $Diagnostico = new Diagnostico($_POST['sele-lab'], $_POST['data'], RegistrarProblema($_POST['prob-apps']),
-            $_POST['quantApps'],  RegistrarProblema($_POST['prob-fonte']), $_POST['quantFonte'],
-            RegistrarProblema($_POST['prob-hd']), $_POST['quantHD'], RegistrarProblema($_POST['prob-monitor']),
-            $_POST['quantMonitor'], RegistrarProblema($_POST['prob-mouse']), $_POST['quantMouse'],
-            RegistrarProblema($_POST['prob-teclado']), $_POST['quantTeclado'], RegistrarProblema($_POST['prob-windows']),
-            $_POST['quantWindows'], $_POST['atv-exer'], $_POST['prob-solu'], $_POST['responsavel']);
+            $Diagnostico = new Diagnostico($_POST['Lab'], $_POST['data'], RegistrarProblema($_POST['probApps']),
+            $_POST['quantApps'],  RegistrarProblema($_POST['probFonte']), $_POST['quantFonte'],
+            RegistrarProblema($_POST['probHD']), $_POST['quantHD'], RegistrarProblema($_POST['probMonitor']),
+            $_POST['quantMonitor'], RegistrarProblema($_POST['probMouse']), $_POST['quantMouse'],
+            RegistrarProblema($_POST['probTeclado']), $_POST['quantTeclado'], RegistrarProblema($_POST['probWindows']),
+            $_POST['quantWindows'], $_POST['atvExercida'], $_POST['probSolucionados'], $_POST['responsavel']);
                 
                 $sql = "INSERT INTO reparo (data, acao, problemas_solucionados, 
                 responsavel, login_monitor, laboratorio) VALUES ('$Diagnostico->data', '$Diagnostico->atividadeExercida', 
@@ -294,25 +302,25 @@
         }
     }
 
-    if (isset($_POST['btnRegistrar']))
+    if (isset($_POST['RegistrarReparo']))
     {
         $Monitor = new Monitor();
         $Monitor->RegistrarReparo();
     }
 
-    if (isset($_POST['cadastrarMonitor']))
+    if (isset($_POST['CadastrarMonitor']))
     {
         $Professor = new Professor();
         $Professor->CadastrarMonitor($_POST['nome'], $_POST['login'], $_POST['senha']);
     }
 
-    if (isset($_POST['btnRegistrarOcorrencia']))
+    if (isset($_POST['RegistrarOcorrencia']))
     {
         $Professor = new Professor();
-        $Professor->RegistrarOcorrencia($_POST['data'], $_POST['txtDescricao']);
+        $Professor->RegistrarOcorrencia($_POST['data'], $_POST['titulo'], $_POST['txtDescricao']);
     }
 
-    if (isset($_POST['cadastrarProfessor']))
+    if (isset($_POST['CadastrarProfessor']))
     {
         $Direcao = new Direcao();
         $Direcao->CadastrarProfessor($_POST['nome'], $_POST['login'], $_POST['senha']);
