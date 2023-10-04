@@ -463,10 +463,36 @@ input[type=file]::file-selector-button{
 
 
 .Btn-Registrar:hover{
-    background-color: var(--botao-hover);
+    background-color: var(--botao-hover-2);
     transform: scale(1.1);
     transition: all 0.5s
 }
 
+.Btn-Excluir{
+    background-color: var(--botao);
+    color: var(--texto);
+    border: none;
+    width: auto;
+    height: auto;
+    
+    padding: 1%;
+    text-align: center;
+    font-size: 135%;
+
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+
+    float: right;
+    
+    margin: 4% 4% 1% 0;
+    cursor: pointer;
+}
+
+.Btn-Excluir:hover{
+    background-color: var(--botao-hover-2);
+    transform: scale(1.1);
+    transition: all 0.5s
+}
 
  

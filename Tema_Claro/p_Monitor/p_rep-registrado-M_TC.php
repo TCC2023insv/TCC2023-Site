@@ -154,6 +154,7 @@
 
             <div id="Btn">
                 <a href="javascript: history.go(-1)" class="Btn">Voltar</a>
+                <button type="submit" class="Btn-Excluir" name="btnExcluir">Excluir</button>
             </div>
 
         </div>

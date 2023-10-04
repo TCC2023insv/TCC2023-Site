@@ -47,7 +47,7 @@ a.Btn-Sair{
     color: var(--texto-nav);
     background-color: var(--fundo-a);
     font-size: 100%;
-    padding: 8% 10px;
+    padding: 8px 10px;
     text-transform: uppercase;
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
