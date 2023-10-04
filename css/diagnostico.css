@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
+@import url('../css/cores.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style: none;
+    
+}
+
+body{
+    background-color: var(--fundo-gradiente-2);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+#Caixa{
+    background-color: var(--fundo-caixa-2);
+
+    width: 900px;
+    height: auto;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 3% auto;   
+    padding: 2% 0 ;
+    border: none;
+    
+    border-radius: 5px;
+}
+    
+#Caixa-direita{
+    margin-top: 3%;
+    float: right;
+    margin-right: 12%;
+    height: auto;
+}
+ 
+#Sele-Lab{
+    background-color: var(--fundo-bloco);
+    width: 118%;
+    height: 40%;
+    padding: 8% 8%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#Titulo-E{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 125%;
+    text-align: center;
+    padding: 2%;
+    width: 95%;
+}
+
+
+#Lab{
+    color: var(--texto);
+    
+    border: 2px solid var(--borda);
+    text-align: center;
+
+    width: 98%;
+    font-size: 140%;
+    letter-spacing: 5px;
+    font-weight: bold;
+
+    margin: 5% 0 0 0;
+    padding: 2% 0;
+}
+
+#Lab-2{
+    color: var(--texto);
+    background-color: transparent;
+    
+    border: 2px solid var(--borda);
+    text-align: center;
+
+    width: 100%;
+    font-size: 130%;
+    letter-spacing: 5px;
+    font-weight: bold;
+
+    margin: 5% 0 0 0;
+    padding: 2% 0;
+}
+
+
+#Data-Resp{
+    margin-top: 2%;
+    background-color: var(--fundo-bloco);
+    width: 14.2%;
+    height: 6.5%;
+    padding: 1.5% 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+
+#Data{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    
+    font-size: 130%;
+    text-align: center;
+
+    padding: 3%;
+    width: 160%;
+    border: none;
+}
+
+#Data-2{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    
+    font-size: 150%;
+    text-align: center;
+
+    padding: 3%;
+    width: 160%;
+    border: none;
+    font-weight: bold;
+}
+
+
+#Responsavel{
+    color: var(--texto);
+    border: 2px solid var(--borda);
+    background-color: transparent;
+    text-align: center;
+    
+    width: 164%;
+    font-size: 130%;
+    letter-spacing: 5px;
+    font-weight: bold;
+
+    margin: 8% 0 0 0;
+    padding: 3% 0;
+}
+/* 
+#Responsavel-2{
+    color: var(--texto);
+    background-color: transparent;
+    border: 2px solid var(--borda);
+    text-align: center;
+    
+    width: 164%;
+    font-size: 130%;
+    letter-spacing: 5px;
+    font-weight: bold;
+
+    margin: 8% 0 0 0;
+    padding: 3% 0%;
+} */
+
+.Titulo{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 150%;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 0.5%;
+}
+
+
+#Caixa-esquerda{
+    margin-top: 3%;
+    margin-left: 6%;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+}
+
+
+#Problemas{
+    background-color: var(--fundo-caixa);
+    width: 90%;
+    height: auto;
+    padding: 6% 0 6% 4%;
+    line-height: 40px;
+}
+
+
+.txtProb{
+    color: var(--texto);
+    background-color: var(--fundo-txt-2);
+    font-size: 100%;
+    padding: 0;
+    margin-top: 4%;
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    border: none;
+}
+
+
+.Quant{
+    border: 2px solid var(--borda);
+    color: var(--borda);
+    text-align: center;
+    width: 10%;
+    padding: 0 0 0 5px;
+    margin-left: 1%;
+    display: flex;
+    display: inline-block;
+
+    font-size: 110%;
+    font-weight: 20;
+}
+
+.Quant-2{
+    border: 2px solid var(--borda);
+    color: var(--borda);
+    background-color: transparent;
+    text-align: center;
+    width: 12%;
+    padding: 1.5% 0.5% 1.5% 0;
+    margin-left: 1%;
+    display: flex;
+    display: inline-block;
+
+    font-size: 110%;
+    font-weight: 20;
+}
+
+input::placeholder{
+    color: var(--texto-placeholder);
+}
+
+.Select{
+
+    border: 2px solid var(--borda);
+    color: var(--borda);
+
+    text-align: center;
+
+    width: 43%;
+    height: 10%;
+    display: flex;
+    display: inline-block;
+    font-size: 125%;
+    padding: 0 2%;
+    margin-left: 1%;
+
+    letter-spacing: 5px;
+    font-weight: 20;
+    
+}
+
+.Select-2{
+    border: 2px solid var(--borda);
+    color: var(--borda);
+    opacity: 0.5;
+    background-color: transparent;
+
+    text-align: center;
+
+    width: 43%;
+    height: 10%;
+    display: flex;
+    display: inline-block;
+    font-size: 125%;
+    padding: 1% 2%;
+    margin-left: 1%;
+
+    letter-spacing: 5px;
+    font-weight: 20;
+    
+}
+
+/* .Select-2::select{
+    color: var(--borda);
+    opacity: 1;
+} */
+
+#Caixa2{
+    display: flex;
+    flex-direction: column; 
+}
+
+
+#Caixa-Texto{
+    background-color: var(--fundo-caixa);
+    
+    margin-top: 4%;
+    margin-left: 6%;
+
+    width: 82%;
+    height: auto;
+    padding: 3% 0 3% 4%;
+    
+    display: flex;
+    flex-direction: column; 
+    border: none;
+}
+
+
+.Titulo-2{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 130%;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 0.5%;
+    margin-right: 45%;
+}
+
+
+.Caixa-Texto{
+    background-color: var(--fundo-txt-2);
+    color: var(--texto);
+    font-size: 100%;
+    padding: 2%;
+    margin-top: 3%;
+    width: 90%;
+    height: auto;
+    font-weight: normal;
+    border: none;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 5px;
+    min-height: 50px;
+}
+
+textarea::placeholder{
+    color:var(--texto-placeholder);
+    font-size: 100%;
+}
+
+.Titulo-3{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    font-size: 130%;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 0.5%;
+    margin-right: 85%;
+}
+
+#Fotos{
+    background-color: var(--fundo-caixa);
+    margin-top: 4%;
+    margin-left: 6%;
+
+    width: 80%;
+    position: relative;
+    height: auto;
+    padding: 3%;
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.Solte-Aqui{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3% 0 2% 0;
+    
+    height: auto;
+    width: 91%;
+    padding: 6% 3%;
+    border: 4px dashed var(--borda);
+    color: var(--texto);
+    font-size: 120%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.Solte-Aqui:hover{
+    background-color: var(--fundo-hover);
+}
+
+
+input[type=file]::file-selector-button{
+    border: none;
+    background: transparent;
+    color: var(--texto);
+    padding: 2% 5%;
+    cursor: pointer;
+    font-size: 130%;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+
+.Btn{
+    background-color: var(--botao);
+    color: var(--texto);
+    width: auto;
+    height: auto;
+    font-size: 125%;
+    margin: 4% 8% 1% 0;
+    padding: 1% 1% 1% 1.5%;
+    float: right;
+    border: none;
+}
+
+.Btn-2{
+    background-color: var(--botao);
+    color: var(--texto);
+    width: auto;
+    height: auto;
+    font-size: 135%;
+    margin: 4% 8% 1% 0;
+    padding: 1% 1% 1% 1.5%;
+    float: right;
+    border: none;
+}
+
+.Btn-Registrar{
+    background-color: var(--botao);
+    color: var(--texto);
+    border: none;
+    width: auto;
+    height: auto;
+    
+    padding: 1%;
+    text-align: center;
+    font-size: 135%;
+
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 5px;
+
+    float: right;
+    
+    margin: 4% 8% 1% 0;
+    
+}
+
+.Btn:hover{
+    background-color: var(--botao-hover-2);
+    transform: scale(1.1);
+    transition: all 0.5s
+}
+ 
+
+
+.Btn-Registrar:hover{
+    background-color: var(--botao-hover);
+    transform: scale(1.1);
+    transition: all 0.5s
+}
+
+
+ 
