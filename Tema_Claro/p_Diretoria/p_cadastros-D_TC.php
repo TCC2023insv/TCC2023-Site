@@ -37,11 +37,7 @@
                 <li><a href="p_d_inicial_tc.php">Diagnósticos</a></li>
                 <li><a href="p_ocorrencias.php">Ocorrências</a></li>
                 <li><a class="active">Cadastros</a></li>
-<<<<<<< HEAD
-                <li><a class="Btn-Sair" href="../../php/classes/direcao.php?resp=sair">Sair</a></li>
-=======
-                <li><a id="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
->>>>>>> arrumando-alerts
+                <li><a class="BtnSair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
             </ul>
         </nav>
         
