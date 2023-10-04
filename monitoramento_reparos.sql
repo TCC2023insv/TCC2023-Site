@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 28/09/2023 às 19:19
+-- Tempo de geração: 04/10/2023 às 19:06
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -23,6 +23,7 @@ SET time_zone = "+00:00";
 
 CREATE DATABASE monitoramento_reparos;
 USE monitoramento_reparos;
+
 
 -- --------------------------------------------------------
 
@@ -96,8 +97,10 @@ CREATE TABLE `monitor` (
 --
 
 INSERT INTO `monitor` (`Login`, `Nome`, `Senha`, `Login_Professor`) VALUES
-('isa_belle', 'isabelle', 'belleisa', 'j_amaral'),
-('ste_phanie', 'stephanie', 'senha123', 'j_amaral');
+('isa_belle', 'isabelle', 'senha123', 'j_amaral'),
+('nico_li', 'nicoli kassa', 'senha123', 'j_amaral'),
+('ste_phanie', 'stephanie', 'senha123', 'j_amaral'),
+('vic_tor', 'victor bello', 'senha123', 'j_amaral');
 
 -- --------------------------------------------------------
 
@@ -108,6 +111,7 @@ INSERT INTO `monitor` (`Login`, `Nome`, `Senha`, `Login_Professor`) VALUES
 CREATE TABLE `ocorrencia` (
   `ID` int(11) NOT NULL,
   `data` date NOT NULL,
+  `titulo` varchar(150) NOT NULL,
   `descricao` varchar(500) NOT NULL,
   `responsavel` varchar(30) NOT NULL,
   `login_prof` varchar(30) NOT NULL
@@ -131,7 +135,6 @@ CREATE TABLE `professor` (
 --
 
 INSERT INTO `professor` (`Login`, `Nome`, `Senha`, `Login_Direcao`) VALUES
-('fabiano_lopes', 'fabiano lopes', 'senha123', 'direcao'),
 ('j_amaral', 'amaral', 'senha123', 'direcao');
 
 -- --------------------------------------------------------
@@ -217,25 +220,25 @@ ALTER TABLE `reparo`
 -- AUTO_INCREMENT de tabela `arquivos`
 --
 ALTER TABLE `arquivos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT de tabela `dispositivo`
 --
 ALTER TABLE `dispositivo`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=398;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=496;
 
 --
 -- AUTO_INCREMENT de tabela `ocorrencia`
 --
 ALTER TABLE `ocorrencia`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de tabela `reparo`
 --
 ALTER TABLE `reparo`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- Restrições para tabelas despejadas
