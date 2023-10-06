@@ -216,7 +216,7 @@
 
     class Monitor extends Usuarios
     {
-        public function RegistrarReparo()
+        public function RegistrarDiagnostico()
         {
             require('../conexao/conexaoBD.php');
             require('diagnosticos.php');
@@ -228,7 +228,7 @@
         
             function RegistrarProblema($problemaSelecionado)
             {
-                if ($problemaSelecionado == "sel")
+                if ($problemaSelecionado == "sel" || $problemaSelecionado == "Sel")
                 {
                     return "";
                 }
@@ -300,12 +300,43 @@
                 $conexao->close();
                 return header("Location: ../../../tcc2023-site/tema_claro/p_Monitor/p_reg-repa-M_TC.php");
         }
+
+        public function ExcluirDiagnostico($id)
+        {
+            require('../conexao/conexaoBD.php');
+            $conexao = ConectarBanco();
+
+            $query_delete_diagnostico = "DELETE FROM `reparo` WHERE ID = " . $id;
+            $query_select_ids = $conexao->query("SELECT ID_Dispositivo FROM dispositivo_reparo WHERE ID_Reparo = " . $id);
+
+            while ($row = $query_select_ids->fetch_assoc()) {
+                $idDispositivo = $row['ID_Dispositivo'];
+                $query = "DELETE FROM `dispositivo` WHERE ID = ?";
+                $stmt = $conexao->prepare($query);
+                $stmt->bind_param("i", $idDispositivo);
+                $stmt->execute();
+            }
+                if($conexao->query($query_delete_diagnostico))
+                {
+                    $conexao->close();
+                    header("Location: ../../Tema_Claro/p_Monitor/p_M_Inicial_TC.php");
+                    exit;
+                }
+            $conexao->close();
+            return false;
+        }
     }
 
-    if (isset($_POST['RegistrarReparo']))
+    if (isset($_POST['RegistrarDiagnostico']))
     {
         $Monitor = new Monitor();
-        $Monitor->RegistrarReparo();
+        $Monitor->RegistrarDiagnostico();
+    }
+
+    if (isset($_GET['excluir']))
+    {
+        $Monitor = new Monitor();
+        $Monitor->ExcluirDiagnostico($_GET['id']);
     }
 
     if (isset($_POST['CadastrarMonitor']))

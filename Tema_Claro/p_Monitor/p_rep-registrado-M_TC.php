@@ -154,9 +154,34 @@
 
             <div id="Btn">
                 <a href="javascript: history.go(-1)" class="Btn">Voltar</a>
-                <button type="submit" class="Btn-Excluir" name="btnExcluir">Excluir</button>
+                <a class="Btn-Excluir"  onclick="Excluir(<?php echo $ID_Reparo; ?>)" style="cursor: pointer;" name="btnExcluir">Excluir</a>
             </div>
 
         </div>
+
+        <script>
+            function Excluir(ID)
+{
+    swal({
+    title: "Tem certeza?",
+    text: "Uma vez deletado, o diagnóstico será perdido.",
+    icon: "warning",
+    buttons: ["Cancel", true],
+    dangerMode: true,
+    })
+    .then((value) => {
+    if (value) {
+        swal("Diagnóstico excluído com sucesso!", {
+        icon: "success",
+        });
+        window.location.href = "../../php/classes/usuarios.php?excluir=true&id="+ID;
+    } else {
+        swal("Não foi possível deletar o diagnóstico", {
+        icon: "error",
+        });
+    }
+    });
+}  
+        </script>
     </body>
 </html>

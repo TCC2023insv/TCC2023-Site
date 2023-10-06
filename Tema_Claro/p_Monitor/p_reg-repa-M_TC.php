@@ -45,7 +45,7 @@
     </nav>
 
     <fieldset id="Caixa">
-        <form id="Diagnostico" method="post" enctype="multipart/form-data" action="../../php/classes/monitor.php" id="Forms">
+        <form id="Diagnostico" method="post" enctype="multipart/form-data" action="../../php/classes/usuarios.php" id="Forms">
 
             <div id="Caixa-direita">
                 <div id="Sele-Lab">
@@ -63,7 +63,7 @@
                 <div id="Data-Resp">
                     <input id="Data-2" type="date" name="data" required>
                     <!-- <label id="Responsavel-2" name="responsavel">Responsavel</label> -->
-                    <input id="Responsavel" type="text" name="responsavel" placeholder="Responsável" required>
+                    <input id="Responsavel" type="text" name="responsavel" value="<?= $nomeMonitor ?>" required>
                 </div>
             </div>
 
@@ -197,13 +197,13 @@
 
             <div id="Caixa-Texto">
                 <label class="Titulo-2">Atividade Exercida</label>
-               <textarea class="Caixa-Texto" name="atvExercida" placeholder="Digite Aqui" required></textarea>
+               <textarea class="Caixa-Texto" id="atvExercida" name="atvExercida" placeholder="Digite Aqui" required></textarea>
             </div>
 
 
             <div id="Caixa-Texto">
                 <label class="Titulo-2">Problemas Solucionados</label>
-                <textarea class="Caixa-Texto" name="probSolucionados" placeholder="Digite Aqui" required></textarea>
+                <textarea class="Caixa-Texto" id="probSolucionados" name="probSolucionados" placeholder="Digite Aqui" required></textarea>
 
             </div>
 
@@ -219,7 +219,7 @@
             <div id="Btn">
                 <button type="submit" class="Btn-Registrar" name="btnRegistrar">Registrar</button>
 
-                <a href="javascript: history.go(-1)" class="Btn">Voltar</a>
+                <a href="p_m_inicial_tc.php" class="Btn">Voltar</a>
             </div>
 
         </form>
@@ -230,7 +230,7 @@
             e.preventDefault();
 
             var Lab = $("#Lab-2").val();
-            var data = $("#Data").val();
+            var data = $("#Data-2").val();
             var responsavel = $("#Responsavel").val();
             var quantApps = $("#quantApps").val();
             var probApps = $("#probApps").val();
@@ -249,7 +249,7 @@
             var atvExercida = $("#atvExercida").val();
             var probSolucionados = $("#probSolucionados").val();
             var fotos = document.getElementById("foto");
-            var RegistrarReparo = "RegistrarReparo";
+            var RegistrarDiagnostico = "RegistrarDiagnostico";
 
             var formData = new FormData();
 
@@ -276,7 +276,7 @@
                 formData.append("probWindows", probWindows);
                 formData.append("atvExercida", atvExercida);
                 formData.append("probSolucionados", probSolucionados);
-                formData.append("RegistrarReparo", RegistrarReparo);
+                formData.append("RegistrarDiagnostico", RegistrarDiagnostico);
 
             $.ajax({
                 type: "POST",

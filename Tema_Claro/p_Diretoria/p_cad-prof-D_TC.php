@@ -17,7 +17,7 @@
 <body>
     <fieldset class="caixa">
         <h1>Cadastrar <br> Professor</h1>
-        <form id="CadProfessor" method="post" action="../../php/classes/usuario.php" class="Forms">
+        <form id="CadProfessor" method="post" action="../../php/classes/usuarios.php" class="Forms">
 
             <label class="Titulo">Nome:</label>
             <input class="Txt" type="text" id="nomeProf" name="nome" placeholder="Digite aqui" required>
