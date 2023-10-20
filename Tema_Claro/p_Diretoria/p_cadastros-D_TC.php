@@ -58,6 +58,7 @@
 
         <?php
             } 
+            $conexao->close();
         ?>
    
     </body>

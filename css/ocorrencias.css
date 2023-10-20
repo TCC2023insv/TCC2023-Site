@@ -25,13 +25,12 @@ body{
     background-color: var(--fundo-caixa);
     width: 68%;
     border: none;
-    border-radius: 2px;
-    
+    /* border-radius: 2px; */
     margin-top: 4%;
     position: absolute;
     margin: 5% 0 0 15%;
     height: auto;
-    padding: 3% 0 3% 5%;
+    padding: 3% 0 3% 3%;
     display: flex;
     flex-direction: column;
 }
@@ -41,36 +40,35 @@ body{
 .Titulo{
     background-color: var(--fundo-txt);
     color: var(--cor-txt);
-    font-size: 150%;
+    font-size: 140%;
     text-align: center;
-    width: 40%;
+    width: 27$;
     height: auto;
-    padding: 0.5%;
-    border-radius: 2px;
+    padding: 0.7%;
+    font-weight: bold;
 }
 
 .data{
     background-color: var(--fundo-txt);
     color: var(--texto-2);
-    font-size: 200%;
-    border-radius: 2px;
-    padding: 2%;
-    width: 25%;
-    height: 38px;
+    font-size: 150%;
+    /* border-radius: 2px; */
+    padding: 1%;
+    width: 19%;
+    height: 35px;
     border: none;
     font-weight: bold;
 }
 
 .txt-titulo{
-    border-radius: 2px;
+    /* border-radius: 2px; */
     width: 95%;
-    height:35px;
-    background-color: var(--fundo-txt) ;
-    font-size: 150%;
+    background-color: var(--fundo-txt);
+    font-size: 120%;
     font-family: 'Roboto Mono', monospace;
     color: var(--cor-txt);
     letter-spacing: 5px;
-    padding-left: 0%px;
+    padding: 0.7%;
     border: none;
     margin-top: 2%;
 }
@@ -79,11 +77,10 @@ body{
     border: none;
     background-color: var(--fundo-txt-2);
     color: var(--texto);
-    border-radius: 2px;
+    /* border-radius: 2px; */
     margin-top: 2%;
     display: flex;
     width: 95%;
-    height: 200px;
     padding: 1%;
     font-size: 150%;
     font-weight: bold;
@@ -94,16 +91,23 @@ textarea::placeholder{
 }
 
 .Btn{
-    background-color: var(--botao-hover);
+    background-color: var(--botao-2);
     color: var(--texto);
     margin-top: 2%;
     height: 35px;
-    width: 15%;
-    margin-left: 80%;
+    width: 150px;
+    margin-left: 77.4%;
     border: none;
-    border-radius: 2px;
+    /* border-radius: 2px; */
     letter-spacing: 3px;
+    font-family: 'Roboto Mono';
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    padding: 0%;
 }
+
+button.Btn {}
 
 .Btn:hover{
     background-color: var(--botao);
@@ -111,15 +115,15 @@ textarea::placeholder{
     transition: all 0.5s;
 }
 
-/* Texto pra direção */
+/* Texto pra direÃ§Ã£o */
 
 .txtOcorrencia-2{
     background-color: var(--fundo-txt-2);
     color: var(--texto);
     font-size: 120%;
     padding: 2%;
-    margin-top: 3%;
-    width: 90%;
+    margin-top: 2%;
+    width: 95%;
     height: auto;
     margin-bottom: 3%;
 }
@@ -127,35 +131,39 @@ textarea::placeholder{
 #profResp{
     background-color: var(--fundo-txt);
     color: var(--cor-txt);
-    font-size: 150%;
+    font-size: 140%;
     text-align: center;
     width: 40%;
     height: auto;
-    padding: 0.5%;
-    border-radius: 2px;
+    padding: 0.7%;
 }
 
 .data-2{
     background-color: var(--fundo-txt);
     color: var(--texto-2);
     font-size: 150%;
-    border-radius: 2px;
     padding: 0.5%;
-    width: 28%;
+    width: auto;
     height: auto;
     border: none;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 a.BtnVoltar{
-    background-color: var(--botao-hover);
+    background-color: var(--botao-2);
     color: var(--texto);
     margin-top: 30%;
     height: 35px;
     width: 15%;
-    margin-left: 80%;
+    margin-left: 83.5%;
     border: none;
-    border-radius: 2px;
     letter-spacing: 3px;
     font-size: 120%;
+    padding:1%;
+}
+
+.BtnVoltar:hover{
+    background-color: var(--botao);
+    transform: scale(1.1);
+    transition: all 0.5s; 
 }

@@ -141,6 +141,9 @@
 
                 <div id="Fotos">
                     <label class="Titulo-3">Fotos</label>
+                    <?php
+                        $conexao->close();
+                    ?>
                 </div>
     
             </div>

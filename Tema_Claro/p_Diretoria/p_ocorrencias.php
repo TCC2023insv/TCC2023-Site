@@ -11,7 +11,7 @@
 
    $conexao = ConectarBanco();
 
-   $sql_query = $conexao->query("SELECT `Data`, `Descricao`, `Responsavel` FROM ocorrencia
+   $sql_query = $conexao->query("SELECT `Data`, `Titulo`, `Descricao`, `Responsavel` FROM ocorrencia
    ORDER BY `Data`DESC") or die ($conexao->error);
 ?>
 
@@ -48,7 +48,7 @@
         {
             echo "<div class='caixa'>
             <div class='lbl-input'>
-                <label class='Titulo'>Ocorrência</label>
+                <label class='Titulo'>" . $ocorrencia['Titulo'] . "</label>
                 <label class='data-2'>" . date('d/m/Y', strtotime($ocorrencia['Data'])) . "</label>
                 <label id='profResp'>" . $ocorrencia['Responsavel'] . "</label>
             </div>
@@ -59,6 +59,7 @@
         </div>
     </div>";
         }
+        $conexao->close();
     ?>
     <!-- <div class="caixa">
         <div class="lbl-input">

@@ -58,6 +58,7 @@
                     echo "<div class='Itens'>" . $reparo['Responsavel'] . "</div>";
                 echo "</div></a>";
                 } 
+                $conexao->close();
             ?> 
         </body>
     </html>
