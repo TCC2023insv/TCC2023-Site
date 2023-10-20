@@ -64,7 +64,10 @@
                         }
                         $conexao->close();
                         $_SESSION['login_incorreto'] = true;
-                        header("Location: ../../tema_claro/p_login_tc.php");
+                        //header("Location: ../../tema_claro/p_login_tc.php");
+                        echo "<script>alert('Usuário ou senha incorretos.')</script>";
+                        echo '<script>window.location.href = "../../tema_claro/p_login_tc.php";';
+                        echo '</script>';
                         break;
                         
                     case 'Prof':
@@ -88,7 +91,10 @@
                         }
                         $conexao->close();
                         $_SESSION['login_incorreto'] = true;
-                        header("Location: ../../tema_claro/p_login_tc.php");
+                        //header("Location: ../../tema_claro/p_login_tc.php");
+                        echo "<script>alert('Usuário ou senha incorretos.')</script>";
+                        echo '<script>window.location.href = "../../tema_claro/p_login_tc.php";';
+                        echo '</script>';
                         break;
 
                     case 'Mon':
@@ -112,8 +118,10 @@
                         }
                         $conexao->close();
                             $_SESSION['login_incorreto'] = true;
-
-                            header("Location: ../../tema_claro/p_login_tc.php");
+                            echo "<script>alert('Usuário ou senha incorretos.')</script>";
+                            echo '<script>window.location.href = "../../tema_claro/p_login_tc.php";';
+                            echo '</script>';
+                            //header("Location: ../../tema_claro/p_login_tc.php");
                         break;
                     default:
                     header("Location: ../tema_claro/p_login_tc.php");

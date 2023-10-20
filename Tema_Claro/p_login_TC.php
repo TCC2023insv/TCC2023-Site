@@ -41,8 +41,8 @@
 			<label>Entrar como:</label>
 			
 			<!-- <br> -->
-			<select name="identificacao" class="Select">
-				<option value="Selec"> Selecione</option>
+			<select name="identificacao" class="Select" required>
+				<option value=""> Selecione</option>
 				<option value="Dir"> Diretoria</option>
 				<option value="Prof"> Professor</option> 
 				<option value="Mon"> Monitor</option>
