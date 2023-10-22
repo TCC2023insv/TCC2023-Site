@@ -24,16 +24,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/diagnostico.css">
     <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
+    <link rel="stylesheet" href="../../css/fonte-alert.css">
     <script src="../../js/sweetalert.js" type="module"></script>
     <script src="../../js/jquery.js"></script>
-    <script src="../../js/confirmar-saida.js"></script>
     <title>Registrar Reparo</title>
 </head>
 <body>
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="btncheck">
-                <img src="img/icon.png">
+                <img src="../../img/icon.png">
             </label>
 
         <label class="logo">MonitoraLab</label>
@@ -308,6 +308,21 @@
             });
         });
     });
+
+    function Sair()
+    {
+        swal({
+            title: "Tem certeza?",
+            icon: "warning",
+            buttons: ["Cancel", true],
+        }).then(value =>{
+            if (value)
+            {
+                window.location.href = "../../php/classes/usuarios.php?resp=true";              
+            }
+        })
+        return false;
+    }
     </script>
 </body>
 

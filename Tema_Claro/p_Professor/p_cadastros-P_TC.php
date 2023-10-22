@@ -20,8 +20,8 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
         <link rel="stylesheet" type="text/css" href="../../css/cadastros.css">
+        <link rel="stylesheet" href="../../css/fonte-alert.css">
         <script src="../../js/sweetalert.js" type="module"></script>
-        <script src="../../js/confirmar-saida.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cadastros</title>
     </head>
@@ -29,7 +29,7 @@
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="btncheck">
-                <img src="img/icon.png">
+                <img src="../../img/icon.png">
             </label>
 
             <label class="logo">MonitoraLab</label>
@@ -53,10 +53,52 @@
         <div id="Cadastros">
             <h1>Nome:</h1><div class="Itens"><?php echo $monitor['Nome']; ?></div>
             <h1>Login:</h1><div class="Itens"><?php echo $monitor['Login']; ?></div>
+            <a class="Btn-Excluir" onclick="ExcluirUsuario(<?php echo $monitor['Login']; ?>)" style="cursor: pointer;" name="ExcluirMon">Excluir</a>
+            
         </div>
 
         <?php
             } 
         ?>
+
+    <script>
+        function ExcluirUsuario(login)
+        {
+            swal({
+                title: "Tem certeza?",
+                text: "Uma vez deletado, o usuário perderá o login.",
+                icon: "warning",
+                buttons: ["Cancel", true],
+                dangerMode: true,
+                })
+                .then((value) => {
+                if (value) {
+                    swal("Monitor excluído com sucesso!", {
+                    icon: "success",
+                    });
+                    window.location.href = "../../php/classes/usuarios.php?login-mon="+login;
+                } else {
+                    swal("Não foi possível deletar o monitor", {
+                    icon: "error",
+                    });
+                }
+                });
+        }
+
+        function Sair()
+        {
+            swal({
+                title: "Tem certeza?",
+                icon: "warning",
+                buttons: ["Cancel", true],
+            }).then(value =>{
+                if (value)
+                {
+                    window.location.href = "../../php/classes/usuarios.php?resp=true";              
+                }
+            })
+            return false;
+        }
+    </script>
     </body>
 </html>

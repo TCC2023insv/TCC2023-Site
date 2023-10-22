@@ -35,15 +35,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../../css/diagnostico.css">
         <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
+        <link rel="stylesheet" href="../../css/fonte-alert.css">
         <script src="../../js/sweetalert.js" type="module"></script>
-        <script src="../../js/confirmar-saida.js"></script>
         <title>Reparo</title>
     </head>
     <body>
     <nav>
             <input type="checkbox" id="check">
             <label for="check" class="btncheck">
-                <img src="img/icon.png">
+                <img src="../../img/icon.png">
             </label>
     
             <label class="logo">MonitoraLab</label>
@@ -161,27 +161,42 @@
 
         <script>
             function Excluir(ID)
-{
-    swal({
-    title: "Tem certeza?",
-    text: "Uma vez deletado, o diagnóstico será perdido.",
-    icon: "warning",
-    buttons: ["Cancel", true],
-    dangerMode: true,
-    })
-    .then((value) => {
-    if (value) {
-        swal("Diagnóstico excluído com sucesso!", {
-        icon: "success",
-        });
-        window.location.href = "../../php/classes/usuarios.php?excluir=true&id="+ID;
-    } else {
-        swal("Não foi possível deletar o diagnóstico", {
-        icon: "error",
-        });
-    }
-    });
-}  
+            {
+                swal({
+                title: "Tem certeza?",
+                text: "Uma vez deletado, o diagnóstico será perdido.",
+                icon: "warning",
+                buttons: ["Cancel", true],
+                dangerMode: true,
+                })
+                .then((value) => {
+                if (value) {
+                    swal("Diagnóstico excluído com sucesso!", {
+                    icon: "success",
+                    });
+                    window.location.href = "../../php/classes/usuarios.php?excluir=true&id="+ID;
+                } else {
+                    swal("Não foi possível deletar o diagnóstico", {
+                    icon: "error",
+                    });
+                }
+                });
+            }  
+
+            function Sair()
+            {
+                swal({
+                    title: "Tem certeza?",
+                    icon: "warning",
+                    buttons: ["Cancel", true],
+                }).then(value =>{
+                    if (value)
+                    {
+                        window.location.href = "../../php/classes/usuarios.php?resp=true";              
+                    }
+                })
+                return false;
+            }
         </script>
     </body>
 </html>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../../css/cadastrar.css">
+    <link rel="stylesheet" href="../../css/fonte-alert.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- JavaScript -->
@@ -56,7 +57,7 @@
                 success: function(response) {
                     swal({
                     title: "Professor cadastrado com sucesso!",
-                    text: "O professor foi cadastrado com sucesso! Novo login já está disponível.",
+                    text: "O novo login já está disponível.",
                     icon: "success",
                     button: {confirm: true},
                     }).then(value =>{

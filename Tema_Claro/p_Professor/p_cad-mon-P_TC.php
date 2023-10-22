@@ -62,7 +62,7 @@
                 success: function(response) {
                     swal({
                     title: "Monitor cadastrado com sucesso!",
-                    text: "O monitor foi cadastrado com sucesso! Novo login já está disponível.",
+                    text: "O novo login já está disponível.",
                     icon: "success",
                     button: {confirm: true},
                     }).then(value =>{
@@ -83,6 +83,21 @@
             });
         });
     });
+
+    function Sair()
+    {
+        swal({
+            title: "Tem certeza?",
+            icon: "warning",
+            buttons: ["Cancel", true],
+        }).then(value =>{
+            if (value)
+            {
+                window.location.href = "../../php/classes/usuarios.php?resp=true";              
+            }
+        })
+        return false;
+    }
     </script>
 </body>
 

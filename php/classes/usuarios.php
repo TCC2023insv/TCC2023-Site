@@ -64,10 +64,11 @@
                         }
                         $conexao->close();
                         $_SESSION['login_incorreto'] = true;
-                        //header("Location: ../../tema_claro/p_login_tc.php");
-                        echo "<script>alert('Usuário ou senha incorretos.')</script>";
-                        echo '<script>window.location.href = "../../tema_claro/p_login_tc.php";';
-                        echo '</script>';
+                        echo '<link rel="stylesheet" href="../../css/fonte-alert.css">';
+                        echo '<script src="../../js/sweetalert.js"></script>';
+                        echo '<script src="../../js/erro-de-login.js"></script>';
+                        echo '<script>window.onload = function() { MostrarErro(); }; </script>';
+
                         break;
                         
                     case 'Prof':
@@ -91,10 +92,11 @@
                         }
                         $conexao->close();
                         $_SESSION['login_incorreto'] = true;
-                        //header("Location: ../../tema_claro/p_login_tc.php");
-                        echo "<script>alert('Usuário ou senha incorretos.')</script>";
-                        echo '<script>window.location.href = "../../tema_claro/p_login_tc.php";';
-                        echo '</script>';
+                        echo '<link rel="stylesheet" href="../../css/fonte-alert.css">';
+                        echo '<script src="../../js/sweetalert.js"></script>';
+                        echo '<script src="../../js/erro-de-login.js"></script>';
+                        echo '<script>window.onload = function() { MostrarErro(); }; </script>';
+
                         break;
 
                     case 'Mon':
@@ -118,10 +120,11 @@
                         }
                         $conexao->close();
                             $_SESSION['login_incorreto'] = true;
-                            echo "<script>alert('Usuário ou senha incorretos.')</script>";
-                            echo '<script>window.location.href = "../../tema_claro/p_login_tc.php";';
-                            echo '</script>';
-                            //header("Location: ../../tema_claro/p_login_tc.php");
+                            echo '<link rel="stylesheet" href="../../css/fonte-alert.css">';
+                            echo '<script src="../../js/sweetalert.js"></script>';
+                            echo '<script src="../../js/erro-de-login.js"></script>';
+                            echo '<script>window.onload = function() { MostrarErro(); }; </script>';
+
                         break;
                     default:
                     header("Location: ../tema_claro/p_login_tc.php");
@@ -164,6 +167,16 @@
             $conexao->close();
             return header("Location: ../../../tcc2023-site/tema_claro/p_diretoria/p_d_Inicial_tc.php");
         }
+
+        public function ExcluirProfessor($login)
+        {
+            require('../conexao/conexaoBD.php');
+            $conexao = ConectarBanco();
+
+            $conexao->query("DELETE FROM professor WHERE login = '" . $login . "'");
+            $conexao->close();
+            return header("Location: ../../../tcc2023-site/tema_claro/p_diretoria/p_cadastros-d_tc.php");
+        }
     }
 
     class Professor extends Usuarios
@@ -190,6 +203,16 @@
             }
             $conexao->close();
             return false;
+        }
+
+        public function ExcluirMonitor($login)
+        {
+            require('../conexao/conexaoBD.php');
+            $conexao = ConectarBanco();
+
+            $conexao->query("DELETE FROM monitor WHERE login = '" . $login . "'");
+            $conexao->close();
+            return header("Location: ../../../tcc2023-site/tema_claro/p_professor/p_cadastros-p_tc.php");
         }
 
         public function RegistrarOcorrencia($data, $titulo, $descricao)
@@ -353,6 +376,12 @@
         $Professor->CadastrarMonitor($_POST['nome'], $_POST['login'], $_POST['senha']);
     }
 
+    if (isset($_GET['login-mon']))
+    {
+        $Professor = new Professor();
+        $Professor->ExcluirMonitor($_GET['login-mon']);
+    }
+
     if (isset($_POST['RegistrarOcorrencia']))
     {
         $Professor = new Professor();
@@ -363,6 +392,12 @@
     {
         $Direcao = new Direcao();
         $Direcao->CadastrarProfessor($_POST['nome'], $_POST['login'], $_POST['senha']);
+    }
+
+    if (isset($_GET['login-prof']))
+    {
+        $Direcao = new Direcao();
+        $Direcao->ExcluirProfessor($_GET['login-prof']);
     }
 
     if (isset($_POST['entrar']))

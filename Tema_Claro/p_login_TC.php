@@ -2,8 +2,7 @@
 	session_start(); // Inicie a sessão
 
 	if (isset($_SESSION['login_incorreto']) && $_SESSION['login_incorreto'] === true) {
-		echo "<script> alert('Usuário ou senha incorreto.')</script>";
-		$_SESSION['login_incorreto'] = false; // Defina a variável de sessão como false após exibir o alerta
+		$_SESSION['login_incorreto'] = false;
 	}
 ?>
 <!DOCTYPE html>
@@ -19,6 +18,7 @@
 	<!-- Configuração de media query-->
 	<script src="php/conexao/conexaoBD.php"></script>
 	<script src="php/classes/usuarios.php"></script>
+	<script src="../js/erro-de-login.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- ÍCONES -->
@@ -56,7 +56,7 @@
 			<input class="Txt" type="password" name="senha" placeholder="Digite aqui" required>
 			<!-- <br><br> -->
 			<div class="Botao">
-				<button type="submit" id="Btn" name="entrar">Entrar</button>
+				<button type="submit" onclick="Entrar()" id="Btn" name="entrar">Entrar</button>
 			</div>
 		</form>
 	</fieldset>
