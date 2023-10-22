@@ -54,7 +54,8 @@
         <div id="Cadastros">
             <h1>Nome:</h1> <div class="Itens"><?php echo $professor['Nome']; ?></div>
             <h1>Login:</h1> <div class="Itens"><?php echo $professor['Login']; ?></div>
-            <?php echo '<a class="Btn-Excluir" href="../../php/classes/usuarios.php?login-prof=' . $professor['Login'] . '">Excluir</a>';?>
+            <a href="#" class="Btn-Excluir" onclick="ExcluirUsuario(this)" var-login="<?php echo 
+                $professor['Login']; ?>" style="cursor: pointer;">Excluir</a>
         </div>
 
         <?php
@@ -76,6 +77,30 @@
                 }
             })
             return false;
+        }
+
+        function ExcluirUsuario(element)
+        {
+            var login = element.getAttribute('var-login')
+            swal({
+                title: "Tem certeza?",
+                text: "Uma vez deletado, o usuário perderá o login.",
+                icon: "warning",
+                buttons: ["Cancel", true],
+                dangerMode: true,
+                })
+                .then((value) => {
+                if (value) {
+                    swal("Professor excluído com sucesso!", {
+                    icon: "success",
+                    });
+                    window.location.href = "../../php/classes/usuarios.php?login-prof="+login;
+                } else {
+                    swal("Não foi possível deletar o professor", {
+                    icon: "error",
+                    });
+                }
+                });
         }
     </script>
     </body>

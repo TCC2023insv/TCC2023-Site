@@ -53,7 +53,7 @@
         <div id="Cadastros">
             <h1>Nome:</h1><div class="Itens"><?php echo $monitor['Nome']; ?></div>
             <h1>Login:</h1><div class="Itens"><?php echo $monitor['Login']; ?></div>
-            <a class="Btn-Excluir" onclick="ExcluirUsuario(<?php echo $monitor['Login']; ?>)" style="cursor: pointer;" name="ExcluirMon">Excluir</a>
+            <a href="#" class="Btn-Excluir" onclick="ExcluirUsuario(this)" var-login="<?php echo $monitor['Login']; ?>" style="cursor: pointer;">Excluir</a>
             
         </div>
 
@@ -62,8 +62,9 @@
         ?>
 
     <script>
-        function ExcluirUsuario(login)
+        function ExcluirUsuario(element)
         {
+            var login = element.getAttribute('var-login')
             swal({
                 title: "Tem certeza?",
                 text: "Uma vez deletado, o usuário perderá o login.",
@@ -74,7 +75,7 @@
                 .then((value) => {
                 if (value) {
                     swal("Monitor excluído com sucesso!", {
-                    icon: "success",
+                    icon: "success"
                     });
                     window.location.href = "../../php/classes/usuarios.php?login-mon="+login;
                 } else {

@@ -78,6 +78,30 @@
             });
         });
     });
+
+    function ExcluirUsuario(element)
+        {
+            var login = element.getAttribute('var-login')
+            swal({
+                title: "Tem certeza?",
+                text: "Uma vez deletado, o usuário perderá o login.",
+                icon: "warning",
+                buttons: ["Cancel", true],
+                dangerMode: true,
+                })
+                .then((value) => {
+                if (value) {
+                    swal("Professor excluído com sucesso!", {
+                    icon: "success",
+                    });
+                    window.location.href = "../../php/classes/usuarios.php?login-prof="+login;
+                } else {
+                    swal("Não foi possível deletar o professor.", {
+                    icon: "error",
+                    });
+                }
+                });
+        }
     </script>
 </body>
 

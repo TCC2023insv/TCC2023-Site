@@ -13,6 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../../css/cadastrar.css">
+    <link rel="stylesheet" href="../../css/fonte-alert.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../js/jquery.js"></script>
     <script src="../../js/sweetalert.js"></script>
@@ -60,6 +61,7 @@
                     CadastrarMonitor: CadastrarMonitor
                 },
                 success: function(response) {
+                    if (response === "success") {
                     swal({
                     title: "Monitor cadastrado com sucesso!",
                     text: "O novo login já está disponível.",
@@ -71,7 +73,16 @@
                         window.location.href = "javascript: history.go(-1)";
                         }
                     });
-                },
+                }
+                else {
+                    swal({
+                        title: "Falha no Cadastro!",
+                        text: "O login já existe.",
+                        icon: "error",
+                        button: {confirm: true},
+                    });
+                }
+            },
                 error: function() {
                     swal({
                     title: "Falha no Cadastro!",

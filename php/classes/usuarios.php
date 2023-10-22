@@ -192,14 +192,27 @@
             session_start();
             $conexao = ConectarBanco();
             $professor = $_SESSION['login'];
-        
-            if(
-                $conexao->query("INSERT INTO monitor (login, nome, senha, login_professor) VALUES 
-            ( '" . $Monitor->login . "', '" . $Monitor->nome . "', '" . $Monitor->senha . "', '" 
-            .$professor ."')"))
+            
+            $sql_procura_igual = "SELECT * FROM monitor WHERE login = " . $Monitor->login;
+            $resultado = mysqli_query( $conexao, $sql_procura_igual);
+
+            if (mysqli_num_rows($resultado) > 0)
             {
                 $conexao->close();
-                return true;
+                echo "error";
+            }
+            else
+            {
+                if(
+                    $conexao->query("INSERT INTO monitor (login, nome, senha, login_professor) VALUES 
+                ( '" . $Monitor->login . "', '" . $Monitor->nome . "', '" . $Monitor->senha . "', '" 
+                .$professor ."')"))
+                {
+                    $conexao->close();
+                    echo "success";
+                }
+                $conexao->close(); 
+                return false;               
             }
             $conexao->close();
             return false;
