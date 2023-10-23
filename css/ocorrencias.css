@@ -25,12 +25,11 @@ body{
     background-color: var(--fundo-caixa);
     width: 68%;
     border: none;
-    /* border-radius: 2px; */
     margin-top: 4%;
     position: absolute;
     margin: 5% 0 0 15%;
     height: auto;
-    padding: 3% 0 3% 3%;
+    padding: 3% 0 2% 3%;
     display: flex;
     flex-direction: column;
 }
@@ -42,7 +41,7 @@ body{
     color: var(--cor-txt);
     font-size: 140%;
     text-align: center;
-    width: 27$;
+    width: 27%;
     height: auto;
     padding: 0.7%;
     font-weight: bold;
@@ -96,18 +95,16 @@ textarea::placeholder{
     margin-top: 2%;
     height: 35px;
     width: 150px;
-    margin-left: 77.4%;
+    margin-left: 77.8%;
     border: none;
     /* border-radius: 2px; */
     letter-spacing: 3px;
     font-family: 'Roboto Mono';
     font-weight: bold;
-    font-size: 150%;
+    font-size: 120%;
     text-align: center;
     padding: 0%;
 }
-
-button.Btn {}
 
 .Btn:hover{
     background-color: var(--botao);

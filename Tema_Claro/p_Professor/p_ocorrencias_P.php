@@ -34,7 +34,7 @@
             <img src="../../img/icon.png">
         </label>
 
-        <label class="logo">LOGO</label>
+        <label class="logo">MonitoraLab</label>
         <ul>
             <li><a href="P_P_Inicial_TC.php">Diagnósticos</a></li>
             <li><a class="active">Ocorrências</a></li>
@@ -43,6 +43,7 @@
         </ul>
     </nav>
     <!-- <div class='caixa'> -->
+        <a href="p_reg-ocorrencia.php" class="Btn-RegOcorrencia">Registrar Ocorrência</a>
     <?php
         while ($ocorrencia = $sql_query->fetch_assoc())
         {
@@ -51,6 +52,7 @@
                 <label class='Titulo'>Ocorrência</label>
                 <label class='data-2'>" . date('d/m/Y', strtotime($ocorrencia['Data'])) . "</label>
                 <label id='profResp'>" . $ocorrencia['Responsavel'] . "</label>
+                <button class='Btn-Excluir'>Excluir</button>
             </div>
             <label class='txtOcorrencia-2'>" . $ocorrencia['Descricao'] . "</label>
 

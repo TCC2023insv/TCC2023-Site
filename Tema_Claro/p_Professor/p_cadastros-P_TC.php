@@ -35,7 +35,7 @@
             <label class="logo">MonitoraLab</label>
             <ul>
                 <li><a href="P_P_Inicial_TC.php">Diagnósticos</a></li>
-                <li><a href="p_reg-ocorrencia.php">Ocorrências</a></li>
+                <li><a href="p_ocorrencias_P.php">Ocorrências</a></li>
                 <li><a  class="active">Cadastros</a></li>
                 <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
             </ul>
@@ -53,8 +53,7 @@
         <div id="Cadastros">
             <h1>Nome:</h1><div class="Itens"><?php echo $monitor['Nome']; ?></div>
             <h1>Login:</h1><div class="Itens"><?php echo $monitor['Login']; ?></div>
-            <a class="Btn-Excluir" onclick="ExcluirUsuario(<?php echo $monitor['Login']; ?>)" style="cursor: pointer;" name="ExcluirMon">Excluir</a>
-            
+            <a class="Btn-Excluir" onclick="ExcluirUsuario(<?php echo $monitor['Login']; ?>)" style="cursor: pointer;" name="ExcluirMon">Excluir</a>    
         </div>
 
         <?php
