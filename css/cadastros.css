@@ -39,8 +39,14 @@ body{
     margin: 1.5% 5.7%;  
     padding: 1.5% 1%;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+}
+
+.nome-login {
+    display: flex;
+    align-items: center;
+    width:300%;
 }
 
 .Itens{
@@ -56,4 +62,14 @@ h1{
     color: var(--texto);
     font-size: 130%;
     margin: 0 -2.5% 0 3%;
+}
+
+a.Btn-Excluir {
+    background-color: var(--botao-2);
+    height: 25%;
+    font-size: 95%;
+    padding: 0.5% 1%;
+    margin: 0 0% 0 3%;
+    text-align: center;
+    color: var(--texto);
 }

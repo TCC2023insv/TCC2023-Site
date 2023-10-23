@@ -78,8 +78,18 @@ a:hover{
     background: var(--fundo-hover);
     color: var(--texto-hover);
     transition: .5s;
-    transform: scale(1.05);
 }
+
+a.Btn-Excluir {
+    background-color: var(--botao-2);
+    height: 25%;
+    font-size: 95%;
+    padding: 0.5% 1%;
+    margin: 0 0% 0 3%;
+    text-align: center;
+    color: var(--texto);
+}
+
 
 .btncheck{
     font-size: 30px;

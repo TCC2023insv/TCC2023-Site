@@ -3,7 +3,7 @@
    
    if (!isset($_SESSION)) session_start();
 
-   if (!isset($_SESSION['login']) or $_SESSION['tipoDeUsuario'] != 'Dir')
+   if (!isset($_SESSION['login']) or $_SESSION['tipoDeUsuario'] != 'Prof')
    {
        session_destroy();
        header("Location: ../p_login_tc.php");
@@ -42,7 +42,9 @@
             <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
         </ul>
     </nav>
-    <!-- <div class='caixa'> -->
+
+    <a class="Btn-Ocorrencia" href="p_reg-ocorrencia.php">Registrar Ocorrência</a>
+
     <?php
         while ($ocorrencia = $sql_query->fetch_assoc())
         {
@@ -53,32 +55,16 @@
                 <label id='profResp'>" . $ocorrencia['Responsavel'] . "</label>
             </div>
             <label class='txtOcorrencia-2'>" . $ocorrencia['Descricao'] . "</label>
-
-            <div id='Btn'>
-            <a href='javascript: history.go(-1)' class='BtnVoltar'>Voltar</a>
-        </div>
+            <a class='Btn-Excluir'>Excluir</a>
     </div>";
         }
     ?>
-    <!-- <div class="caixa">
-        <div class="lbl-input">
-            <label class="Titulo">Ocorrência</label>
-            <label class="data-2">00/00/0000</label>
-            <label id="profResp">Alberto Marques</label>
-        </div>
-
-        <label class="txtOcorrencia-2">abluebluevlue</label> -->
-
-        <!-- <div id="Btn">
-            <a href="javascript: history.go(-1)" class="BtnVoltar">Voltar</a>
-        </div>
-    </div> -->
 
     <script>
         function Sair()
         {
             swal({
-                title: "Tem certeza?",
+                title: "Deseja realmente sair?",
                 icon: "warning",
                 buttons: ["Cancel", true],
             }).then(value =>{

@@ -44,6 +44,7 @@
     </div>
     <input class="txt-titulo" id="tituloOcorrencia" type="text" placeholder="Digite o titulo da ocorrência" required>
     <textarea class="txtOcorrencia" id="descricaoOcorrencia" name="txtDescricao" placeholder="Digite a ocorrência aqui" required></textarea>
+    <a href="javascript: history.go(-1)" id="Btn-Voltar">Voltar</a>
     <button class="Btn" type="submit" name="btnRegistrarOcorrencia">Registrar</button>
   </form>
 
@@ -94,7 +95,7 @@
     function Sair()
     {
         swal({
-            title: "Tem certeza?",
+            title: "Deseja realmente sair?",
             icon: "warning",
             buttons: ["Cancel", true],
         }).then(value =>{

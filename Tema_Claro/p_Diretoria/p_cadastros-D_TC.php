@@ -52,8 +52,10 @@
         ?>
 
         <div id="Cadastros">
-            <h1>Nome:</h1> <div class="Itens"><?php echo $professor['Nome']; ?></div>
-            <h1>Login:</h1> <div class="Itens"><?php echo $professor['Login']; ?></div>
+            <div class="nome-login">
+                <h1>Nome:</h1> <div class="Itens"><?php echo $professor['Nome']; ?></div>
+                <h1>Login:</h1> <div class="Itens"><?php echo $professor['Login']; ?></div>                
+            </div>
             <a href="#" class="Btn-Excluir" onclick="ExcluirUsuario(this)" var-login="<?php echo 
                 $professor['Login']; ?>" style="cursor: pointer;">Excluir</a>
         </div>
@@ -67,7 +69,7 @@
         function Sair()
         {
             swal({
-                title: "Tem certeza?",
+                title: "Deseja realmente sair?",
                 icon: "warning",
                 buttons: ["Cancel", true],
             }).then(value =>{

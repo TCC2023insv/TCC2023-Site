@@ -40,23 +40,17 @@
                     <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
                 </ul>
             </nav>
-    
-            <h1>Lab 1</h1>
         
-            <!-- <select class="Selecionar-LAB">
-				<option value="Lab1"> Lab 1</option>
-				<option value="lab2"> Lab 2</option>
-				<option value="lab3"> Lab 3</option> 
-				<option value="lab4"> Lab 4</option>
-			</select>
-             -->
             <?php
                 while ($reparo = $sql_query->fetch_assoc())
                 {
-                echo "<a href='p_rep-registrado-D_TC.php?id=" . $reparo['ID'] ."'>" . "<div class='a' id='Bloco'>";
-                    echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
+                    echo "<a href='p_rep-registrado-P_TC.php?id=" . $reparo['ID'] ."'>" . "<div class='a' id='Bloco'>";
+                    echo "<div class='data-responsavel'>";
+                        echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
+                        echo "<div id='Lab'>". $reparo['Laboratorio'] . "</div>";
+                    echo "</div>";
                     echo "<div class='Itens'>" . $reparo['Responsavel'] . "</div>";
-                echo "</div></a>";
+                    echo "</div></a>";
                 } 
                 $conexao->close();
             ?> 
@@ -65,7 +59,7 @@
             function Sair()
             {
                 swal({
-                    title: "Tem certeza?",
+                    title: "Deseja realmente sair?",
                     icon: "warning",
                     buttons: ["Cancel", true],
                 }).then(value =>{

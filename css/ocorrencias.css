@@ -167,3 +167,27 @@ a.BtnVoltar{
     transform: scale(1.1);
     transition: all 0.5s; 
 }
+
+a.Btn-Ocorrencia{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt)
+    height: 25%;
+    font-size: 120%;
+    padding: 0.5% 1%;
+    margin: 9% 0% 0 3%;
+    text-align: center;
+}
+
+a.Btn-Excluir {
+    background-color: var(--botao-2);
+    color: var(--texto);
+    height: 35px;
+    width: 20%;
+    margin-left: 75%;
+    border: none;
+    letter-spacing: 3px;
+    font-size: 120%;
+    padding:1% 1% 1% 1%;
+    cursor: pointer;
+    text-align: center;
+}

@@ -39,14 +39,15 @@
                 <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
                 </ul>
             </nav>
-    
-            <h1>Lab1</h1>
             
             <?php
                 while ($reparo = $sql_query->fetch_assoc())
                 {
-                echo "<a href='p_rep-registrado-M_TC.php?id=" . $reparo['ID'] ."'>" . "<div class='a' id='Bloco'>";
-                    echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
+                    echo "<a href='p_rep-registrado-P_TC.php?id=" . $reparo['ID'] ."'>" . "<div class='a' id='Bloco'>";
+                    echo "<div class='data-responsavel'>";
+                        echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
+                        echo "<div id='Lab'>". $reparo['Laboratorio'] . "</div>";
+                    echo "</div>";
                     echo "<div class='Itens'>" . $reparo['Responsavel'] . "</div>";
                     echo "</div></a>";
                 } 
@@ -56,7 +57,7 @@
             function Sair()
             {
                 swal({
-                    title: "Tem certeza?",
+                    title: "Deseja realmente sair?",
                     icon: "warning",
                     buttons: ["Cancel", true],
                 }).then(value =>{

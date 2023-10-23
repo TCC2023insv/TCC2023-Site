@@ -193,7 +193,7 @@
             $conexao = ConectarBanco();
             $professor = $_SESSION['login'];
             
-            $sql_procura_igual = "SELECT * FROM monitor WHERE login = " . $Monitor->login;
+            $sql_procura_igual = "SELECT * FROM monitor WHERE login = '" . $Monitor->login . "'";
             $resultado = mysqli_query( $conexao, $sql_procura_igual);
 
             if (mysqli_num_rows($resultado) > 0)
@@ -205,16 +205,13 @@
             {
                 if(
                     $conexao->query("INSERT INTO monitor (login, nome, senha, login_professor) VALUES 
-                ( '" . $Monitor->login . "', '" . $Monitor->nome . "', '" . $Monitor->senha . "', '" 
+                ( '" . $Monitor->login . "', '" . mb_convert_case($Monitor->nome, MB_CASE_TITLE, 'UTF-8') . "', '" . $Monitor->senha . "', '" 
                 .$professor ."')"))
                 {
                     $conexao->close();
                     echo "success";
-                }
-                $conexao->close(); 
-                return false;               
+                }              
             }
-            $conexao->close();
             return false;
         }
 

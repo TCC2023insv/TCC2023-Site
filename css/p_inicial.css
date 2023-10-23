@@ -40,10 +40,16 @@ h1{
     background-color: var(--fundo-bloco);
     position: relative;
     display: flex;
-    flex-direction: row;
-    margin: 2% 5.7%;  
-    height: 100px;
+    margin: 2% 5.7%;
+    height: auto;
     transition: all ease .5s;
+    padding: 2%;
+    justify-content: space-between;
+}
+
+.a:hover{
+    transform: scale(1.05);
+    transition: .5s;
 }
 
 
@@ -55,15 +61,14 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center; */
-
     background-color: var(--fundo-txt);
     color: var(--texto-2);
     height: 25%;
     border-radius: 1%;
     font-size: 120%;
     padding: 0.5% 1%;
-    margin: 1.5% 0% 0 3%;
-    width: 14%;
+    margin: 0% 0% 0 1.5%;
+    width: auto;
     text-align: center;
 }
 
@@ -83,4 +88,24 @@ h1{
     margin-left: 50px;
     padding-top: 10px;
     font-size: 25px;
+}
+
+#Lab{
+    background-color: var(--fundo-txt);
+    color: var(--texto-2);
+    height: 25%;
+    border-radius: 1%;
+    font-size: 120%;
+    padding: 0.5% 1%;
+    margin: 0px 0px 0px 0px;
+    width: auto;
+    text-align: center;
+    floar:right;
+}
+
+.data-responsavel {
+    display: flex;
+    align-items: center;
+    width: 87.8%;
+    height: 25%;
 }

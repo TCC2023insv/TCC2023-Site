@@ -186,7 +186,7 @@
             function Sair()
             {
                 swal({
-                    title: "Tem certeza?",
+                    title: "Deseja realmente sair?",
                     icon: "warning",
                     buttons: ["Cancel", true],
                 }).then(value =>{

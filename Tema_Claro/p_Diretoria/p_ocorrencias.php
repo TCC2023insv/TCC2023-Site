@@ -53,36 +53,16 @@
                 <label id='profResp'>" . $ocorrencia['Responsavel'] . "</label>
             </div>
             <label class='txtOcorrencia-2'>" . $ocorrencia['Descricao'] . "</label>
-
-            <div id='Btn'>
-            <a href='javascript: history.go(-1)' class='BtnVoltar'>Voltar</a>
-        </div>
     </div>";
         }
         $conexao->close();
     ?>
-    <!-- <div class="caixa">
-        <div class="lbl-input">
-            <label class="Titulo">Ocorrência</label>
-            <label class="data-2">00/00/0000</label>
-            <label id="profResp">Alberto Marques</label>
-        </div>
-        ____________________________________________________________________
-       | <label class="txt-titulo">O titulo da ocorrencia fica aqui</label> |
-       |____________________________________________________________________|
-       
-        <label class="txtOcorrencia-2">abluebluevlue</label> -->
-
-        <!-- <div id="Btn">
-            <a href="javascript: history.go(-1)" class="BtnVoltar">Voltar</a>
-        </div>
-    </div> -->
 
     <script>
         function Sair()
         {
             swal({
-                title: "Tem certeza?",
+                title: "Deseja realmente sair?",
                 icon: "warning",
                 buttons: ["Cancel", true],
             }).then(value =>{

@@ -128,7 +128,6 @@
                 <div id="Caixa-Texto">
                     <label class="Titulo-2">Problemas Solucionados</label>
 
-                    <!-- TESTAR COM BANCO DE DADOS -->
                     <?php
                         if (isset($reparo))
                             {
@@ -158,7 +157,7 @@
         function Sair()
         {
             swal({
-                title: "Tem certeza?",
+                title: "Deseja realmente sair?",
                 icon: "warning",
                 buttons: ["Cancel", true],
             }).then(value =>{
