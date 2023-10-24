@@ -47,7 +47,7 @@
             <?php
                 while ($reparo = $sql_query->fetch_assoc())
                 {
-                echo "<a href='p_rep-registrado-P_TC.php?id=" . $reparo['ID'] ."'>" . "<div class='a' id='Bloco'>";
+                echo "<a href='p_rep-registrado-p_tc.php?id=" . $reparo['ID'] ."'>" . "<div class='a' id='Bloco'>";
                 echo "<div class='data-responsavel'>";
                     echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
                     echo "<div id='Lab'>". $reparo['Laboratorio'] . "</div>";
