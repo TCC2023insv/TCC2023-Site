@@ -21,6 +21,11 @@ body{
     min-height: 100vh;
 }
 
+a.#Cadastrar:hover{
+    transition: .5s;
+    transform: scale(1.05);
+}
+
 #Cadastrar{
     background-color: var(--fundo-1);
     color: var(--texto);
@@ -29,11 +34,6 @@ body{
     font-size: 130%;
     
     margin-left: 5.7%;  
-}
-
-#Cadastrar:hover{
-    transition: .5s;
-    transform: scale(1.05);
 }
 
 #Cadastros{

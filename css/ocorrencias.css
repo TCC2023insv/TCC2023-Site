@@ -168,6 +168,11 @@ a.BtnVoltar{
     transition: all 0.5s; 
 }
 
+a.Btn-Ocorrencia:hover{
+    transform: scale(1.05);
+    transition: .5s;
+}
+
 a.Btn-Ocorrencia{
     background-color: var(--fundo-txt);
     color: var(--cor-txt)
