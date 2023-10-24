@@ -46,19 +46,49 @@
     <?php
         while ($ocorrencia = $sql_query->fetch_assoc())
         {
-            echo "<div class='caixa'>
-            <div class='lbl-input'>
-                <label class='Titulo'>" . $ocorrencia['Titulo'] . "</label>
-                <label class='data-2'>" . date('d/m/Y', strtotime($ocorrencia['Data'])) . "</label>
-                <label id='profResp'>" . $ocorrencia['Responsavel'] . "</label>
-            </div>
-            <label class='txtOcorrencia-2'>" . $ocorrencia['Descricao'] . "</label>
-    </div>";
+    ?>
+            <div class='caixa'>
+                <div class='lbl-input'>
+                    <div class='info-ocorrencia'>
+                        <label class='Titulo'><?php echo $ocorrencia['Titulo']; ?></label>
+                        <label class='data-2'><?php echo date('d/m/Y', strtotime($ocorrencia['Data'])); ?></label>
+                        <label id='profResp'><?php echo $ocorrencia['Responsavel']; ?></label>
+                    </div>          
+                    <a href='#' class='Btn-Excluir' onclick='Excluir(this)' id-ocorrencia='<?php echo $ocorrencia['ID']; ?>' style='cursor: pointer;'>Excluir</a>
+                </div>
+                <label class='txtOcorrencia-2'><?php echo $ocorrencia['Descricao']; ?></label>
+            </div>;
+    <?php
         }
         $conexao->close();
     ?>
 
     <script>
+        function Excluir(element)
+        {
+            var id = element.getAttribute('id-ocorrencia')
+
+            swal({
+                title: "Tem certeza?",
+                text: "A ocorrência registrada será perdida.",
+                icon: "warning",
+                buttons: ["Cancel", true],
+                dangerMode: true,
+                })
+                .then((value) => {
+                if (value) {
+                    swal("Ocorrência excluída com sucesso!", {
+                    icon: "success"
+                    });
+                    window.location.href = "../../php/classes/usuarios.php?id-ocorrencia="+id;
+                } else {
+                    swal("Não foi possível deletar a ocorrência.", {
+                    icon: "error",
+                    });
+                }
+                });
+        }
+
         function Sair()
         {
             swal({

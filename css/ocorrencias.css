@@ -23,12 +23,12 @@ body{
 
 .caixa{
     background-color: var(--fundo-caixa);
-    width: 68%;
+    width: 75%;
     border: none;
     /* border-radius: 2px; */
     margin-top: 4%;
     position: absolute;
-    margin: 5% 0 0 15%;
+    margin: 3% 0 0 10%;
     height: auto;
     padding: 3% 0 3% 3%;
     display: flex;
@@ -174,9 +174,14 @@ a.Btn-Ocorrencia{
     height: 25%;
     font-size: 120%;
     padding: 0.5% 1%;
-    margin: 9% 0% 0 3%;
     text-align: center;
 }
+
+.registrar-ocorrencia{
+    display: flex;
+    margin: 2% 0 0 10%
+}
+
 
 a.Btn-Excluir {
     background-color: var(--botao-2);

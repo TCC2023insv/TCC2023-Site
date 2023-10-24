@@ -59,7 +59,7 @@
                             $_SESSION['login_incorreto'] = false;
                             $_SESSION['tipoDeUsuario'] = $tipoDeLogin;
 
-                            header("Location: ../../tema_claro/p_diretoria/p_d_inicial_tc.php");
+                            header("Location: ../../usuarios/diretoria/p_d_inicial_tc.php");
                             
                         }
                         $conexao->close();
@@ -88,7 +88,7 @@
                             $_SESSION['login_incorreto'] = false;
                             $_SESSION['tipoDeUsuario'] = $tipoDeLogin;
 
-                            header("Location: ../../tema_claro/p_professor/p_p_inicial_tc.php");
+                            header("Location: ../../usuarios/professor/p_p_inicial_tc.php");
                         }
                         $conexao->close();
                         $_SESSION['login_incorreto'] = true;
@@ -116,7 +116,7 @@
                             $_SESSION['login_incorreto'] = false;
                             $_SESSION['tipoDeUsuario'] = $tipoDeLogin;
 
-                            header("Location: ../../tema_claro/p_monitor/p_m_inicial_tc.php");
+                            header("Location: ../../usuarios/monitor/p_m_inicial_tc.php");
                         }
                         $conexao->close();
                             $_SESSION['login_incorreto'] = true;
@@ -127,7 +127,7 @@
 
                         break;
                     default:
-                    header("Location: ../tema_claro/p_login_tc.php");
+                    header("Location: ../usuarios/p_login_tc.php");
                         break;
                 }
             }
@@ -139,7 +139,7 @@
             {
                 session_start();
                 session_destroy();
-                header("Location: ../../tema_claro/p_login_tc.php");
+                header("Location: ../../usuarios/p_login_tc.php");
             }
         }
     }
@@ -165,7 +165,7 @@
             .$direcao."')");
         
             $conexao->close();
-            return header("Location: ../../../tcc2023-site/tema_claro/p_diretoria/p_d_Inicial_tc.php");
+            return header("Location: ../../../tcc2023-site/usuarios/diretoria/p_d_Inicial_tc.php");
         }
 
         public function ExcluirProfessor($login)
@@ -175,7 +175,7 @@
 
             $conexao->query("DELETE FROM professor WHERE login = '" . $login . "'");
             $conexao->close();
-            return header("Location: ../../../tcc2023-site/tema_claro/p_diretoria/p_cadastros-d_tc.php");
+            return header("Location: ../../../tcc2023-site/usuarios/diretoria/p_cadastros-d_tc.php");
         }
     }
 
@@ -222,7 +222,7 @@
 
             $conexao->query("DELETE FROM monitor WHERE login = '" . $login . "'");
             $conexao->close();
-            return header("Location: ../../../tcc2023-site/tema_claro/p_professor/p_cadastros-p_tc.php");
+            return header("Location: ../../../tcc2023-site/usuarios/professor/p_cadastros-p_tc.php");
         }
 
         public function RegistrarOcorrencia($data, $titulo, $descricao)
@@ -252,6 +252,16 @@
             }
             $conexao->close();
             return false;
+        }
+
+        public function ExcluirOcorrencia($id)
+        {
+            require('../conexao/conexaoBD.php');
+            $conexao = ConectarBanco();
+
+            $conexao->query("DELETE FROM ocorrencia WHERE ID = '" . $id . "'");
+            $conexao->close();
+            return header("Location: ../../../tcc2023-site/usuarios/professor/p_ocorrencias.php");
         }
     }
 
@@ -339,7 +349,7 @@
                     }
                 }
                 $conexao->close();
-                return header("Location: ../../../tcc2023-site/tema_claro/p_Monitor/p_reg-repa-M_TC.php");
+                return header("Location: ../../../tcc2023-site/usuarios/monitor/p_reg-repa-M_TC.php");
         }
 
         public function ExcluirDiagnostico($id)
@@ -360,7 +370,7 @@
                 if($conexao->query($query_delete_diagnostico))
                 {
                     $conexao->close();
-                    header("Location: ../../Tema_Claro/p_Monitor/p_M_Inicial_TC.php");
+                    header("Location: ../../usuarios/monitor/p_M_Inicial_TC.php");
                     exit;
                 }
             $conexao->close();
@@ -396,6 +406,12 @@
     {
         $Professor = new Professor();
         $Professor->RegistrarOcorrencia($_POST['data'], $_POST['titulo'], $_POST['txtDescricao']);
+    }
+
+    if (isset($_GET['id-ocorrencia']))
+    {
+        $Professor = new Professor();
+        $Professor->ExcluirOcorrencia($_GET['id-ocorrencia']);
     }
 
     if (isset($_POST['CadastrarProfessor']))

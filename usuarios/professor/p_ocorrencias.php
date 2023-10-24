@@ -11,7 +11,7 @@
 
    $conexao = ConectarBanco();
 
-   $sql_query = $conexao->query("SELECT `Data`, `Descricao`, `Responsavel` FROM ocorrencia
+   $sql_query = $conexao->query("SELECT `ID`, `Data`, `Titulo`, `Descricao`, `Responsavel` FROM ocorrencia
    ORDER BY `Data`DESC") or die ($conexao->error);
 ?>
 
@@ -34,33 +34,65 @@
             <img src="../../img/icon.png">
         </label>
 
-        <label class="logo">LOGO</label>
+        <label class="logo">MonitoraLab</label>
         <ul>
             <li><a href="P_P_Inicial_TC.php">Diagnósticos</a></li>
             <li><a class="active">Ocorrências</a></li>
-            <li><a  href="p_cadastros-P_TC.php">Cadastros</a></li>
+            <li><a href="p_cadastros-P_TC.php">Cadastros</a></li>
             <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
         </ul>
     </nav>
 
+    <div class="registrar-ocorrencia">
     <a class="Btn-Ocorrencia" href="p_reg-ocorrencia.php">Registrar Ocorrência</a>
+    </div>  
 
     <?php
         while ($ocorrencia = $sql_query->fetch_assoc())
         {
-            echo "<div class='caixa'>
-            <div class='lbl-input'>
-                <label class='Titulo'>Ocorrência</label>
-                <label class='data-2'>" . date('d/m/Y', strtotime($ocorrencia['Data'])) . "</label>
-                <label id='profResp'>" . $ocorrencia['Responsavel'] . "</label>
-            </div>
-            <label class='txtOcorrencia-2'>" . $ocorrencia['Descricao'] . "</label>
-            <a class='Btn-Excluir'>Excluir</a>
-    </div>";
+    ?>
+            <div class='caixa'>
+                <div class='lbl-input'>
+                    <div class='info-ocorrencia'>
+                        <label class='Titulo'><?php echo $ocorrencia['Titulo']; ?></label>
+                        <label class='data-2'><?php echo date('d/m/Y', strtotime($ocorrencia['Data'])); ?></label>
+                        <label id='profResp'><?php echo $ocorrencia['Responsavel']; ?></label>
+                    </div>          
+                    <a href='#' class='Btn-Excluir' onclick='Excluir(this)' id-ocorrencia='<?php echo $ocorrencia['ID']; ?>' style='cursor: pointer;'>Excluir</a>
+                </div>
+                <label class='txtOcorrencia-2'><?php echo $ocorrencia['Descricao']; ?></label>
+            </div>;
+    <?php
         }
+        $conexao->close();
     ?>
 
     <script>
+        function Excluir(element)
+        {
+            var id = element.getAttribute('id-ocorrencia')
+
+            swal({
+                title: "Tem certeza?",
+                text: "A ocorrência registrada será perdida.",
+                icon: "warning",
+                buttons: ["Cancel", true],
+                dangerMode: true,
+                })
+                .then((value) => {
+                if (value) {
+                    swal("Ocorrência excluída com sucesso!", {
+                    icon: "success"
+                    });
+                    window.location.href = "../../php/classes/usuarios.php?id-ocorrencia="+id;
+                } else {
+                    swal("Não foi possível deletar a ocorrência.", {
+                    icon: "error",
+                    });
+                }
+                });
+        }
+
         function Sair()
         {
             swal({

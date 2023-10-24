@@ -1,5 +1,6 @@
 <?php
 	session_start(); // Inicie a sessão
+	session_destroy();
 
 	if (isset($_SESSION['login_incorreto']) && $_SESSION['login_incorreto'] === true) {
 		$_SESSION['login_incorreto'] = false;
