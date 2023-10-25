@@ -56,7 +56,7 @@ body{
 #Titulo-E{
     background-color: var(--fundo-txt);
     color: var(--cor-txt);
-    font-size: 125%;
+    font-size: 130%;
     text-align: center;
     padding: 2%;
     width: 95%;
@@ -370,39 +370,48 @@ textarea::placeholder{
     align-items: center;
 }
 
-.Solte-Aqui{
-    position: relative;
+.miniatura{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+
+    border: 4px dashed var(--borda);
     margin: 3% 0 2% 0;
-    
     height: auto;
     width: 91%;
     padding: 6% 3%;
-    border: 4px dashed var(--borda);
+
     color: var(--texto);
     font-size: 120%;
     background-color: transparent;
     cursor: pointer;
 }
 
-.Solte-Aqui:hover{
+
+.miniatura:hover{
     background-color: var(--fundo-hover);
 }
 
 
 input[type=file]::file-selector-button{
-    border: none;
+    border: 3px solid var(--borda);
     background: transparent;
     color: var(--texto);
-    padding: 2% 5%;
+    padding: 2% 0%;
     cursor: pointer;
     font-size: 130%;
     width: 100%;
     font-family: 'Roboto Mono', monospace;
+    border-radius: 2px;
+    margin-bottom: 8%;
 }
 
+#foto{
+    width: 35%;
+    height: 15%;
+    padding: 2% 100%;
+    /* padding: 2%; */
+}
 
 
 .Btn{
