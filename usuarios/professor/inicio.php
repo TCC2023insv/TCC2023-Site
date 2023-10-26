@@ -3,15 +3,17 @@
 
     if (!isset($_SESSION)) session_start();
 
-    if (!isset($_SESSION['login']) or $_SESSION['tipoDeUsuario'] != 'Mon')
+    if (!isset($_SESSION['login']) or $_SESSION['tipoDeUsuario'] != 'Prof')
     {
         session_destroy();
-        header("Location: ../p_login_tc.php");
+        header("Location: ../login.php");
     }
+    
     $conexao = ConectarBanco();
 
     $sql_query = $conexao->query("SELECT `ID`, `Data`, `Responsavel`, `Laboratorio` FROM `reparo` 
-    ORDER BY `Data` DESC") or die($conexao->error);
+    ORDER BY `Data` DESC")
+    or die ($conexao->error);
     ?>
 
     <!DOCTYPE html>
@@ -34,24 +36,26 @@
     
                 <label class="logo">MonitoraLab</label>
                 <ul>
-                <li><a class="Btn-Diag" href="p_reg-repa-M_TC.php">Registrar</a></li>
-                <li><a class="active" href="">Diagnósticos</a></li>
-                <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
+                    <li><a class="active" href="">Diagnósticos</a></li>
+                    <li><a href="ocorrencias.php">Ocorrências</a></li>
+                    <li><a href="monitores-cadastrados.php">Cadastros</a></li>
+                    <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
                 </ul>
             </nav>
+
             
             <?php
                 while ($reparo = $sql_query->fetch_assoc())
                 {
-                    echo "<a href='p_rep-registrado-m_tc.php?id=" . $reparo['ID'] ."'>" . "<div class='a' id='Bloco'>";
-                    echo "<div class='data-responsavel'>";
-                        echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
-                        echo "<div id='Lab'>". $reparo['Laboratorio'] . "</div>";
-                    echo "</div>";
-                    echo "<div class='Itens'>" . $reparo['Responsavel'] . "</div>";
-                    echo "</div></a>";
-                } 
-            ?>
+                echo "<a href='diagnostico.php?id=" . $reparo['ID'] ."'>" . "<div class='a' id='Bloco'>";
+                echo "<div class='data-responsavel'>";
+                    echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
+                    echo "<div id='Lab'>". $reparo['Laboratorio'] . "</div>";
+                echo "</div>";
+                echo "<div class='Itens'>" . $reparo['Responsavel'] . "</div>";
+                echo "</div></a>";
+                }
+            ?> 
 
         <script>
             function Sair()

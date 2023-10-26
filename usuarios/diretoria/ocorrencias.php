@@ -6,7 +6,7 @@
    if (!isset($_SESSION['login']) or $_SESSION['tipoDeUsuario'] != 'Dir')
    {
        session_destroy();
-       header("Location: ../p_login_tc.php");
+       header("Location: ../login.php");
    }
 
    $conexao = ConectarBanco();
@@ -36,9 +36,9 @@
 
             <label class="logo">MonitoraLab</label>
             <ul>
-                <li><a href="p_d_inicial_tc.php">Diagnósticos</a></li>
-                <li><a class="active" href="p_ocorrencias.php">Ocorrências</a></li>
-                <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
+                <li><a href="inicio.php">Diagnósticos</a></li>
+                <li><a class="active" href="ocorrencias.php">Ocorrências</a></li>
+                <li><a href="professores-cadastrados.php">Cadastros</a></li>
                 <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
             </ul>
         </nav>

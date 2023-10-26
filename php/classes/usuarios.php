@@ -59,7 +59,7 @@
                             $_SESSION['login_incorreto'] = false;
                             $_SESSION['tipoDeUsuario'] = $tipoDeLogin;
 
-                            header("Location: ../../usuarios/diretoria/p_d_inicial_tc.php");
+                            header("Location: ../../usuarios/diretoria/inicio.php");
                             
                         }
                         $conexao->close();
@@ -88,7 +88,7 @@
                             $_SESSION['login_incorreto'] = false;
                             $_SESSION['tipoDeUsuario'] = $tipoDeLogin;
 
-                            header("Location: ../../usuarios/professor/p_p_inicial_tc.php");
+                            header("Location: ../../usuarios/professor/inicio.php");
                         }
                         $conexao->close();
                         $_SESSION['login_incorreto'] = true;
@@ -116,7 +116,7 @@
                             $_SESSION['login_incorreto'] = false;
                             $_SESSION['tipoDeUsuario'] = $tipoDeLogin;
 
-                            header("Location: ../../usuarios/monitor/p_m_inicial_tc.php");
+                            header("Location: ../../usuarios/monitor/inicio.php");
                         }
                         $conexao->close();
                             $_SESSION['login_incorreto'] = true;
@@ -127,7 +127,7 @@
 
                         break;
                     default:
-                    header("Location: ../usuarios/p_login_tc.php");
+                    header("Location: ../usuarios/login.php");
                         break;
                 }
             }
@@ -139,7 +139,7 @@
             {
                 session_start();
                 session_destroy();
-                header("Location: ../../usuarios/p_login_tc.php");
+                header("Location: ../../usuarios/login.php");
             }
         }
     }
@@ -165,7 +165,7 @@
             .$direcao."')");
         
             $conexao->close();
-            return header("Location: ../../../monitoralab/usuarios/diretoria/p_d_Inicial_tc.php");
+            return header("Location: ../../../monitoralab/usuarios/diretoria/inicio.php");
         }
 
         public function ExcluirProfessor($login)
@@ -175,7 +175,7 @@
 
             $conexao->query("DELETE FROM professor WHERE login = '" . $login . "'");
             $conexao->close();
-            return header("Location: ../../../monitoralab/usuarios/diretoria/p_cadastros-d_tc.php");
+            return header("Location: ../../../monitoralab/usuarios/diretoria/professores-cadastrados.php");
         }
     }
 
@@ -222,7 +222,7 @@
 
             $conexao->query("DELETE FROM monitor WHERE login = '" . $login . "'");
             $conexao->close();
-            return header("Location: ../../../monitoralab/usuarios/professor/p_cadastros-p_tc.php");
+            return header("Location: ../../../monitoralab/usuarios/professor/monitores-cadastrados.php");
         }
 
         public function RegistrarOcorrencia($data, $titulo, $descricao)
@@ -261,7 +261,7 @@
 
             $conexao->query("DELETE FROM ocorrencia WHERE ID = '" . $id . "'");
             $conexao->close();
-            return header("Location: ../../../monitoralab/usuarios/professor/p_ocorrencias.php");
+            return header("Location: ../../../monitoralab/usuarios/professor/ocorrencias.php");
         }
     }
 
@@ -349,7 +349,7 @@
                     }
                 }
                 $conexao->close();
-                return header("Location: ../../../monitoralab/usuarios/monitor/p_reg-repa-M_TC.php");
+                return header("Location: ../../../monitoralab/usuarios/monitor/registrar-diagnostico.php");
         }
 
         public function ExcluirDiagnostico($id)
@@ -370,7 +370,7 @@
                 if($conexao->query($query_delete_diagnostico))
                 {
                     $conexao->close();
-                    header("Location: ../../usuarios/monitor/p_M_Inicial_TC.php");
+                    header("Location: ../../usuarios/monitor/inicio.php");
                     exit;
                 }
             $conexao->close();

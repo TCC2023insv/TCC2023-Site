@@ -6,7 +6,7 @@
     if (!isset($_SESSION['login']) or $_SESSION['tipoDeUsuario'] != 'Dir')
     {
         session_destroy();
-        header("Location: ../p_login_tc.php");
+        header("Location: ../login.php");
     }
     
     $conexao = ConectarBanco();
@@ -35,8 +35,8 @@
                 <label class="logo">MonitoraLab</label>
                 <ul>
                     <li><a class="active" href="">Diagnósticos</a></li>
-                    <li><a href="p_ocorrencias.php">Ocorrências</a></li>
-                    <li><a href="p_cadastros-D_TC.php">Cadastros</a></li>
+                    <li><a href="ocorrencias.php">Ocorrências</a></li>
+                    <li><a href="professores-cadastrados.php">Cadastros</a></li>
                     <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
                 </ul>
             </nav>
@@ -44,7 +44,7 @@
             <?php
                 while ($reparo = $sql_query->fetch_assoc())
                 {
-                    echo "<a href='p_rep-registrado-d_tc.php?id=" . $reparo['ID'] ."'>" . "<div class='a' id='Bloco'>";
+                    echo "<a href='diagnostico.php?id=" . $reparo['ID'] ."'>" . "<div class='a' id='Bloco'>";
                     echo "<div class='data-responsavel'>";
                         echo "<div class='Itens'>" . date('d/m/Y', strtotime($reparo['Data'])) . "</div>";
                         echo "<div id='Lab'>". $reparo['Laboratorio'] . "</div>";

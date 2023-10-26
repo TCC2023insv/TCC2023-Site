@@ -4,7 +4,7 @@
     if (!isset($_SESSION['login']) or $_SESSION['tipoDeUsuario'] != 'Mon')
     {
         session_destroy();
-        header("Location: ../p_login_tc.php");
+        header("Location: ../login.php");
     }
 
     require('../../php/conexao/conexaoBD.php');
@@ -40,8 +40,8 @@
 
         <label class="logo">MonitoraLab</label>
         <ul>
-            <li><a class="active Btn-Diag" href="p_reg-repa-M_TC.php">Registrar</a></li>
-            <li><a href="p_M_Inicial_TC.php">Diagnósticos</a></li>
+            <li><a class="active Btn-Diag" href="registrar-diagnostico.php">Registrar</a></li>
+            <li><a href="inicio.php">Diagnósticos</a></li>
             <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
         </ul>
     </nav>
@@ -226,7 +226,7 @@
             <div id="Btn">
                 <button type="submit" class="Btn-Registrar" name="btnRegistrar">Registrar</button>
 
-                <a href="p_m_inicial_tc.php" class="Btn">Voltar</a>
+                <a href="inicio.php" class="Btn">Voltar</a>
             </div>
 
         </form>
