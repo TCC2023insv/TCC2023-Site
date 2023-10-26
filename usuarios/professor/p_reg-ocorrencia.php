@@ -32,20 +32,30 @@
             <li><a href="P_P_Inicial_TC.php">Diagnósticos</a></li>
             <li><a class="active">Ocorrências</a></li>
             <li><a  href="p_cadastros-P_TC.php">Cadastros</a></li>
-            <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>
-        
+            <li><a class="Btn-Sair" onclick="Sair()" style="cursor: pointer;">Sair</a> </li>   
         </ul>
     </nav>
 
   <form id="Ocorrencia" action="../../php/classes/usuarios.php" method="post" class="caixa">
-    <div class="lbl-input">
-        <label class="Titulo">Registrar Ocorrência</label>
-        <input class="data" id="dataOcorrencia" name="data" type="date" required> 
+    <div class="lbl-input">            
+        <label class="label-data">Data:</label>
+            <input class="data" id="dataOcorrencia" name="data" type="date" required>    
+            <label class="label-lab">Laboratório:</label>
+            <select name="" id="Sele-lab" required>
+                <option class="Select-Lab" value="">Selecione</option>
+                <option class="Select-Lab" value="Lab 1">Lab 1</option>
+                <option class="Select-Lab" value="Lab 2">Lab 2</option>
+                <option class="Select-Lab" value="Lab 3">Lab 3</option> 
+                <option class="Select-Lab" value="Lab 4">Lab 4</option>
+            </select>
     </div>
+       
     <input class="txt-titulo" id="tituloOcorrencia" type="text" placeholder="Digite o titulo da ocorrência" required>
     <textarea class="txtOcorrencia" id="descricaoOcorrencia" name="txtDescricao" placeholder="Digite a ocorrência aqui" required></textarea>
-    <a href="javascript: history.go(-1)" id="Btn-Voltar">Voltar</a>
-    <button class="Btn" type="submit" name="btnRegistrarOcorrencia">Registrar</button>
+    <div class="Botoes">
+        <a href="javascript: history.go(-1)" class="Btn">Voltar</a>
+        <button class="Btn" type="submit" name="btnRegistrarOcorrencia">Registrar</button>
+    </div>
   </form>
 
   <script>

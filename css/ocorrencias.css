@@ -23,51 +23,85 @@ body{
 
 .caixa{
     background-color: var(--fundo-caixa);
-    width: 75%;
+    width: 85%;
     border: none;
-    /* border-radius: 2px; */
-    margin-top: 4%;
     position: absolute;
-    margin: 3% 0 0 10%;
+    margin: 3% 0 0 7.5%;
     height: auto;
-    padding: 3% 0 3% 3%;
+    padding: 3% 0 2% 3%;
     display: flex;
     flex-direction: column;
 }
 .lbl-input{
-    display: inline;
+    display: flex;
 }
-.Titulo{
-    background-color: var(--fundo-txt);
-    color: var(--cor-txt);
-    font-size: 140%;
+
+.label-data{
+    color: var(--texto);
+    font-size: 130%;
     text-align: center;
-    width: 27%;
+    width: auto;
     height: auto;
-    padding: 0.7%;
-    font-weight: bold;
+    padding: 0.5%;
+    margin: 0;
+}
+
+.label-lab{
+    color: var(--texto);
+    font-size: 130%;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 0.5%;
+    margin: 0 0 0 34%;
 }
 
 .data{
     background-color: var(--fundo-txt);
     color: var(--texto-2);
     font-size: 150%;
-    /* border-radius: 2px; */
     padding: 1%;
-    width: 19%;
+    width: 14%;
     height: 35px;
     border: none;
     font-weight: bold;
+    cursor: pointer;
+}
+
+#Sele-lab{
+    border: 2px solid var(--borda);
+    color: var(--borda);
+    opacity: 0.6;
+    background-color: transparent;
+    text-align: center;
+    width: 20%;
+    height: 10%;
+    display: flex;
+    display: inline-block;
+    font-size: 125%;
+    padding: 0.5% 0 0.5% 0;
+    margin-left: 1%;
+    letter-spacing: 5px;
+    font-weight: 20;
+    cursor: pointer;
+}
+
+.Select-Lab{
+    background-color: var(--fundo-txt-2);
+    color: var(--texto);
+}
+
+.Selecionar{
+    display: flex;
 }
 
 .txt-titulo{
-    /* border-radius: 2px; */
     width: 95%;
     background-color: var(--fundo-txt);
-    font-size: 120%;
+    font-size: 115%;
     font-family: 'Roboto Mono', monospace;
     color: var(--cor-txt);
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     padding: 0.7%;
     border: none;
     margin-top: 2%;
@@ -77,15 +111,15 @@ body{
     border: none;
     background-color: var(--fundo-txt-2);
     color: var(--texto);
-    /* border-radius: 2px; */
     margin-top: 2%;
     display: flex;
     width: 95%;
-    padding: 1%;
+    height: 120px;
+    padding: 0.5% 0 0 1%;
     font-size: 150%;
-    font-weight: bold;
     letter-spacing: 3px;
 }
+
 textarea::placeholder{
     color: var(--texto);
 }
@@ -93,20 +127,21 @@ textarea::placeholder{
 .Btn{
     background-color: var(--botao-2);
     color: var(--texto);
-    margin-top: 2%;
-    height: 35px;
-    width: 150px;
-    margin-left: 77.4%;
+    height: auto;
+    width: auto;
     border: none;
-    /* border-radius: 2px; */
     letter-spacing: 3px;
     font-family: 'Roboto Mono';
     font-weight: bold;
-    font-size: 150%;
-    text-align: center;
-    padding: 0%;
+    font-size: 120%;
+    padding: 1%;
+    cursor: pointer;
 }
 
+.Botoes{
+    display: inline;
+    margin: 2% 0 0 75%;
+}
 
 .Btn:hover{
     background-color: var(--botao);
@@ -114,7 +149,42 @@ textarea::placeholder{
     transition: all 0.5s;
 }
 
-/* Texto pra direÃ§Ã£o */
+
+
+a.Btn-Ocorrencia:hover{
+    transform: scale(1.05);
+    transition: .5s;
+}
+
+a.Btn-Ocorrencia{
+    background-color: var(--fundo-txt);
+    color: var(--cor-txt);
+    height: 25%;
+    font-size: 120%;
+    padding: 0.5% 1%;
+    text-align: center;
+}
+
+.registrar-ocorrencia{
+    display: flex;
+    margin: 2% 0 0 10%
+}
+
+a.Btn-Excluir {
+    background-color: var(--botao-2);
+    color: var(--texto);
+    height: 35px;
+    width: 20%;
+    margin-left: 75%;
+    border: none;
+    letter-spacing: 3px;
+    font-size: 120%;
+    padding:1% 1% 1% 1%;
+    cursor: pointer;
+    text-align: center;
+}
+
+/*Exclusivo direção*/
 
 .txtOcorrencia-2{
     background-color: var(--fundo-txt-2);
@@ -145,58 +215,4 @@ textarea::placeholder{
     width: auto;
     height: auto;
     border: none;
-    /* font-weight: bold; */
-}
-
-a.BtnVoltar{
-    background-color: var(--botao-2);
-    color: var(--texto);
-    margin-top: 30%;
-    height: 35px;
-    width: 15%;
-    margin-left: 83.5%;
-    border: none;
-    letter-spacing: 3px;
-    font-size: 120%;
-    padding:1%;
-}
-
-.BtnVoltar:hover{
-    background-color: var(--botao);
-    transform: scale(1.1);
-    transition: all 0.5s; 
-}
-
-a.Btn-Ocorrencia:hover{
-    transform: scale(1.05);
-    transition: .5s;
-}
-
-a.Btn-Ocorrencia{
-    background-color: var(--fundo-txt);
-    color: var(--cor-txt);
-    height: 25%;
-    font-size: 120%;
-    padding: 0.5% 1%;
-    text-align: center;
-}
-
-.registrar-ocorrencia{
-    display: flex;
-    margin: 2% 0 0 10%
-}
-
-
-a.Btn-Excluir {
-    background-color: var(--botao-2);
-    color: var(--texto);
-    height: 35px;
-    width: 20%;
-    margin-left: 75%;
-    border: none;
-    letter-spacing: 3px;
-    font-size: 120%;
-    padding:1% 1% 1% 1%;
-    cursor: pointer;
-    text-align: center;
 }
