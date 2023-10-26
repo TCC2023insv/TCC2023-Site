@@ -61,7 +61,7 @@
                     <a href='#' class='Btn-Excluir' onclick='Excluir(this)' id-ocorrencia='<?php echo $ocorrencia['ID']; ?>' style='cursor: pointer;'>Excluir</a>
                 </div>
                 <label class='txtOcorrencia-2'><?php echo $ocorrencia['Descricao']; ?></label>
-            </div>;
+            </div>
     <?php
         }
         $conexao->close();
