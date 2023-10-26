@@ -165,7 +165,7 @@
             .$direcao."')");
         
             $conexao->close();
-            return header("Location: ../../../tcc2023-site/usuarios/diretoria/p_d_Inicial_tc.php");
+            return header("Location: ../../../monitoralab/usuarios/diretoria/p_d_Inicial_tc.php");
         }
 
         public function ExcluirProfessor($login)
@@ -175,7 +175,7 @@
 
             $conexao->query("DELETE FROM professor WHERE login = '" . $login . "'");
             $conexao->close();
-            return header("Location: ../../../tcc2023-site/usuarios/diretoria/p_cadastros-d_tc.php");
+            return header("Location: ../../../monitoralab/usuarios/diretoria/p_cadastros-d_tc.php");
         }
     }
 
@@ -222,7 +222,7 @@
 
             $conexao->query("DELETE FROM monitor WHERE login = '" . $login . "'");
             $conexao->close();
-            return header("Location: ../../../tcc2023-site/usuarios/professor/p_cadastros-p_tc.php");
+            return header("Location: ../../../monitoralab/usuarios/professor/p_cadastros-p_tc.php");
         }
 
         public function RegistrarOcorrencia($data, $titulo, $descricao)
@@ -261,7 +261,7 @@
 
             $conexao->query("DELETE FROM ocorrencia WHERE ID = '" . $id . "'");
             $conexao->close();
-            return header("Location: ../../../tcc2023-site/usuarios/professor/p_ocorrencias.php");
+            return header("Location: ../../../monitoralab/usuarios/professor/p_ocorrencias.php");
         }
     }
 
@@ -293,7 +293,7 @@
             RegistrarProblema($_POST['probTeclado']), $_POST['quantTeclado'], RegistrarProblema($_POST['probWindows']),
             $_POST['quantWindows'], $_POST['atvExercida'], $_POST['probSolucionados'], $_POST['responsavel']);
                 
-                $sql = "INSERT INTO reparo (data, acao, problemas_solucionados, 
+                $sql = "INSERT INTO reparo (data, acao, Problemas_Nao_Solucionados, 
                 responsavel, login_monitor, laboratorio) VALUES ('$Diagnostico->data', '$Diagnostico->atividadeExercida', 
                 '$Diagnostico->problemasSolucionados', '$Diagnostico->responsavel','$monitor', '$Diagnostico->laboratorio')";
         
@@ -349,7 +349,7 @@
                     }
                 }
                 $conexao->close();
-                return header("Location: ../../../tcc2023-site/usuarios/monitor/p_reg-repa-M_TC.php");
+                return header("Location: ../../../monitoralab/usuarios/monitor/p_reg-repa-M_TC.php");
         }
 
         public function ExcluirDiagnostico($id)

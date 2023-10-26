@@ -146,7 +146,7 @@ CREATE TABLE reparo (
   ID int(11) NOT NULL,
   Data date NOT NULL,
   Acao varchar(300) NOT NULL,
-  Problemas_Solucionados varchar(300) NOT NULL,
+  Problemas_Nao_Solucionados varchar(300) NOT NULL,
   Responsavel varchar(30) NOT NULL,
   Login_Monitor varchar(30) NOT NULL,
   Laboratorio varchar(15) NOT NULL

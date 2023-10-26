@@ -54,14 +54,17 @@
             <div class='caixa'>
                 <div class='lbl-input'>
                     <div class='info-ocorrencia'>
-                        <label class='Titulo'><?php echo $ocorrencia['Titulo']; ?></label>
-                        <label class='data-2'><?php echo date('d/m/Y', strtotime($ocorrencia['Data'])); ?></label>
+                        <label class='Titulo'><?php echo $ocorrencia['Titulo']; ?></label>                      
                         <label id='profResp'><?php echo $ocorrencia['Responsavel']; ?></label>
-                    </div>          
-                    <a href='#' class='Btn-Excluir' onclick='Excluir(this)' id-ocorrencia='<?php echo $ocorrencia['ID']; ?>' style='cursor: pointer;'>Excluir</a>
+                    </div> 
+       
                 </div>
                 <label class='txtOcorrencia-2'><?php echo $ocorrencia['Descricao']; ?></label>
-            </div>;
+                    <div class="data-botao">
+                        <label class='data-2'><?php echo date('d/m/Y', strtotime($ocorrencia['Data'])); ?></label>          
+                        <a href='#' class='Btn-Excluir' onclick='Excluir(this)' id-ocorrencia='<?php echo $ocorrencia['ID']; ?>' style='cursor: pointer;'>Excluir</a>
+                    </div> 
+            </div>
     <?php
         }
         $conexao->close();

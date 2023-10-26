@@ -23,12 +23,10 @@ body{
 
 .caixa{
     background-color: var(--fundo-caixa);
-    width: 75%;
+    width: 90%;
     border: none;
-    /* border-radius: 2px; */
-    margin-top: 4%;
     position: absolute;
-    margin: 3% 0 0 10%;
+    margin: 3% 0 0 5%;
     height: auto;
     padding: 3% 0 3% 3%;
     display: flex;
@@ -37,6 +35,11 @@ body{
 .lbl-input{
     display: inline;
 }
+.Titulo-2{
+    color: var(--texto);
+    font-size: 120%;
+}
+
 .Titulo{
     background-color: var(--fundo-txt);
     color: var(--cor-txt);
@@ -115,7 +118,7 @@ button.Btn {}
     transition: all 0.5s;
 }
 
-/* Texto pra direÃ§Ã£o */
+/* Texto pra direÃƒÂ§ÃƒÂ£o */
 
 .txtOcorrencia-2{
     background-color: var(--fundo-txt-2);
@@ -133,9 +136,10 @@ button.Btn {}
     color: var(--cor-txt);
     font-size: 140%;
     text-align: center;
-    width: 40%;
+    width: auto;
     height: auto;
     padding: 0.7%;
+    margin: 0 5%;
 }
 
 .data-2{
@@ -200,4 +204,9 @@ a.Btn-Excluir {
     padding:1% 1% 1% 1%;
     cursor: pointer;
     text-align: center;
+}
+
+.info-ocorrencia{
+    display: flex;
+    justify-content: space-between;
 }

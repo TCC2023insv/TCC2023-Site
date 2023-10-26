@@ -320,7 +320,7 @@ input::placeholder{
     width: auto;
     height: auto;
     padding: 0.5%;
-    margin-right: 45%;
+    margin-right: 35%;
 }
 
 
@@ -354,6 +354,14 @@ textarea::placeholder{
     padding: 0.5%;
     margin-right: 85%;
 }
+
+#Btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 40px;
+}
+
 
 #Fotos{
     background-color: var(--fundo-caixa);
@@ -490,5 +498,4 @@ input[type=file]::file-selector-button{
     transform: scale(1.1);
     transition: all 0.5s
 }
-
  
