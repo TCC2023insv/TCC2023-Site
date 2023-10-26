@@ -225,14 +225,14 @@
             return header("Location: ../../../monitoralab/usuarios/professor/monitores-cadastrados.php");
         }
 
-        public function RegistrarOcorrencia($data, $titulo, $descricao)
+        public function RegistrarOcorrencia($data, $titulo, $laboratorio, $problema, $descricao)
         {
             require('../conexao/conexaoBD.php');
             require('ocorrencias.php');
 
             session_start();
             $professor = $_SESSION['login'];
-            $Ocorrencia = new Ocorrencia($professor, $data, $titulo, $descricao);
+            $Ocorrencia = new Ocorrencia($professor, $data, $titulo, $laboratorio, $problema, $descricao);
 
             $conexao = ConectarBanco();
             $resultado = mysqli_query($conexao, "SELECT nome FROM professor WHERE login = '" . 
@@ -405,7 +405,8 @@
     if (isset($_POST['RegistrarOcorrencia']))
     {
         $Professor = new Professor();
-        $Professor->RegistrarOcorrencia($_POST['data'], $_POST['titulo'], $_POST['txtDescricao']);
+        $Professor->RegistrarOcorrencia($_POST['data'], $_POST['titulo'],
+        $_POST['laboratorio'], $_POST['problema'], $_POST['txtDescricao']);
     }
 
     if (isset($_GET['id-ocorrencia']))

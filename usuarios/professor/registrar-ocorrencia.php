@@ -41,7 +41,7 @@
         <label class="label-data">Data:</label>
             <input class="data" id="dataOcorrencia" name="data" type="date" required>    
             <label class="label-lab">Laboratório:</label>
-            <select name="" id="Sele-lab" required>
+            <select name="laboratorio" id="Sele-lab" required>
                 <option class="Select-Lab" value="">Selecione</option>
                 <option class="Select-Lab" value="Lab 1">Lab 1</option>
                 <option class="Select-Lab" value="Lab 2">Lab 2</option>
@@ -65,6 +65,8 @@
 
             var data = $("#dataOcorrencia").val();
             var titulo = $("#tituloOcorrencia").val();
+            var laboratorio = $("#Sele-lab").val();
+            var problema = $("#Sele-problema").val();
             var txtDescricao = $("#descricaoOcorrencia").val();
             var RegistrarOcorrencia = "RegistrarOcorrencia";
 
@@ -74,6 +76,8 @@
                 data: {
                     data: data,
                     titulo: titulo,
+                    laboratorio: laboratorio,
+                    problema: problema,
                     txtDescricao:txtDescricao,
                     RegistrarOcorrencia:RegistrarOcorrencia
                 },
