@@ -25,8 +25,10 @@
     <link rel="stylesheet" type="text/css" href="../../css/diagnostico.css">
     <link rel="stylesheet" type="text/css" href="../../css/navbar_TC.css">
     <link rel="stylesheet" href="../../css/fonte-alert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../../js/sweetalert.js" type="module"></script>
     <script src="../../js/jquery.js"></script>
+    <script src="../../js/foto.js"></script>
     <title>Registrar Reparo</title>
 </head>
 <body>
@@ -209,18 +211,16 @@
 
             <div id="Fotos">
                 <label class="Titulo-3">Fotos</label>
-                <div class="miniatura">
-                    <input type="file" name="fotos[]" id="foto" accept="image/*" multiple="true">
-                    <h2 id="h2-foto"> </h2>
-                </div>
-                <!-- <input type="file" name="fotos[]" id="image" accept="image/*" multiple="true"> -->
+                <input type="file" name="foto[]" id="upload" accept="image/*" multiple="true" hidden>
+       
+                <label for="upload" class="uploadlabel">
+                    <span><i class="fa fa-cloud-upload"></i></span>
+                    <p>Escolher Arquivo</p>
+                </label>
 
-                <!-- <input type="file" name="fotos" id="fotos" accept="image/*" multiple="true"> -->
-                <!-- <label for="foto" class="Solte-Aqui">
-                        <span class="Solte-Titulo">Clique aqui</span>
-                        ou
-                        <input type="file" name="fotos[]" id="foto" accept="image/*" multiple="true"> 
-                    </label> -->
+                <div id="filewrapper">
+                    <h3 class="uploaded">Fotos Selecionadas:</h3>
+                </div>
             </div>
 
             <div id="Btn">
@@ -232,28 +232,6 @@
         </form>
     </fieldset>
     <script>
-    // Miniatura
-
-    const foto = document.querySelector('#foto');
-    const h2Foto = document.querySelector('#h2-foto');
-
-    foto.addEventListener('change', event =>{
-        
-        const reader = new FileReader;
-        // console.log(foto.files[0]);
-
-        reader.onload = function(event){
-            const previewImage = document.createElement('img');
-            previewImage.width = 115;
-            previewImage.height = 100;
-            previewImage.id = 'preview-image';
-            previewImage.src = event.target.result;
-            h2Foto.insertAdjacentElement('afterend', previewImage);
-        }
-
-        reader.readAsDataURL(foto.files[0]);
-    })
-
     $(document).ready(function() {
         $("#Diagnostico").submit(function(e) {
             e.preventDefault();
