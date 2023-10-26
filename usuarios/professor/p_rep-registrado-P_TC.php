@@ -12,7 +12,7 @@
    $conexao = ConectarBanco();
    $ID_Reparo = $_GET['id'];
 
-   $sql_query = $conexao->query("SELECT `ID`, `Data`, `Acao`, `Problemas_Solucionados`, `Responsavel`, 
+   $sql_query = $conexao->query("SELECT `ID`, `Data`, `Acao`, `Problemas_Nao_Solucionados`, `Responsavel`, 
    `Login_Monitor`, `Laboratorio` FROM `reparo` WHERE ID = '$ID_Reparo'") or die ($conexao->error);
 
     $sql_query_prob = $conexao->query("SELECT dispositivo.Nome, dispositivo.Quantidade, dispositivo.Problema 
@@ -129,7 +129,7 @@
                         if (isset($reparo))
                             {
                     ?>      
-                    <label class="Caixa-Texto"><?php echo $reparo['Problemas_Solucionados']; ?></label>
+                    <label class="Caixa-Texto"><?php echo $reparo['Problemas_Nao_Solucionados']; ?></label>
                     <?php
                         }
                 ?>

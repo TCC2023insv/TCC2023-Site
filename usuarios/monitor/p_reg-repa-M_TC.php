@@ -204,7 +204,7 @@
 
 
             <div id="Caixa-Texto">
-                <label class="Titulo-2">Problemas Solucionados</label>
+                <label class="Titulo-2">Problemas Não Solucionados</label>
                 <textarea class="Caixa-Texto" id="probSolucionados" name="probSolucionados" placeholder="Digite Aqui" required></textarea>
 
             </div>

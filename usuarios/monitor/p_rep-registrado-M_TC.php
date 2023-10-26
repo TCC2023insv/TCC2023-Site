@@ -12,7 +12,7 @@
    $conexao = ConectarBanco();
    $ID_Reparo = $_GET['id'];
 
-   $sql_query = $conexao->query("SELECT `ID`, `Data`, `Acao`, `Problemas_Solucionados`, `Responsavel`, 
+   $sql_query = $conexao->query("SELECT `ID`, `Data`, `Acao`, `Problemas_Nao_Solucionados`, `Responsavel`, 
    `Login_Monitor`, `Laboratorio` FROM `reparo` WHERE ID = '$ID_Reparo'") or die ($conexao->error);
 
     $sql_query_prob = $conexao->query("SELECT dispositivo.Nome, dispositivo.Quantidade, dispositivo.Problema 
@@ -125,14 +125,14 @@
                 </div>
     
                 <div id="Caixa-Texto">
-                    <label class="Titulo-2">Problemas Solucionados</label>
+                    <label class="Titulo-2">Problemas Não Solucionados</label>
 
                     <!-- TESTAR COM BANCO DE DADOS -->
                     <?php
                         if (isset($reparo))
                             {
                     ?>      
-                    <label class="Caixa-Texto"><?php echo $reparo['Problemas_Solucionados']; ?></label>
+                    <label class="Caixa-Texto"><?php echo $reparo['Problemas_Nao_Solucionados']; ?></label>
                     <?php
                         }
                 ?>
@@ -153,7 +153,7 @@
             </div>
 
             <div id="Btn">
-                <a href="javascript: history.go(-1)" class="Btn">Voltar</a>
+                <a href="javascript: history.go(-1)" class="Btn-Excluir">Voltar</a>
                 <a class="Btn-Excluir"  onclick="Excluir(<?php echo $ID_Reparo; ?>)" style="cursor: pointer;" name="btnExcluir">Excluir</a>
             </div>
 
