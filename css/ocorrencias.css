@@ -42,7 +42,7 @@ body{
     color: var(--cor-txt);
     font-size: 140%;
     text-align: center;
-    width: 27$;
+    width: 27%;
     height: auto;
     padding: 0.7%;
     font-weight: bold;
@@ -107,7 +107,6 @@ textarea::placeholder{
     padding: 0%;
 }
 
-button.Btn {}
 
 .Btn:hover{
     background-color: var(--botao);
@@ -175,7 +174,7 @@ a.Btn-Ocorrencia:hover{
 
 a.Btn-Ocorrencia{
     background-color: var(--fundo-txt);
-    color: var(--cor-txt)
+    color: var(--cor-txt);
     height: 25%;
     font-size: 120%;
     padding: 0.5% 1%;
