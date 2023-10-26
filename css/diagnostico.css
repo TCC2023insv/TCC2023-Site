@@ -356,63 +356,95 @@ textarea::placeholder{
 }
 
 #Fotos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    padding: 3%;
+    width: 80%;
+
+    min-height: 100%;
+    
     background-color: var(--fundo-caixa);
     margin-top: 4%;
     margin-left: 6%;
-
-    width: 80%;
-    position: relative;
-    height: auto;
-    padding: 3%;
-    
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-}
-
-.miniatura{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    border: 4px dashed var(--borda);
-    margin: 3% 0 2% 0;
-    height: auto;
-    width: 91%;
-    padding: 6% 3%;
-
-    color: var(--texto);
-    font-size: 120%;
-    background-color: transparent;
-    cursor: pointer;
 }
 
 
-.miniatura:hover{
-    background-color: var(--fundo-hover);
-}
-
-
-input[type=file]::file-selector-button{
-    border: 3px solid var(--borda);
+.uploadlabel{
+    width: 97%;
+    min-height: 100%;
     background: transparent;
-    color: var(--texto);
-    padding: 2% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed #C2D5F0;
     cursor: pointer;
-    font-size: 130%;
-    width: 100%;
-    font-family: 'Roboto Mono', monospace;
-    border-radius: 2px;
-    margin-bottom: 8%;
+    padding: 5% 0;
+    margin-top: 2%;
 }
 
-#foto{
-    width: 35%;
-    height: 15%;
-    padding: 2% 100%;
-    /* padding: 2%; */
+.uploadlabel span{
+    font-size: 350%;
+    margin-bottom: 1%;
+    color: #C2D5F0;
 }
 
+.uploadlabel p{
+    font-size: 100%;
+    color: #C2D5F0;
+    font-weight: 800;
+    margin-bottom: 2%;
+}
+
+.uploaded{
+    margin: 5% 40% 5% 0;
+    font-size: 16px;
+    /* font-weight: 700; */
+    color: #a5a5a5;
+    float: left;
+    padding: 0 0 0 2%
+}
+
+#filewrapper{
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+}
+
+.showfilebox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1% 0% ;
+    padding: 10px 15px;
+    box-shadow: #0000000d 0px 0px 0px 1px,
+    #d1d5db3d 0px 0px 0px 1px inset;
+}
+
+.left h3{
+    color: #C2D5F0;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Deletar */
+.right span{
+    background: #C2D5F0;
+    color: #224169;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    line-height: 25px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 50%;
+}
 
 .Btn{
     background-color: var(--botao);
@@ -456,6 +488,7 @@ input[type=file]::file-selector-button{
     float: right;
     
     margin: 4% 8% 1% 0;
+    cursor:pointer;
     
 }
 
