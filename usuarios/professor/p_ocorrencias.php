@@ -50,24 +50,24 @@
     <?php
         while ($ocorrencia = $sql_query->fetch_assoc())
         {
-    ?>
-            <div class='caixa'>
-                <div class='lbl-input'>
-                    <div class='info-ocorrencia'>
-                        <label class='Titulo'><?php echo $ocorrencia['Titulo']; ?></label>                      
-                        <label id='profResp'><?php echo $ocorrencia['Responsavel']; ?></label>
-                    </div> 
+
+            echo "<div class='caixa'>";
+                echo "<div class='lbl-input'>";
+                    echo "<div class='info-ocorrencia'>";
+                        echo "<label class='Titulo'>" . $ocorrencia['Titulo'] . "</label> ";                    
+                        echo "<label id='profResp'>" . $ocorrencia['Responsavel'] . "</label>";
+                    echo "</div>"; 
        
-                </div>
-                <label class='txtOcorrencia-2'><?php echo $ocorrencia['Descricao']; ?></label>
-                    <div class="data-botao">
-                        <label class='data-2'><?php echo date('d/m/Y', strtotime($ocorrencia['Data'])); ?></label>          
-                        <a href='#' class='Btn-Excluir' onclick='Excluir(this)' id-ocorrencia='<?php echo $ocorrencia['ID']; ?>' style='cursor: pointer;'>Excluir</a>
-                    </div> 
-            </div>
-    <?php
+                echo "</div>";
+                echo "<label class='txtOcorrencia-2'>" . $ocorrencia['Descricao'] . "</label>";
+                    echo "<div class='data-botao'>";
+                        echo "<label class='data-2'>" . date('d/m/Y', strtotime($ocorrencia['Data'])) . "</label>   ";       
+                        echo "<a href='#' class='Btn-Excluir' onclick='Excluir(this)' id-ocorrencia='" . $ocorrencia['ID'] . "' style='cursor: pointer;'>Excluir</a>";
+                    echo "</div>"; 
+            echo "</div>";
+
         }
-        $conexao->close();
+        // $conexao->close();
     ?>
 
     <script>

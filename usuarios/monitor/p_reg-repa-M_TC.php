@@ -65,7 +65,7 @@
                 <div id="Data-Resp">
                     <input id="Data-2" type="date" name="data" required>
                     <!-- <label id="Responsavel-2" name="responsavel">Responsavel</label> -->
-                    <input id="Responsavel" type="text" name="responsavel" value="<?= $nomeMonitor ?>" required>
+                    <input id="Responsavel" type="text" name="responsavel" value="<?= $nomeMonitor ?>" readonly required>
                 </div>
             </div>
 
@@ -255,7 +255,7 @@
             var probWindows = $("#probWindows").val();
             var atvExercida = $("#atvExercida").val();
             var probSolucionados = $("#probSolucionados").val();
-            var fotos = document.getElementById("foto");
+            var fotos = document.getElementById("upload");
             var RegistrarDiagnostico = "RegistrarDiagnostico";
 
             var formData = new FormData();
