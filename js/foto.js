@@ -12,8 +12,8 @@ window.addEventListener("load",()=>{
 
     reader.onload = function(event){
         const miniatura = document.createElement('img');
-        miniatura.width = 100;
         miniatura.height = 100;
+        miniatura.width = 115;
         miniatura.id = 'miniatura';
         miniatura.src = event.target.result;
         fotoSelecionada.insertAdjacentElement('afterend', miniatura);

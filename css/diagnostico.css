@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@454&display=swap');
 @import url('../css/cores.css');
+@import url('../js/foto.js');
 
 html{
     min-height: 100vh;
@@ -86,7 +87,7 @@ body{
     text-align: center;
 
     width: 100%;
-    font-size: 130%;
+    font-size: 120%;
     letter-spacing: 5px;
     font-weight: bold;
 
@@ -122,11 +123,11 @@ body{
     background-color: var(--fundo-txt);
     color: var(--cor-txt);
     
-    font-size: 150%;
+    font-size: 170%;
     text-align: center;
 
     padding: 3%;
-    width: 160%;
+    width: 150%;
     border: none;
     font-weight: bold;
 }
@@ -144,28 +145,13 @@ body{
     margin: 8% 0 0 0;
     padding: 3% 0;
 }
-/* 
-#Responsavel-2{
-    color: var(--texto);
-    background-color: transparent;
-    border: 2px solid var(--borda);
-    text-align: center;
-    
-    width: 164%;
-    font-size: 130%;
-    letter-spacing: 5px;
-    font-weight: bold;
-
-    margin: 8% 0 0 0;
-    padding: 3% 0%;
-} */
 
 .Titulo{
     background-color: var(--fundo-txt);
     color: var(--cor-txt);
     font-size: 150%;
     text-align: center;
-    width: auto;
+    width: 100%;
     height: auto;
     padding: 0.5%;
 }
@@ -223,7 +209,7 @@ body{
     background-color: transparent;
     text-align: center;
     width: 14%;
-    padding: 1.5% 0.5% 1.5% 0;
+    padding: 1.5% 0.5% 1.5% 1%;
     margin-left: 1%;
     display: flex;
     display: inline-block;
@@ -268,11 +254,11 @@ input::placeholder{
 
     text-align: center;
 
-    width: 48%;
+    width: 45%;
     height: 10%;
     display: flex;
     display: inline-block;
-    font-size: 125%;
+    font-size: 120%;
     padding: 1% 2%;
     margin-left: 1%;
 
@@ -302,7 +288,8 @@ input::placeholder{
     margin-top: 4%;
     margin-left: 6%;
 
-    width: 82%;
+    /* width: 82%; */
+    max-width: 82%;
     height: auto;
     padding: 3% 0 3% 4%;
     
@@ -495,7 +482,7 @@ textarea::placeholder{
 
     float: right;
     
-    margin: 4% 8% 1% 0;
+    margin: 4% 4% 1% 0;
     cursor:pointer;
     
 }
@@ -541,3 +528,6 @@ textarea::placeholder{
     transition: all 0.5s
 }
  
+#img{
+    margin-bottom: 10%;
+}

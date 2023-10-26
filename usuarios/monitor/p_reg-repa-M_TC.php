@@ -199,7 +199,7 @@
 
             <div id="Caixa-Texto">
                 <label class="Titulo-2">Atividade Exercida</label>
-               <textarea class="Caixa-Texto" id="atvExercida" name="atvExercida" placeholder="Digite Aqui" required></textarea>
+                <textarea class="Caixa-Texto" id="atvExercida" name="atvExercida" placeholder="Digite Aqui" required></textarea>
             </div>
 
 
@@ -224,9 +224,8 @@
             </div>
 
             <div id="Btn">
-                <button type="submit" class="Btn-Registrar" name="btnRegistrar">Registrar</button>
-
                 <a href="p_m_inicial_tc.php" class="Btn">Voltar</a>
+                <button type="submit" class="Btn-Registrar" name="btnRegistrar">Registrar</button>
             </div>
 
         </form>
@@ -275,7 +274,7 @@
                 formData.append("probHD", probHD);
                 formData.append("quantMonitor", quantMonitor);
                 formData.append("probMonitor", probMonitor);
-                formData.append("quantMous", quantMouse);
+                formData.append("quantMous", quantMo3use);
                 formData.append("probMouse", probMouse);
                 formData.append("quantTeclado",quantTeclado);
                 formData.append("probTeclado", probTeclado);
