@@ -39,14 +39,29 @@
   <form id="Ocorrencia" action="../../php/classes/usuarios.php" method="post" class="caixa">
     <div class="lbl-input">            
         <label class="label-data">Data:</label>
-            <input class="data" id="dataOcorrencia" name="data" type="date" required>    
-            <label class="label-lab">Laboratório:</label>
+            <input class="data" id="dataOcorrencia" name="data" type="date" required>
+
+        <label class="label-lab">Laboratório:</label>
             <select name="laboratorio" id="Sele-lab" required>
                 <option class="Select-Lab" value="">Selecione</option>
                 <option class="Select-Lab" value="Lab 1">Lab 1</option>
                 <option class="Select-Lab" value="Lab 2">Lab 2</option>
                 <option class="Select-Lab" value="Lab 3">Lab 3</option> 
                 <option class="Select-Lab" value="Lab 4">Lab 4</option>
+            </select>
+
+            <label class="label-problema">Problema:</label>
+            <select name="problema" id="Sele-problema" required>
+                <option class="Select-problema">Selecione</option>
+                <option class="Select-problema" value="">Falta de internet</option>
+                <option class="Select-problema" value="">Computadores desorganizados</option>
+                <option class="Select-problema" value="">Sumiço de dispositivo</option>
+                <option class="Select-problema" value="">Dispositivo quebrado</option>
+                <option class="Select-problema" value="">Cadeiras desorganizadas</option>
+                <option class="Select-problema" value="">Cabos desconectados</option>
+                <option class="Select-problema" value="">Disjuntor desligado</option>
+                <option class="Select-problema" value="">Janelas abertas</option>
+                <option class="Select-problema" value="">Queda de energia</option>
             </select>
     </div>
        
