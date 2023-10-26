@@ -211,7 +211,7 @@
 
             <div id="Fotos">
                 <label class="Titulo-3">Fotos</label>
-                <input type="file" name="foto[]" id="upload" accept="image/*" multiple="true" hidden>
+                <input type="file" name="foto[]" id="upload" accept="image/*" hidden multiple>
        
                 <label for="upload" class="uploadlabel">
                     <span><i class="fa fa-cloud-upload"></i></span>
@@ -232,6 +232,15 @@
         </form>
     </fieldset>
     <script>
+    var formData = new FormData();
+         
+    document.getElementById("upload").onchange = function(e)
+    {
+        if (e.target.files != null && e.target.files != 0)
+        {
+            formData.append("foto[]", e.target.files[0]);
+        }
+    }
     $(document).ready(function() {
         $("#Diagnostico").submit(function(e) {
             e.preventDefault();
@@ -255,35 +264,28 @@
             var probWindows = $("#probWindows").val();
             var atvExercida = $("#atvExercida").val();
             var probSolucionados = $("#probSolucionados").val();
-            var fotos = document.getElementById("upload");
             var RegistrarDiagnostico = "RegistrarDiagnostico";
 
-            var formData = new FormData();
-
-            for (var i = 0; i < fotos.files.length; i++)
-            {
-                formData.append("foto[]", fotos.files[i]);
-            }
-                formData.append("Lab", Lab);
-                formData.append("data", data);
-                formData.append("responsavel", responsavel);
-                formData.append("quantApps", quantApps);
-                formData.append("probApps", probApps);
-                formData.append("quantFonte", quantFonte);
-                formData.append("probFonte", probFonte);
-                formData.append("quantHD", quantHD);
-                formData.append("probHD", probHD);
-                formData.append("quantMonitor", quantMonitor);
-                formData.append("probMonitor", probMonitor);
-                formData.append("quantMous", quantMouse);
-                formData.append("probMouse", probMouse);
-                formData.append("quantTeclado",quantTeclado);
-                formData.append("probTeclado", probTeclado);
-                formData.append("quantWindows", quantWindows);
-                formData.append("probWindows", probWindows);
-                formData.append("atvExercida", atvExercida);
-                formData.append("probSolucionados", probSolucionados);
-                formData.append("RegistrarDiagnostico", RegistrarDiagnostico);
+            formData.append("Lab", Lab);
+            formData.append("data", data);
+            formData.append("responsavel", responsavel);
+            formData.append("quantApps", quantApps);
+            formData.append("probApps", probApps);
+            formData.append("quantFonte", quantFonte);
+            formData.append("probFonte", probFonte);
+            formData.append("quantHD", quantHD);
+            formData.append("probHD", probHD);
+            formData.append("quantMonitor", quantMonitor);
+            formData.append("probMonitor", probMonitor);
+            formData.append("quantMous", quantMouse);
+            formData.append("probMouse", probMouse);
+            formData.append("quantTeclado",quantTeclado);
+            formData.append("probTeclado", probTeclado);
+            formData.append("quantWindows", quantWindows);
+            formData.append("probWindows", probWindows);
+            formData.append("atvExercida", atvExercida);
+            formData.append("probSolucionados", probSolucionados);
+            formData.append("RegistrarDiagnostico", RegistrarDiagnostico);
 
             $.ajax({
                 type: "POST",
