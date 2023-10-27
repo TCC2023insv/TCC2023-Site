@@ -141,20 +141,22 @@
                 <div id="Fotos">
                     <label class="Titulo-3">Fotos</label>
                     <br><br>
-                        <?php
-                            while ($fotos = $sql_query_img->fetch_assoc())
-                            {
-                                $img = "<img src=" . $fotos['Path'] . ">";
-                                echo $img;
-                            }
-                        ?>
+                        <!-- <div class="mostrarFoto"> -->
+                            <?php
+                                while ($fotos = $sql_query_img->fetch_assoc())
+                                {
+                                    $img = "<img src=" . $fotos['Path'] . ">";
+                                    echo $img;
+                                }
+                            ?>
+                        <!-- </div> -->
                 </div>
     
             </div>
 
             <div id="Btn">
-                <a href="javascript: history.go(-1)" class="Btn-Excluir">Voltar</a>
-                <a class="Btn-Excluir"  onclick="Excluir(<?php echo $ID_Reparo; ?>)" style="cursor: pointer;" name="btnExcluir">Excluir</a>
+                <a href="javascript: history.go(-1)" class="Btn-Voltar">Voltar</a>
+                <a class="Btn-Voltar"  onclick="Excluir(<?php echo $ID_Reparo; ?>)" style="cursor: pointer;" name="btnExcluir">Excluir</a>
             </div>
 
         </div>
