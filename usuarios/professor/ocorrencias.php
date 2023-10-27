@@ -50,13 +50,14 @@
     <?php
         while ($ocorrencia = $sql_query->fetch_assoc())
         {
-
+            echo "<div class='bloco'>";
             echo "<div class='caixa'>";
                 echo "<div class='lbl-input'>";
-                    echo "<div class='info-ocorrencia'>";
+                    // echo "<div class='info-ocorrencia'>";
                         echo "<label class='Titulo'>" . $ocorrencia['Titulo'] . "</label> ";                    
                         echo "<label id='profResp'>" . $ocorrencia['Responsavel'] . "</label>";
-                    echo "</div>"; 
+                        echo "<label id='Laboratorio'>Lab 4</label>";
+                    // echo "</div>"; 
        
                 echo "</div>";
                 echo "<label class='txtOcorrencia-2'>" . $ocorrencia['Descricao'] . "</label>";
@@ -64,6 +65,7 @@
                         echo "<label class='data-2'>" . date('d/m/Y', strtotime($ocorrencia['Data'])) . "</label>   ";       
                         echo "<a href='#' class='Btn-Excluir' onclick='Excluir(this)' id-ocorrencia='" . $ocorrencia['ID'] . "' style='cursor: pointer;'>Excluir</a>";
                     echo "</div>"; 
+            echo "</div>";
             echo "</div>";
 
         }

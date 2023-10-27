@@ -46,18 +46,19 @@
     <?php
         while ($ocorrencia = $sql_query->fetch_assoc())
         {
+            echo <div class='caixa'>
+                echo <div class='lbl-input'>
+                    echo <div class='info-ocorrencia'>
+                    echo <label class='Titulo'><?php echo $ocorrencia['Titulo']; ?></label>
+                    echo <label class='data-2'><?php echo date('d/m/Y', strtotime($ocorrencia['Data'])); ?></label>
+                    echo <label id='profResp'><?php echo $ocorrencia['Responsavel']; ?></label>
+                echo </div>          
+                echo <a href='#' class='Btn-Excluir' onclick='Excluir(this)' id-ocorrencia='<?php echo $ocorrencia['ID']; ?>' style='cursor: pointer;'>Excluir</a>
+                echo </div>
+                echo <label class='txtOcorrencia-2'><?php echo $ocorrencia['Descricao']; ?></label>
+            echo </div>;
     ?>
-            <div class='caixa'>
-                <div class='lbl-input'>
-                    <div class='info-ocorrencia'>
-                        <label class='Titulo'><?php echo $ocorrencia['Titulo']; ?></label>
-                        <label class='data-2'><?php echo date('d/m/Y', strtotime($ocorrencia['Data'])); ?></label>
-                        <label id='profResp'><?php echo $ocorrencia['Responsavel']; ?></label>
-                    </div>          
-                    <a href='#' class='Btn-Excluir' onclick='Excluir(this)' id-ocorrencia='<?php echo $ocorrencia['ID']; ?>' style='cursor: pointer;'>Excluir</a>
-                </div>
-                <label class='txtOcorrencia-2'><?php echo $ocorrencia['Descricao']; ?></label>
-            </div>;
+
     <?php
         }
         $conexao->close();

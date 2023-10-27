@@ -54,13 +54,6 @@ h1{
 
 
 .Itens{
-    /* background-color: var(--fundo-txt);
-    color: #FFEEDD;
-    height: 40px;
-    width: 229px;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
     background-color: var(--fundo-txt);
     color: var(--texto-2);
     height: 25%;

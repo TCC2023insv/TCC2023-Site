@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 -- Banco de dados: `monitoramento_reparos`
 --
 
-CREATE DATABASE `monitoramento_reparos`
+CREATE DATABASE `monitoramento_reparos`;
 
 -- --------------------------------------------------------
 
