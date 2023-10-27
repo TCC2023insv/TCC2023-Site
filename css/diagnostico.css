@@ -70,7 +70,7 @@ body{
     text-align: center;
 
     width: 98%;
-    font-size: 140%;
+    font-size: 130%;
     letter-spacing: 5px;
     font-weight: bold;
 
@@ -122,11 +122,11 @@ body{
     background-color: var(--fundo-txt);
     color: var(--cor-txt);
     
-    font-size: 150%;
+    font-size: 160%;
     text-align: center;
 
     padding: 3%;
-    width: 160%;
+    width: 150%;
     border: none;
     font-weight: bold;
 }
@@ -138,11 +138,11 @@ body{
     background-color: transparent;
     text-align: center;
     width: 155%;
-    font-size: 115%;
+    font-size: 120%;
     letter-spacing: 5px;
     font-weight: bold;
     margin: 8% 0 0 0;
-    padding: 3% 0;
+    padding: 4% 0;
 }
 /* 
 #Responsavel-2{
@@ -182,9 +182,9 @@ body{
 
 #Problemas{
     background-color: var(--fundo-caixa);
-    width: 92%;
+    width: 88%;
     height: auto;
-    padding: 6% 0 6% 4%;
+    padding: 6% 1% 6% 6%;
     line-height: 40px;
 }
 
@@ -223,7 +223,7 @@ body{
     background-color: transparent;
     text-align: center;
     width: 14%;
-    padding: 1.5% 0.5% 1.5% 0;
+    padding: 1.5% 0.5% 1.5% 1%;
     margin-left: 1%;
     display: flex;
     display: inline-block;
@@ -247,7 +247,7 @@ input::placeholder{
 
     text-align: center;
 
-    width: 43%;
+    width: 45%;
     height: 10%;
     display: flex;
     display: inline-block;
@@ -268,12 +268,12 @@ input::placeholder{
 
     text-align: center;
 
-    width: 48%;
-    height: 10%;
+    width: 42%;
+    height: 12%;
     display: flex;
     display: inline-block;
-    font-size: 125%;
-    padding: 1% 2%;
+    font-size: 120%;
+    padding: 1.3% 2%;
     margin-left: 1%;
 
     letter-spacing: 5px;
@@ -379,6 +379,9 @@ textarea::placeholder{
     margin-left: 6%;
 }
 
+/* .mostrarFoto{
+
+} */
 
 .uploadlabel{
     width: 97%;
@@ -397,6 +400,7 @@ textarea::placeholder{
 .uploadlabel span{
     font-size: 350%;
     margin-bottom: 1%;
+    /* padding-right: -10%; */
     color: #C2D5F0;
 }
 
@@ -410,10 +414,8 @@ textarea::placeholder{
 .uploaded{
     margin: 5% 40% 5% 0;
     font-size: 16px;
-    /* font-weight: 700; */
     color: #a5a5a5;
     float: left;
-    padding: 0 0 0 2%
 }
 
 #filewrapper{
@@ -495,7 +497,7 @@ textarea::placeholder{
 
     float: right;
     
-    margin: 4% 8% 1% 0;
+    margin: 4% 4% 1% 0;
     cursor:pointer;
     
 }
@@ -514,16 +516,16 @@ textarea::placeholder{
     transition: all 0.5s
 }
 
-.Btn-Excluir{
+.Btn-Voltar{
     background-color: var(--botao);
     color: var(--texto);
     border: none;
     width: auto;
     height: auto;
     
-    padding: 1%;
+    padding: 1% 1% 1% 1.5%;
     text-align: center;
-    font-size: 135%;
+    font-size: 120%;
 
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;

@@ -56,7 +56,7 @@ window.addEventListener("load",()=>{
 
         // X
         const crossElem = document.createElement("span");
-        crossElem.innerHTML = "&#215;";
+        crossElem.innerHTML = "   &#215;";
         rightElem.append(crossElem);
         filewrapper.append(showfileboxElem);
         

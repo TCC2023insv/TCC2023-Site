@@ -29,7 +29,7 @@ body{
 
     font-size: 130%;
     
-    margin-left: 5.7%;
+    margin: -2% 5.7%;
     display: block;
     transition: .5s;
 }
@@ -42,7 +42,7 @@ body{
     background-color: var(--fundo-2);
     color: var(--texto-2);
     height: auto;
-    margin: 1.5% 5.7%;  
+    margin: 1% 5.7%;  
     padding: 1.5% 1%;
     display: flex;
     align-items: center;
@@ -72,10 +72,10 @@ h1{
 
 a.Btn-Excluir {
     background-color: var(--botao-2);
-    height: 25%;
-    font-size: 95%;
-    padding: 0.5% 1%;
-    margin: 0 0% 0 3%;
+    height: 30%;
+    font-size: 100%;
+    padding: 0.8% 1%;
     text-align: center;
     color: var(--texto);
+    margin: 0 2% 0 0;
 }

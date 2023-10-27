@@ -224,9 +224,8 @@
             </div>
 
             <div id="Btn">
-                <button type="submit" class="Btn-Registrar" name="btnRegistrar">Registrar</button>
-
                 <a href="inicio.php" class="Btn">Voltar</a>
+                <button type="submit" class="Btn-Registrar" name="btnRegistrar">Registrar</button>
             </div>
 
         </form>
